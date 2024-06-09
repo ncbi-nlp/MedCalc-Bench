@@ -231,7 +231,7 @@ if __name__ == "__main__":
         responses["Patient Note"].append(patient_note)
         responses["Question"].append(question)
 
-        responses["LLM Answer"].append()
+        responses["LLM Answer"].append(question)
         responses["LLM Explanation"].append(question)
         responses["Ground Truth Answer"].append(ground_truth_answer)
 
