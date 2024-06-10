@@ -12,10 +12,6 @@ def calculate_map(variables):
 
 def mean_arterial_pressure_explanation(variables):
 
-    print(variables['sys_bp'])
-    print(variables['dia_bp'])
-
-
     sys_bp = variables['sys_bp']
     dia_bp = variables['dia_bp']
     
