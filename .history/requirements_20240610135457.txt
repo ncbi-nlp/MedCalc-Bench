@@ -1,0 +1,4 @@
+tqdm==4.66.1
+transformers==4.41.2
+tiktoken==0.6.0
+openai==1.16.1
