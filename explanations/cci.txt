@@ -1,0 +1,106 @@
+Explanation:
+The current CCI is value is 0.
+The patient is 52 years old. Because the patient's age is between 50 and 59, we add 1 point to the score, making the current total = 0 + 1 = 1.
+ The issue,'Myocardial infarction,' is present for the patient and so we add 1 point to the score, making the current total 1 + 1 = 2.
+The patient's CCI score is 2 points.
+ The issue,'Congestive heart failure,' is present for the patient and so we add 1 point to the score, making the current total 2 + 1 = 3.
+The patient's CCI score is 3 points.
+ The issue,'Peripheral vascular disease,' is present for the patient and so we add 1 point to the score, making the current total 3 + 1 = 4.
+The patient's CCI score is 4 points.
+At least one of transient ischemic attack or cerebral vascular accident must be present in the patient for a point to be added to the current total.
+Transient ischemic attacks is reported to be present for the patient.
+Cerebral vascular accident is reported to be present for the patient.
+Because at least one of the issues is reported to be present for the patient, we add 1 point to the score, making the current total 4 + 1 = 5.
+ The issue,'Connective tissue diease,' is present for the patient and so we add 1 point to the score, making the current total 5 + 1 = 6.
+The patient's CCI score is 6 points.
+ The issue,'Dementia,' is present for the patient and so we add 1 point to the score, making the current total 6 + 1 = 7.
+The patient's CCI score is 7 points.
+ The issue,'Chronic obstructive pulmonary disease,' is present for the patient and so we add 1 point to the score, making the current total 7 + 1 = 8.
+The patient's CCI score is 8 points.
+The issue, 'Hemiplegia,' is reported to be present for the patient and so we add 2 points to the score, making the current total 8 + 2 = 10.
+The patient's CCI score is 10 points.
+ The issue,'Peptic ulcer disease,' is present for the patient and so we add 1 point to the score, making the current total 10 + 1 = 11.
+The patient's CCI score is 11 points.
+The patient's liver disease is reported to be 'none' and so we do not add any points to the score, keeping the current total at 11.
+The patient's diabetes mellitus is reported to be 'none or diet-controlled' and so we add 0 point to the score, keeping the current total at 11.
+The issue, 'Moderate to severe chronic kidney disease,' is reported to be present for the patient and so we add 2 points to the score, making the current total 11 + 2 = 13.
+The patient's CCI score is 13 points.
+The patient's solid tumor is reported to be 'none' and so we do not add any points to the score, keeping the current total at 13.
+The issue, 'Leukemia,' is reported to be present for the patient and so we add 2 points to the score, making the current total 13 + 2 = 15.
+The patient's CCI score is 15 points.
+The issue, 'Lymphoma,' is reported to be present for the patient and so we add 2 points to the score, making the current total 15 + 2 = 17.
+The patient's CCI score is 17 points.
+AIDS is reported to be present for the patient and so we add 6 points to the score, making the current total at 17 + 6 = 23.
+The patient's CCI score is 23 points.
+
+Explanation:
+The current CCI is value is 0.
+The patient is 80 years old. Because the patient's age is greater than or equal to 80 years, we add 4 points to the score, making the current total = 0 + 4 = 4.
+The issue, 'Myocardial infarction,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Congestive heart failure,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Peripheral vascular disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+At least one of transient ischemic attack or cerebral vascular accident must be present in the patient for a point to be added to the current total.
+Transient ischemic attacks is reported to be absent for the patient.
+Cerebral vascular accident is reported to be absent for the patient.
+Neither of the issues are reported to be present for the patient and so we add 0 point to the score, keeping the current total at 4.
+The issue, 'Connective tissue diease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Dementia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Chronic obstructive pulmonary disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Hemiplegia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The issue, 'Peptic ulcer disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 4.
+The patient's CCI score is 4 points.
+The patient's liver disease is reported to be 'mild' and so we add 1 point to the score, making the current total 4 + 1 = 5.
+The patient's diabetes mellitus is reported to be 'uncomplicated' and so we add 1 point to the score, making the current total 5 + 1 = 6.
+The issue, 'Moderate to severe chronic kidney disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 6.
+The patient's CCI score is 6 points.
+The patient's solid tumor is reported to be 'localized' and so we add 2 points to the score, making the current total 6 + 2 = 8.
+The issue, 'Leukemia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 8.
+The patient's CCI score is 8 points.
+The issue, 'Lymphoma,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 8.
+The patient's CCI score is 8 points.
+The issue, 'AIDS,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 8.
+The patient's CCI score is 8 points.
+
+Explanation:
+The current CCI is value is 0.
+The patient is 49 years old. Because the patient's age is less than 50, we do not add any points to the score, keeping the current total at 0.
+The issue, 'Myocardial infarction,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Congestive heart failure,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Peripheral vascular disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+At least one of transient ischemic attack or cerebral vascular accident must be present in the patient for a point to be added to the current total.
+Transient ischemic attacks is not reported for the patient and so we assume it to be absent.
+Cerebral vascular accident is not reported for the patient and so we assume it to be absent.
+Neither of the issues are reported to be present for the patient and so we add 0 point to the score, keeping the current total at 0.
+The issue, 'Connective tissue diease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Dementia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Chronic obstructive pulmonary disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Hemiplegia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Peptic ulcer disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Liver Disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The patient's diabetes mellitus status is not reported and so we assume the value to be 'none or diet-controlled.' No points are added to the score, keeping the current total at 0.
+The issue, 'Moderate to severe chronic kidney disease,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The patient's solid tumor status is not reported and so we assume that it is 'none.' Hence, do not add any points to the score, keeping the current total at 0.
+The issue, 'Leukemia,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'Lymphoma,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+The issue, 'AIDS,' is reported to be absent for the patient and so we do not add any points to the score, keeping the current total at 0.
+The patient's CCI score is 0 points.
+

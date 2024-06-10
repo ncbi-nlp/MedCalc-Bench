@@ -1,0 +1,40 @@
+Explantion:
+The Well's score for pulmonary embolism is currently 0.
+Clinical signs and symptoms of DVT are repoted to be absent and so the total score remains unchanged, keeping the total score at 0. Pulmonary Embolism is not reported to be the #1 diagnosis and so the total score remains unchanged, keeping the total score at 0.
+The patient's heart rate is 90 beats per minute. The heart rate is less than 100 bpm, and so the score remains unchanged, keeping the total score at 0.
+Because the patient has not had an immobilization for at least 3 days, and the patient did not have a surgery in the past 4 weeks, the score remains at 0.
+Because the patient has no previous diagnosis of pulmonary embolism (PE) or deep vein thrombosis (DVT), the score remains at 0.
+Hemoptysis is reported to be absent and so the total score remains unchanged, keeping the total score at 0.
+Malignany with treatment within 6 months or palliative is reported to be absent and so the total score remains unchanged, keeping the total score at 0.
+The patient's Well's score for pulmonary embolism is 0.
+
+Explantion:
+The Well's score for pulmonary embolism is currently 0.
+Clinical signs and symptoms of DVT are reported to be present and so three points are added to the score, making the current total 0 + 3 = 3. Pulmonary Embolism is reported to be the #1 diagnosis or equally likely to be the #1 diagonsis and so we add 3 points to the score making the current total = 3 + 3 = 6.
+The patient's heart rate is 110 beats per minute. The heart rate is more than 100 bpm, and so the score is increased by 1.5, making the total score, 6 + 1.5 = 7.5.
+Because the patient has had an immobilization for at least 3 days and the patient had a surgery in the past 4 weeks, the score increases to 7.5 + 1.5 =  9.0.
+Because the patient has previously been diagnosed for pulmonary embolism (PE) and deep vein thrombosis (DVT), we increase the current total by 1.5 so that 9.0 + 1.5 = 10.5.
+Hemoptysis is reported to be present and so one point is incremented to the score, making the current total 10.5 + 1 = 11.5.
+Malignany with treatment within 6 months or palliative is reported to be present and so one point is added to the score, making the total score 11.5 + 1 =  12.5.
+The patient's Well's score for pulmonary embolism is 12.5.
+
+Explantion:
+The Well's score for pulmonary embolism is currently 0.
+Clinical signs and symptoms of DVT are reported to be present and so three points are added to the score, making the current total 0 + 3 = 3. Pulmonary Embolism is reported to be the #1 diagnosis or equally likely to be the #1 diagonsis and so we add 3 points to the score making the current total = 3 + 3 = 6.
+The patient's heart rate is 100 beats per minute. The heart rate is less than 100 bpm, and so the score remains unchanged, keeping the total score at 6.
+Because the patient has had an immobilization for at least 3 days but the patient did not have a surgery in the past 4 weeks, the score increases to 6 + 1.5 = 7.5.
+Because the patient has been previously diagnosed for pulmonary embolism (PE), but the patient has never been diagnosed for deep vein thrombosis (DVT), we increase the current total by 1.5 so that 7.5 + 1.5 = 9.0.
+Hemoptysis is reported to be present and so one point is incremented to the score, making the current total 9.0 + 1 = 10.0.
+Malignany with treatment within 6 months or palliative is reported to be present and so one point is added to the score, making the total score 10.0 + 1 =  11.0.
+The patient's Well's score for pulmonary embolism is 11.0.
+
+Explantion:
+The Well's score for pulmonary embolism is currently 0.
+Clinical signs and symptoms of DVT are not reported and so we assume that this is missing from the patient, keeping the current total at 0. Whether Pulmonary Embolism is the #1 diagonsis or is equally likely to being the #1 diagnosis is not reported and so we assume this statement is false, keeping the total unchanged at 0.
+The patient's heart rate is 100 beats per minute. The heart rate is less than 100 bpm, and so the score remains unchanged, keeping the total score at 0.
+The report does not give an indication on whether the patient has had an immobilization for at least 3 days and so we assume this to be false.The report does not give an indication on whether the patient has had a surgery for the past 4 weeks and so we assume this to be false.Because the patient has not had an immobilization for at least 3 days, and the patient did not have a surgery in the past 4 weeks, the score remains at 0.
+The report does not give an indication on if the patient has previously had pulmonary embolism diagnosed and so we assume this to be false.The report does not give an indication on if the patient has previously been diagnosed with deep vein thrombosis and so we assume this to be false.Because the patient has no previous diagnosis of pulmonary embolism (PE) or deep vein thrombosis (DVT), the score remains at 0.
+Hemoptysis is not reported in the patient note and so we assume that it is missing from the patient, keeping the total score at 0.
+Malignany with treatment within 6 months or palliative is not reported in the patient note and so we assume that this is absent for the patient, keeping the score at 0.
+The patient's Well's score for pulmonary embolism is 0.
+

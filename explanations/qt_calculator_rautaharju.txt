@@ -1,0 +1,21 @@
+Explanation:
+The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.
+The QT interval is 400 msec.
+The patient's heart rate is 75 beats per minute.
+Hence, plugging in these values, we will get 400 x (120 + 75) / 180 = 433.333.
+The patient's corrected QT interval (QTc) is 433.333 msec.
+
+Explanation:
+The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.
+The QT interval is 350 msec.
+The patient's heart rate is 60 beats per minute.
+Hence, plugging in these values, we will get 350 x (120 + 60) / 180 = 350.0.
+The patient's corrected QT interval (QTc) is 350.0 msec.
+
+Explanation:
+The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.
+The QT interval is 450 msec.
+The patient's heart rate is 90 beats per minute.
+Hence, plugging in these values, we will get 450 x (120 + 90) / 180 = 525.0.
+The patient's corrected QT interval (QTc) is 525.0 msec.
+

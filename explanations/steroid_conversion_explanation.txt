@@ -1,0 +1,6 @@
+Explanations:
+The mass of PredniSONE PO is 2 mg. To convert from the PredniSONE PO to PrednisoLONE PO, multiply by the conversion factor, 1.0 mg PrednisoLONE PO/PredniSONE PO, giving us 2 mg PredniSONE PO * 1.0 mg PrednisoLONE PO/mg PredniSONE PO = 2.0 mg PrednisoLONE PO. 2 mg of PredniSONE PO is equal to 2.0 mg of PrednisoLONE PO.
+
+Explanations:
+The mass of PredniSONE PO is 0.1 g. To convert 0.1 g of PredniSONE PO to mg, multiply by the conversion factor 1000.0, giving us 0.1 g PredniSONE PO * 1000.0 mg/g = 100.0 mg PredniSONE PO. To convert from the PredniSONE PO to Hydrocortisone IV, multiply by the conversion factor, 3.999 mg Hydrocortisone IV/PredniSONE PO, giving us 100.0 mg PredniSONE PO * 3.999 mg Hydrocortisone IV/mg PredniSONE PO = 399.9 mg Hydrocortisone IV. 100.0 g of PredniSONE PO is equal to 399.9 mg of Hydrocortisone IV.
+

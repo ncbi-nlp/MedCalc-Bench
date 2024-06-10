@@ -1,0 +1,14 @@
+Explanation:
+The formula for computing Fibrosis-4 is Fib-4 = (Age * AST) / (Platelet count (in billions) * √ALT), where platelet count is the number of billions per L, and the units for AST and ALT are both U/L.
+The patient's concentration of AST is 26 U/L.
+The patient's concentration of ALT is 17 U/L.
+The patient's concentration of platelets is 150000000000.0 count/L. This means that there are 150000000000.0/(10^9) = 150.0 billion platelet counts per liter.
+Plugging these values into the formula, we get (40 * 26)/(150.0 * sqrt(17)) = 1.682.
+Hence, the Fibrosis-4 score is 1.682.
+Explanation:
+The formula for computing Fibrosis-4 is Fib-4 = (Age * AST) / (Platelet count (in billions) * √ALT), where platelet count is the number of billions per L, and the units for AST and ALT are both U/L.
+The patient's concentration of AST is 26 U/L.
+The patient's concentration of ALT is 17 U/L.
+The patient's concentration of platelets is 150000.0 count/µL. To convert 150000.0 count/µL of platelets to L, multiply by the conversion factor 1000000.0 µL/L which will give 150000.0 platelets count/µL * 1000000.0 µL/L = 150000000000.0 platelets count/L. This means that there are 150000000000.0/(10^9) = 150.0 billion platelet counts per liter.
+Plugging these values into the formula, we get (40 * 26)/(150.0 * sqrt(17)) = 1.682.
+Hence, the Fibrosis-4 score is 1.682.

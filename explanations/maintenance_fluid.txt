@@ -1,0 +1,24 @@
+Explanation:
+The patient's weight is 220.26 lbs so this converts to 220.26 lbs * 0.453592 kg/lbs = 99.908 kg. For patient's whose weight is greater than 20 kg, the formula for computing the maintenance fluid is 60 mL/hr + 1 mL/kg/hr * (weight (in kilograms) - 20 kilograms). Hence, plugging into this formula, we get 60 mL/hr + 2 mL/kg/hr * (99.908 kg - 20 kg) = 139.908 mL/hr.
+Hence, the patient's fluid maintenance is 139.908 mL/hr.
+
+Explanation:
+The patient's weight is 100 kg. For patient's whose weight is greater than 20 kg, the formula for computing the maintenance fluid is 60 mL/hr + 1 mL/kg/hr * (weight (in kilograms) - 20 kilograms). Hence, plugging into this formula, we get 60 mL/hr + 2 mL/kg/hr * (100 kg - 20 kg) = 140 mL/hr.
+Hence, the patient's fluid maintenance is 140 mL/hr.
+
+Explanation:
+The patient's weight is 11 kg. For patient's whose weight is in between 10 kg and 20 kg, the formula for computing maintenance fluid is 40 mL/hr + 2 mL/kg/hr * (weight (in kilograms) - 10 kilograms). Hence, plugging into this formula, we get 40 mL/hr + 2 mL/kg/hr * (11 kg - 10 kg) = 42 mL/hr.
+Hence, the patient's fluid maintenance is 42 mL/hr.
+
+Explanation:
+The patient's weight is 24.25 lbs so this converts to 24.25 lbs * 0.453592 kg/lbs = 11.0 kg. For patient's whose weight is in between 10 kg and 20 kg, the formula for computing maintenance fluid is 40 mL/hr + 2 mL/kg/hr * (weight (in kilograms) - 10 kilograms). Hence, plugging into this formula, we get 40 mL/hr + 2 mL/kg/hr * (11.0 kg - 10 kg) = 42.0 mL/hr.
+Hence, the patient's fluid maintenance is 42.0 mL/hr.
+
+Explanation:
+The patient's weight is 5 kg. For patient's with weight less than 10 kg, the rule for computing maintenance fluid is to multiply their weight by 4 mL/kg/hr to get the maintenance fluids per hour. Hence, the patient's maintenance fluid is 5 kg * 4 mL/kg/hr = 20 mL/hr.
+Hence, the patient's fluid maintenance is 20 mL/hr.
+
+Explanation:
+The patient's weight is 11.07 lbs so this converts to 11.07 lbs * 0.453592 kg/lbs = 5.021 kg. For patient's with weight less than 10 kg, the rule for computing maintenance fluid is to multiply their weight by 4 mL/kg/hr to get the maintenance fluids per hour. Hence, the patient's maintenance fluid is 5.021 kg * 4 mL/kg/hr = 20.084 mL/hr.
+Hence, the patient's fluid maintenance is 20.084 mL/hr.
+

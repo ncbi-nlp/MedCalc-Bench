@@ -1,0 +1,32 @@
+Explanation:
+The formula for computing Cockcroft-Gault is given by CrCl = ((140 - age) * adjusted weight * (gender_coefficient)) / (serum creatinine * 72), where the gender_coefficient is 1 if male, and 0.85 if female. The serum creatinine concentration is in mg/dL.
+The patient's gender is male, which means that the gender coefficient is 1.
+The patient is 43 years old. 
+The concentration of creatinine is 90 µmol/L. We need to convert the concentration to mg/dL. Let's first convert the mass of creatinine from µmol to mg. The mass of creatinine is 90 µmol. To convert 90 µmol of creatinine to mol, multiply by the conversion factor 1e-06, giving us 90 µmol creatinine * 1e-06 mol/µmol = 9e-05 mol creatinine. To convert from mol creatinine to grams, multiply by the molar mass 113.12 g/mol, which will give 9e-05 mol creatinine * 113.12 g/mol = 0.01 g creatinine. To convert 0.01 g of creatinine to mg, multiply by the conversion factor 1000.0, giving us 0.01 g creatinine * 1000.0 mg/g = 10.0 mg creatinine. The current volume unit is L and the target volume unit is dL. The conversion factor is 10.0 dL for every unit of L. Our next step will be to divide the mass by the volume conversion factor of 10.0 to get the final concentration in terms of mg/dL. This will result to 10.0 mg creatinine/10.0 dL = 1.0 mg creatinine/dL. The concentration value of 90 µmol creatinine/L converts to 1.0 mg creatinine/dL. 
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 100.4 cm, which is 100.4 cm * 1 m / 100 cm = 1.004 m. The patient's weight is 143 lbs so this converts to 143 lbs * 0.453592 kg/lbs = 64.864 kg. The patient's bmi is therefore 64.864 kg / (1.004 m * 1.004 m) = 64.348 kg/m^2.The patient's BMI is 64.3, indicating they are overweight/obese.
+Because the patient is overweight/obese, we use the adjusted body weight formula to get the adjusted weight used for Cockroft-Gault Equation. Shown below is the computation for IBW (ideal body weight).
+The patient's gender is Male.
+The patient's height is 100.4 cm, which is 100.4 cm * 0.393701 in/cm = 39.528 in. 
+For males, the ideal body weight (IBW) is calculated as follows:
+IBW = 50 kg + 2.3 kg * (height (in inches) - 60)
+Plugging in the values gives us 50 kg + 2.3 kg * (39.528 (in inches) - 60) = 2.914 kg.
+Hence, the patient's IBW is 2.914 kg.Shown below is the computation for ABW (adjusted body weight).
+To compute the ABW value, apply the following formula: ABW = IBW + 0.4 * (weight (in kg) - IBW (in kg)). ABW = 2.914 kg + 0.4 * (64.864 kg  - 2.914 kg) = 27.694 kg. The patient's adjusted body weight is 27.694 kg.
+
+Using the Cockcroft-Gault equation:
+CrCl = ((140 - age) * adjusted weight * gender_coefficient) / (serum creatinine * 72).
+Plugging the patient's values gives us ((140 - 43) * 27.694 * 1) / (1.0 * 72) = 37.31 mL/min. Hence, the patient's creatinine clearance is 37.31 mL/min.
+
+Explanation:
+The formula for computing Cockcroft-Gault is given by CrCl = ((140 - age) * adjusted weight * (gender_coefficient)) / (serum creatinine * 72), where the gender_coefficient is 1 if male, and 0.85 if female. The serum creatinine concentration is in mg/dL.
+The patient's gender is female, which means that the gender coefficient is 0.85.
+The patient is 20 years old. 
+The concentration of creatinine is 1.2 mg/dL. 
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 65.4 in, which is 65.4 in * 0.0254 m / in = 1.661 m. The patient's weight is 40 kg. The patient's bmi is therefore 40 kg / (1.661 m * 1.661 m) = 14.498 kg/m^2.The patient's BMI is 14.5, indicating they are underweight.
+Because the patient is underweight, we take the patient's weight, 40 kg as the patient's adjusted weight needed for the Cockroft-Gault Equation. 
+Using the Cockcroft-Gault equation:
+CrCl = ((140 - age) * adjusted weight * gender_coefficient) / (serum creatinine * 72).
+Plugging the patient's values gives us ((140 - 20) * 40 * 0.85) / (1.2 * 72) = 47.222 mL/min. Hence, the patient's creatinine clearance is 47.222 mL/min.
+

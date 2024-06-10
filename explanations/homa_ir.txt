@@ -1,0 +1,12 @@
+Explanation:
+The formula for computing HOMA-IR score is (insulin (µIU/mL) * glucose mg/dL)/405.
+The concentration of insulin is 12.43 µIU/mL.
+The concentration of glucose is 85.23 mg/dL. 
+Plugging into the formula will give us 12.43 * 85.23/405 = 2.616. Hence, the patient's HOMA-IR score is 2.616. 
+
+Explanation:
+The formula for computing HOMA-IR score is (insulin (µIU/mL) * glucose mg/dL)/405.
+The concentration of insulin is 447.48 pmol/L. We to need convert the concentration of insulin to pmol/L, by multiplying by the conversion factor of 6.0 µIU/mL/pmol/L. This makes the insulin concentration 74.58 * 6 µIU/mL/pmol/L = 447.48 µIU/mL.
+The concentration of glucose is 4.73 mmol/dL. We need to convert the concentration to mg/dL. Let's first convert the mass of glucose from mmol to mg. The mass of glucose is 4.73 mmol. To convert 4.73 mmol of glucose to mol, multiply by the conversion factor 0.001, giving us 4.73 mmol glucose * 0.001 mol/mmol = 0.005 mol glucose. To convert from mol glucose to grams, multiply by the molar mass 180.16 g/mol, which will give 0.005 mol glucose * 180.16 g/mol = 0.901 g glucose. To convert 0.901 g of glucose to mg, multiply by the conversion factor 1000.0, giving us 0.901 g glucose * 1000.0 mg/g = 901.0 mg glucose. The volume units is dL so no volume conversion is needed. Hence, the concentration value of 4.73 mmol glucose/dL converts to 901.0 mg glucose/dL. 
+Plugging into the formula will give us 447.48 * 901.0/405 = 995.505. Hence, the patient's HOMA-IR score is 995.505. 
+

@@ -1,0 +1,26 @@
+Explanation:
+The patient's gender is Female.
+For females, the formula for computing the framingham risk score is 31.764001 * ln(age) + 22.465206 * ln(total_cholestrol) - 1.187731 * ln(hdl_cholestrol) + 2.552905 * ln(sys_bp) + 0.420251 * bp_medicine + 13.07543 * smoker + -5.060998 * ln(age) * ln(total_cholestrol) + -2.996945 * ln(age_smoke) * smoker - 146.5933061, where 'bp_medicine' is a binary variable for whether a patient's blood pressure is being treated with medicine, total cholestrol and hdl cholestrol are in mg/dL, and 'smoker' is whether the patient is a smoker or not.
+From this, we use the risk score to get likelihood for a patient getting myocardial infraction (MI) or dying in the next 10 years: 1 - 0.9402^exp(risk_score), where risk_score is the value from the formula above.
+The patient is 59 years old. The patient is not a smoker, making the smoking variable equal to 0.
+The patient's systolic blood pressure is 110 mm Hg.
+The patient has been specified to not take medication for treating their blood pressure, making the bp_medicine variable equal to 0.
+The concentration of total cholestrol is 175.3 mg/dL. We need to convert the concentration to mmol/L. Let's first convert the mass of total cholestrol from mg to mmol. The mass of total cholestrol is 175.3 mg. To convert 175.3 mg of total cholestrol to g, multiply by the conversion factor 0.001, giving us 175.3 mg total cholestrol * 0.001 g/mg = 0.175 g total cholestrol. To convert from grams of total cholestrol to moles, divide by the molar mass 386.65 g/mol, which will give 0.175 g/(386.65 g total cholestrol/mol) = 0.000453 mol total cholestrol. To convert 0.000453 mol of total cholestrol to mmol, multiply by the conversion factor 1000.0, giving us 0.000453 mol total cholestrol * 1000.0 mmol/mol = 0.453 mmol total cholestrol. The current volume unit is dL and the target volume unit is L. The conversion factor is 0.1 L for every unit of dL. Our next step will be to divide the mass by the volume conversion factor of 0.1 to get the final concentration in terms of mmol/L. This will result to 0.453 mmol total cholestrol/0.1 L = 4.53 mmol total cholestrol/L. The concentration value of 175.3 mg total cholestrol/dL converts to 4.53 mmol total cholestrol/L. 
+The concentration of hdl cholestrol is 30.1 mg/dL. We need to convert the concentration to mmol/L. Let's first convert the mass of hdl cholestrol from mg to mmol. The mass of hdl cholestrol is 30.1 mg. To convert 30.1 mg of hdl cholestrol to g, multiply by the conversion factor 0.001, giving us 30.1 mg hdl cholestrol * 0.001 g/mg = 0.03 g hdl cholestrol. To convert from grams of hdl cholestrol to moles, divide by the molar mass 386.65 g/mol, which will give 0.03 g/(386.65 g hdl cholestrol/mol) = 7.76e-05 mol hdl cholestrol. To convert 7.76e-05 mol of hdl cholestrol to mmol, multiply by the conversion factor 1000.0, giving us 7.76e-05 mol hdl cholestrol * 1000.0 mmol/mol = 0.078 mmol hdl cholestrol. The current volume unit is dL and the target volume unit is L. The conversion factor is 0.1 L for every unit of dL. Our next step will be to divide the mass by the volume conversion factor of 0.1 to get the final concentration in terms of mmol/L. This will result to 0.078 mmol hdl cholestrol/0.1 L = 0.78 mmol hdl cholestrol/L. The concentration value of 30.1 mg hdl cholestrol/dL converts to 0.78 mmol hdl cholestrol/L. 
+Plugging in these values will give us the risk score: 31.764001 * ln(59) + 22.465206 * ln(4.53) - 1.187731 * ln(0.78) + 2.552905 * ln(110) + 0.420251 * 0 + 13.07543 * 0 + -5.060998 * ln(59) * ln(4.53) + -2.996945 * ln(59) * 0 - 146.5933061 = -2.0.
+Plugging this into the MI risk formula gives us 1 - 0.98767^exp(-2.0) = 0.0 %.
+The patient's percentage of getting MI or dying is 0.0 %.
+
+Explanation:
+The patient's gender is Female.
+For females, the formula for computing the framingham risk score is 31.764001 * ln(age) + 22.465206 * ln(total_cholestrol) - 1.187731 * ln(hdl_cholestrol) + 2.552905 * ln(sys_bp) + 0.420251 * bp_medicine + 13.07543 * smoker + -5.060998 * ln(age) * ln(total_cholestrol) + -2.996945 * ln(age_smoke) * smoker - 146.5933061, where 'bp_medicine' is a binary variable for whether a patient's blood pressure is being treated with medicine, total cholestrol and hdl cholestrol are in mg/dL, and 'smoker' is whether the patient is a smoker or not.
+From this, we use the risk score to get likelihood for a patient getting myocardial infraction (MI) or dying in the next 10 years: 1 - 0.9402^exp(risk_score), where risk_score is the value from the formula above.
+The patient is 59 years old. The patient is a smoker, making the smoking variable equal to 1.
+The patient's systolic blood pressure is 110 mm Hg.
+The patient has been specified to take medication for treating their blood pressure, making the bp_medicine variable equal to 1.
+The concentration of total cholestrol is 4.53 mmol/L. 
+The concentration of hdl cholestrol is 0.78 mmol/L. 
+Plugging in these values will give us the risk score: 31.764001 * ln(59) + 22.465206 * ln(4.53) - 1.187731 * ln(0.78) + 2.552905 * ln(110) + 0.420251 * 1 + 13.07543 * 1 + -5.060998 * ln(59) * ln(4.53) + -2.996945 * ln(59) * 1 - 146.5933061 = -0.7.
+Plugging this into the MI risk formula gives us 1 - 0.98767^exp(-0.7) = 0.0 %.
+The patient's percentage of getting MI or dying is 0.0 %.
+

@@ -1,0 +1,28 @@
+Explanation:
+The patient's gender is Male.
+The patient's height is 5 ft 2.5 in which converts to 5 ft * 12 in/ft + 2.5 in = 62.5 in. Hence, the patient's height is 62.5 in. 
+For males, the ideal body weight (IBW) is calculated as follows:
+IBW = 50 kg + 2.3 kg * (height (in inches) - 60)
+Plugging in the values gives us 50 kg + 2.3 kg * (62.5 (in inches) - 60) = 55.75 kg.
+Hence, the patient's IBW is 55.75 kg.
+Explanation:
+The patient's gender is Male.
+The patient's height is 120 cm, which is 120 cm * 0.393701 in/cm = 47.244 in. 
+For males, the ideal body weight (IBW) is calculated as follows:
+IBW = 50 kg + 2.3 kg * (height (in inches) - 60)
+Plugging in the values gives us 50 kg + 2.3 kg * (47.244 (in inches) - 60) = 20.661 kg.
+Hence, the patient's IBW is 20.661 kg.
+Explanation:
+The patient's gender is Female.
+The patient's height is 120.3 cm, which is 120.3 cm * 0.393701 in/cm = 47.362 in. 
+For females, the ideal body weight (IBW) is calculated as follows:
+IBW = 45.5 kg + 2.3 kg * (height (in inches) - 60)
+Plugging in the values gives us 45.5 kg + 2.3 kg * (47.362 (in inches) - 60) = 16.433 kg.
+Hence, the patient's IBW is 16.433 kg.
+Explanation:
+The patient's gender is Female.
+The patient's height is 73.2 in. 
+For females, the ideal body weight (IBW) is calculated as follows:
+IBW = 45.5 kg + 2.3 kg * (height (in inches) - 60)
+Plugging in the values gives us 45.5 kg + 2.3 kg * (73.2 (in inches) - 60) = 75.86 kg.
+Hence, the patient's IBW is 75.86 kg.

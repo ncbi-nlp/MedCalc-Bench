@@ -1,0 +1,12 @@
+Explanation:
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 5 ft 2.5 in which converts to 5 ft * 12 in/ft + 2.5 in = 62.5 in. Hence, the patient's height is 62.5 in * 0.0254 m/in = 1.587 m. The patient's weight is 150.1 lbs so this converts to 150.1 lbs * 0.453592 kg/lbs = 68.084 kg. The patient's bmi is therefore 68.084 kg / (1.587 m * 1.587 m) = 27.033 kg/m^2.
+Explanation:
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 120.3 cm, which is 120.3 cm * 1 m / 100 cm = 1.203 m. The patient's weight is 32.1 kg. The patient's bmi is therefore 32.1 kg / (1.203 m * 1.203 m) = 22.181 kg/m^2.
+Explanation:
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 73.2 in, which is 73.2 in * 0.0254 m / in = 1.859 m. The patient's weight is 100 kg. The patient's bmi is therefore 100 kg / (1.859 m * 1.859 m) = 28.936 kg/m^2.
+Explanation:
+The formula for computing the patient's BMI is (weight)/(height * height), where weight is the patient's weight in kg and height is the patient's height in m.
+The patient's height is 67 in, which is 67 in * 0.0254 m / in = 1.702 m. The patient's weight is 174.1 lbs so this converts to 174.1 lbs * 0.453592 kg/lbs = 78.97 kg. The patient's bmi is therefore 78.97 kg / (1.702 m * 1.702 m) = 27.261 kg/m^2.

@@ -1,0 +1,14 @@
+Explanation:
+The formula for Sodium Correction for Hyperglycemia is Measured sodium + 0.024 * (Serum glucose - 100), where Measured Sodium is the sodium concentration in mEq/L and the Serum glucose is the concentration of glucose in mg/dL.
+The concentration of sodium is 140.0 mEq/L. 
+The concentration of glucose is 4.44 mmol/L. We need to convert the concentration to mg/dL. Let's first convert the mass of glucose from mmol to mg. The mass of glucose is 4.44 mmol. To convert 4.44 mmol of glucose to mol, multiply by the conversion factor 0.001, giving us 4.44 mmol glucose * 0.001 mol/mmol = 0.004 mol glucose. To convert from mol glucose to grams, multiply by the molar mass 180.16 g/mol, which will give 0.004 mol glucose * 180.16 g/mol = 0.721 g glucose. To convert 0.721 g of glucose to mg, multiply by the conversion factor 1000.0, giving us 0.721 g glucose * 1000.0 mg/g = 721.0 mg glucose. The current volume unit is L and the target volume unit is dL. The conversion factor is 10.0 dL for every unit of L. Our next step will be to divide the mass by the volume conversion factor of 10.0 to get the final concentration in terms of mg/dL. This will result to 721.0 mg glucose/10.0 dL = 72.1 mg glucose/dL. The concentration value of 4.44 mmol glucose/L converts to 72.1 mg glucose/dL. 
+Plugging in these values into the formula gives us 140.0 mEq/L + 0.024 * (72.1 - 100) = 139.33 mEq/L.
+Hence, the patient's corrected concentration of sodium is 139.33 mEq/L.
+
+Explanation:
+The formula for Sodium Correction for Hyperglycemia is Measured sodium + 0.024 * (Serum glucose - 100), where Measured Sodium is the sodium concentration in mEq/L and the Serum glucose is the concentration of glucose in mg/dL.
+The concentration of sodium is 140.0 mmol/L. We need to convert the concentration to mEq/L. Let's first convert the mass of sodium from mmol to mEq. The mass of sodium is 140.0 mmol. The compound, sodium, has a valence of 1, and so multiply the valence by the value of mmol to get, 140.0 mmol * 1 mEq/mmol = 140.0 mEq sodium. The volume units is L so no volume conversion is needed. Hence, the concentration value of 140.0 mmol sodium/L converts to 140.0 mEq sodium/L. 
+The concentration of glucose is 80.0 mg/dL. 
+Plugging in these values into the formula gives us 140.0 mEq/L + 0.024 * (80.0 - 100) = 139.52 mEq/L.
+Hence, the patient's corrected concentration of sodium is 139.52 mEq/L.
+

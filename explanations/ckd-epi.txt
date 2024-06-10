@@ -1,0 +1,42 @@
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 50 years old. The patient's gender is Male, and so the patient's gender coefficient is 1.0.
+The concentration of Serum Creatinine is 90 µmol/L. We need to convert the concentration to mg/dL. Let's first convert the mass of Serum Creatinine from µmol to mg. The mass of Serum Creatinine is 90 µmol. To convert 90 µmol of Serum Creatinine to mol, multiply by the conversion factor 1e-06, giving us 90 µmol Serum Creatinine * 1e-06 mol/µmol = 9e-05 mol Serum Creatinine. To convert from mol Serum Creatinine to grams, multiply by the molar mass 113.12 g/mol, which will give 9e-05 mol Serum Creatinine * 113.12 g/mol = 0.01 g Serum Creatinine. To convert 0.01 g of Serum Creatinine to mg, multiply by the conversion factor 1000.0, giving us 0.01 g Serum Creatinine * 1000.0 mg/g = 10.0 mg Serum Creatinine. The current volume unit is L and the target volume unit is dL. The conversion factor is 10.0 dL for every unit of L. Our next step will be to divide the mass by the volume conversion factor of 10.0 to get the final concentration in terms of mg/dL. This will result to 10.0 mg Serum Creatinine/10.0 dL = 1.0 mg Serum Creatinine/dL. The concentration value of 90 µmol Serum Creatinine/L converts to 1.0 mg Serum Creatinine/dL. Because the patient's gender is male and the creatinine concentration is greater than or equal to 0.9 mg/dL, A = 0.9 and B = -1.2.
+Plugging in these values, we get 142 * (1.0/0.9)**-1.2 * 0.9938**50 * 1.0 = 91.691.
+Hence, the GFR value is 91.691 ml/min/1.73 m².
+
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 50 years old. The patient's gender is Female, and so the patient's gender coefficient is 1.012.
+The concentration of Serum Creatinine is 1.2 mg/dL. Because the patient's gender is female and the creatinine concentration is greater than or equal to 0.7 mg/dL, A = 0.7 and B = -1.2.
+Plugging in these values, we get 142 * (1.2/0.7)**-1.2 * 0.9938**50 * 1.012 = 55.147.
+Hence, the GFR value is 55.147 ml/min/1.73 m².
+
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 50 years old. The patient's gender is Female, and so the patient's gender coefficient is 1.012.
+The concentration of Serum Creatinine is 90 µmol/L. We need to convert the concentration to mg/dL. Let's first convert the mass of Serum Creatinine from µmol to mg. The mass of Serum Creatinine is 90 µmol. To convert 90 µmol of Serum Creatinine to mol, multiply by the conversion factor 1e-06, giving us 90 µmol Serum Creatinine * 1e-06 mol/µmol = 9e-05 mol Serum Creatinine. To convert from mol Serum Creatinine to grams, multiply by the molar mass 113.12 g/mol, which will give 9e-05 mol Serum Creatinine * 113.12 g/mol = 0.01 g Serum Creatinine. To convert 0.01 g of Serum Creatinine to mg, multiply by the conversion factor 1000.0, giving us 0.01 g Serum Creatinine * 1000.0 mg/g = 10.0 mg Serum Creatinine. The current volume unit is L and the target volume unit is dL. The conversion factor is 10.0 dL for every unit of L. Our next step will be to divide the mass by the volume conversion factor of 10.0 to get the final concentration in terms of mg/dL. This will result to 10.0 mg Serum Creatinine/10.0 dL = 1.0 mg Serum Creatinine/dL. The concentration value of 90 µmol Serum Creatinine/L converts to 1.0 mg Serum Creatinine/dL. Because the patient's gender is female and the creatinine concentration is greater than or equal to 0.7 mg/dL, A = 0.7 and B = -1.2.
+Plugging in these values, we get 142 * (1.0/0.7)**-1.2 * 0.9938**50 * 1.012 = 68.633.
+Hence, the GFR value is 68.633 ml/min/1.73 m².
+
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 50 years old. The patient's gender is Female, and so the patient's gender coefficient is 1.012.
+The concentration of Serum Creatinine is 1.2 mg/dL. Because the patient's gender is female and the creatinine concentration is greater than or equal to 0.7 mg/dL, A = 0.7 and B = -1.2.
+Plugging in these values, we get 142 * (1.2/0.7)**-1.2 * 0.9938**50 * 1.012 = 55.147.
+Hence, the GFR value is 55.147 ml/min/1.73 m².
+
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 45 years old. The patient's gender is Female, and so the patient's gender coefficient is 1.012.
+The concentration of Serum Creatinine is 1.5 mg/dL. Because the patient's gender is female and the creatinine concentration is greater than or equal to 0.7 mg/dL, A = 0.7 and B = -1.2.
+Plugging in these values, we get 142 * (1.5/0.7)**-1.2 * 0.9938**45 * 1.012 = 43.524.
+Hence, the GFR value is 43.524 ml/min/1.73 m².
+
+Explanation:
+The formula for computing GFR is 142 x (Scr/A)**B x 0.9938**age x (gender_coeffcient), where the ** indicates an exponent operation, Scr is the concentration of serum creatinine in mg/dL and gender_coefficient is 1.012 if the patient is female, else the coeffient is 1. The coefficients A and B are dependent on the patient's gender and the patient's creatinine concentration.
+The patient is 35 years old. The patient's gender is Male, and so the patient's gender coefficient is 1.0.
+The concentration of Serum Creatinine is 106.08 µmol/L. We need to convert the concentration to mg/dL. Let's first convert the mass of Serum Creatinine from µmol to mg. The mass of Serum Creatinine is 106.08 µmol. To convert 106.08 µmol of Serum Creatinine to mol, multiply by the conversion factor 1e-06, giving us 106.08 µmol Serum Creatinine * 1e-06 mol/µmol = 0.000106 mol Serum Creatinine. To convert from mol Serum Creatinine to grams, multiply by the molar mass 113.12 g/mol, which will give 0.000106 mol Serum Creatinine * 113.12 g/mol = 0.012 g Serum Creatinine. To convert 0.012 g of Serum Creatinine to mg, multiply by the conversion factor 1000.0, giving us 0.012 g Serum Creatinine * 1000.0 mg/g = 12.0 mg Serum Creatinine. The current volume unit is L and the target volume unit is dL. The conversion factor is 10.0 dL for every unit of L. Our next step will be to divide the mass by the volume conversion factor of 10.0 to get the final concentration in terms of mg/dL. This will result to 12.0 mg Serum Creatinine/10.0 dL = 1.2 mg Serum Creatinine/dL. The concentration value of 106.08 µmol Serum Creatinine/L converts to 1.2 mg Serum Creatinine/dL. Because the patient's gender is male and the creatinine concentration is greater than or equal to 0.9 mg/dL, A = 0.9 and B = -1.2.
+Plugging in these values, we get 142 * (1.2/0.9)**-1.2 * 0.9938**35 * 1.0 = 80.877.
+Hence, the GFR value is 80.877 ml/min/1.73 m².
+

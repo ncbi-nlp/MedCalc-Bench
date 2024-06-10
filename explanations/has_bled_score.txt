@@ -1,0 +1,39 @@
+Explanation:
+The current HAS-BLED score is 0.
+The patient is 45 years old. Because the patient's age is less than 66 years, we don't change the score, keeping the current score at 0.
+The patient has 8 drinks a week. Because the patient has at least 8 alcoholic drinks a week, we increment the score by 1, making the current score 0 + 1 = 1.
+The issue, hypertension, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 1.
+The issue, liver disease, is reported to be present for the patient note and so we increase the score by 1, making the current score 1 + 1 = 2.
+The issue, renal disease, is reported to be absent for the patient and so we do not change the score, keeping the current score at 2.
+The issue, stroke history, is reported to be absent for the patient and so we do not change the score, keeping the current score at 2.
+The issue, prior bleeding, is reported to be present for the patient note and so we increase the score by 1, making the current score 2 + 1 = 3.
+The issue, labile inr, is reported to be absent for the patient and so we do not change the score, keeping the current score at 3.
+The issue, medications for bleeding, is reported to be absent for the patient and so we do not change the score, keeping the current score at 3.
+Hence, the patient's HAS-BLED score is 3.
+
+Explanation:
+The current HAS-BLED score is 0.
+The patient is 15 years old. Because the patient's age is less than 66 years, we don't change the score, keeping the current score at 0.
+The patient has 2 drinks a week. Because the patient has less than 8 alcoholic drinks a week, we don't change the score, keeping the current score at 0.
+The issue, hypertension, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 0.
+The issue, liver disease, is reported to be present for the patient note and so we increase the score by 1, making the current score 0 + 1 = 1.
+The issue, renal disease, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 1.
+The issue, stroke history, is reported to be absent for the patient and so we do not change the score, keeping the current score at 1.
+The issue, prior bleeding, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 1.
+The issue, labile inr, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 1.
+The issue, medications for bleeding, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 1.
+Hence, the patient's HAS-BLED score is 1.
+
+Explanation:
+The current HAS-BLED score is 0.
+The patient is 75 years old. Because the patient's age is greater than 65 years, we increment the score by 1, making the current score 0 + 1 = 1.
+The patient has 10 drinks a week. Because the patient has at least 8 alcoholic drinks a week, we increment the score by 1, making the current score 1 + 1 = 2.
+The issue, hypertension, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 2.
+The issue, liver disease, is reported to be present for the patient note and so we increase the score by 1, making the current score 2 + 1 = 3.
+The issue, renal disease, is reported to be absent for the patient and so we do not change the score, keeping the current score at 3.
+The issue, stroke history, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 3.
+The issue, prior bleeding, is reported to be present for the patient note and so we increase the score by 1, making the current score 3 + 1 = 4.
+The issue, labile inr, is missing from the patient note and so we assume it to be absent and so we do not change the score, keeping the current score at 4.
+The issue, medications for bleeding, is reported to be absent for the patient and so we do not change the score, keeping the current score at 4.
+Hence, the patient's HAS-BLED score is 4.
+
