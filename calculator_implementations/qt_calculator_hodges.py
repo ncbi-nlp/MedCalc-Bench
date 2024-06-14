@@ -1,5 +1,3 @@
-import os
-import json 
 from rounding import round_number
 
 def hodges_calculator_explanation(input_variables):
