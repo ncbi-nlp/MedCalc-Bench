@@ -1,9 +1,8 @@
 # MedCalc-Bench
 
 
-![Overview](figures/overview.png) 
 <div style="text-align: center;">
-  <img width="535" alt="MedCalc-Bench" src="https://github.com/ncbi-nlp/MedCalc-Bench/blob/main/instance_illustration/instance_illustration.png">
+  <img alt="MedCalc-Bench" src="https://github.com/ncbi-nlp/MedCalc-Bench/blob/main/instance_illustration/instance_illustration.png">
 </div>
 
 
