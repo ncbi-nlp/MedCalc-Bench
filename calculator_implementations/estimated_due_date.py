@@ -1,26 +1,4 @@
-import json 
-import os
 from datetime import datetime, timedelta
-
-
-def add_40_weeks(input_data):
-
-    input_date_str = input_data["menstrual_date"]
-    cycle_length = input_data["cycle_length"]
-
-    input_date = datetime.strptime(input_date_str, "%m/%d/%Y")
-
-    future_date = input_date + timedelta(weeks=40)
-
-    future_date_str = future_date.strftime("%m/%d/%Y")
-
-    cycle_length_gap = cycle_length - 28
-
-    future_date = future_date + timedelta(days=cycle_length_gap)
-
-    future_date_str = future_date.strftime("%m/%d/%Y")
-    
-    return future_date_str
 
 
 def add_40_weeks_explanation(input_data):
@@ -48,4 +26,4 @@ def add_40_weeks_explanation(input_data):
         future_date = future_date + timedelta(days=cycle_length_gap)
         explanation += f"Because the patient's cycle length is {cycle_length} days, this means that we must add {cycle_length_gap} days to the patient's estimate due date. Hence, the patient's estimated due date is {future_date.strftime('%m-%d-%Y')}. \n"
 
-    return {"Explanation": explanation, "Answer": future_date.strftime('%m/%d/%Y'), "Calculator Answer": add_40_weeks(input_data)}
+    return {"Explanation": explanation, "Answer": future_date.strftime('%m/%d/%Y')}
