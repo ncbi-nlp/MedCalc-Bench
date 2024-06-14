@@ -1,16 +1,5 @@
-import os
-import json
 import unit_converter_new
 from rounding import round_number
-
-def compute_ldl(input_parameters):
-
-    total_cholestrol = unit_converter_new.conversions(input_parameters["total_cholestrol"][0], input_parameters["total_cholestrol"][1], "mg/dL", 386.654, None)
-    hdl_cholestrol = unit_converter_new.conversions(input_parameters["hdl_cholestrol"][0], input_parameters["total_cholestrol"][1], "mg/dL", 386.654, None)
-    triglycerides = unit_converter_new.conversions(input_parameters["triglycerides"][0], input_parameters["triglycerides"][1], "mg/dL", 861.338, None)
-
-    return total_cholestrol - hdl_cholestrol - (triglycerides/5)
-
 
 def compute_ldl_explanation(input_parameters):
 
@@ -37,25 +26,3 @@ test_outputs = [{"total_cholestrol": [4.2, "mmol/L"], "hdl_cholestrol": [0.82, "
               ]
 
 
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] =  compute_ldl_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/ldl.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/ldl.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
