@@ -1,13 +1,5 @@
 from rounding import round_number
 
-def fahrenheit_to_celsius(temperature, units):
-
-    if units == "degrees celsius":
-        return temperature
-
-    celsius = round_number((temperature - 32) * 5/9)
-    return celsius
-
 def fahrenheit_to_celsius_explanation(temperature, units):
 
     if units == "degrees celsius":
