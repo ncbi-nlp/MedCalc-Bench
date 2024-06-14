@@ -18,7 +18,7 @@ We hope this dataset serves as a call to improve the computational reasoning ski
 
 To download the CSV for the MedCalc-Bench evaluation dataset, either download the file, dataset/test_data.csv, from in this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
 
-In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs. 
+In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix).
 
 Each Instance in the dataset contains the following information: 
 
