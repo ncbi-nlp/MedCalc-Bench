@@ -131,6 +131,4 @@ def compute_cci_explanation(input_parameters):
         explanation += f"The patient's CCI score is {cci} points.\n"
 
     return {"Explanation": explanation, "Answer": cci}
-    
 
-'''
