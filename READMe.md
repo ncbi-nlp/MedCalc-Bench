@@ -2,7 +2,8 @@
 
 ## MedCalc-Bench Dataset
 
-To download the MedCalc-Bench Dataset CSV, either download the file, , from in this repository or from HuggingFace at .
+To download the MedCalc-Bench Dataset CSV, either download the file, test_data.csv, from in this repository or from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
+
 
 
 
