@@ -1,36 +1,4 @@
-import os
-import json
 import age_conversion
-
-def compute_perc_rule(input_parameters):
-
-    perc_count = 0
-
-    age = age_conversion.age_conversion(input_parameters["age"])
-    heart_rate = input_parameters["heart_rate"][0]
-    oxygen_sat = input_parameters["oxygen_sat"][0]
-
-    parameters = {"unilateral_leg_swelling", "hemoptysis", "recent_surgery_or_trauma",  
-                  "previous_pe", "previous_dvt", "hormonal_use"}
-    
-    if age >= 50:
-        perc_count += 1
-    if heart_rate >= 100:
-       perc_count += 1
-    if oxygen_sat < 95:
-       perc_count
-    
-
-    for parameter in parameters:
-        presence = input_parameters.get(parameter, False)
-
-        if presence:
-            perc_count += 1
-
-    if input_parameters.get("previous_pe", False) or input_parameters.get("previous_dvt", False):
-        perc_count += 1
-        
-    return perc_count
 
 def compute_perc_rule_explanation(input_parameters):
 
@@ -112,33 +80,4 @@ def compute_perc_rule_explanation(input_parameters):
 
     explanation += f"Hence, the number of PERC rule criteria met by the patient is {perc_count}.\n"
 
-    return {"Explanation": explanation, "Answer": perc_count, "Calculator Answer":  compute_perc_rule(input_parameters)}
-
-
-test_cases = [{"age": [50, "years"], "heart_rate": [120, "beats per minute"], "oxygen_sat": [94, "%"], "unilateral_leg_swelling": True, "hemoptysis": True, "recent_surgery_or_trauma": True, "previous_pe": False, "previous_dvt": True, "hormonal_use": True},
-              {"age": [49, "years"], "heart_rate": [99, "beats per minute"], "oxygen_sat": [95, "%"], "unilateral_leg_swelling": False, "hemoptysis": False, "recent_surgery_or_trauma": False, "previous_pe": False, "previous_dvt": False, "hormonal_use": False}, 
-               {"age": [49, "years"], "heart_rate": [99, "beats per minute"], "oxygen_sat": [95, "%"]}
-              ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_cases):
-    outputs[i] = compute_perc_rule_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/perc_rule.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/perc_rule.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
+    return {"Explanation": explanation, "Answer": perc_count}
