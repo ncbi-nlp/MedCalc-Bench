@@ -81,7 +81,9 @@ Each instance in the JSON will have the following meta-data associated with them
 
 In addition to the results for Table 2 in the main paper, we also prompted LLMs to write code to perform arithmetic instead of having the LLM do this itself. Due to limited compute, we only ran the results for GPT-3.5 and GPT-4. To examine the prompts and run under this setting, please examine the ```generate_code_prompt.py``` file in the ```evaluation``` folder. 
 
-To run this code, simply `cd` into the ```evaluations``` folder and run the following: ```python generate_code_prompt.py --gpt <gpt_model>```. The options for ```<gpt_model>``` are either `4` for running GPT-4 or `35` to run GPT-3.5-turbo-16k. The results will then get saved in a JSON file named: ```code_exec_{model_name}.json```. In this case, ```model_name``` will either be ```gpt_4``` if you chose to run using GPT-4. Otherwise, ```model_name``` will be ```gpt_35_16k``` if you selected to run with GPT-3.5-turbo. You can then obtain the accuracy by running ```python compute_score_code_prompt.py --file <file>``` in the ```evaluation``` folder. 
+To run this code, simply `cd` into the ```evaluations``` folder and run the following: ```python generate_code_prompt.py --gpt <gpt_model>```. The options for ```<gpt_model>``` are either `4` for running GPT-4 or `35` to run GPT-3.5-turbo-16k. The results will then get saved in a JSON file named: ```code_exec_{model_name}.json```. In this case, ```model_name``` will either be ```gpt_4``` if you chose to run using GPT-4. Otherwise, ```model_name``` will be ```gpt_35_16k``` if you selected to run with GPT-3.5-turbo.
+
+You can then obtain the accuracy by running ```python compute_score_code_prompt.py --file <file>``` in the ```evaluation``` folder. Note that ```<file>``` must be ```code_exec_gpt_4.json``` or ```code_exec_gpt_35_16k.json```.
 
 ## Acknowledgments and Disclosure of Funding
 
