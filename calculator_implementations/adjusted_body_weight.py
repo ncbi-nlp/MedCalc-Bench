@@ -1,7 +1,5 @@
-import json
 import weight_conversion
 import ideal_body_weight
-import os
 from rounding import round_number
 
 
@@ -25,5 +23,5 @@ def abw_explanation(input_variables):
 
     explanation += abw_explanation_string
 
-    return {"Explanation": explanation, "ABW": abw_explanation_string, "Answer": abw, "Calculator Answer": abw_calculator(input_variables)}
+    return {"Explanation": explanation, "ABW": abw_explanation_string, "Answer": abw}
 
