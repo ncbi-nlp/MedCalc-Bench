@@ -41,5 +41,5 @@ def mrdr_gfr_explanation(input_variables):
                     f"Plugging in these values will give us: 175 * {creatinine_conc}^(-1.154) * {age}^(-0.203) * {race_coefficient} * {gender_coefficient}={gfr}.\n"
                     f"Hence, the patient's GFR is {gfr} mL/min/1.73m².\n")
 
-    return {"Explanation": explanation, "Answer": gfr, "Calculator Answer": mdrd_gfr(input_variables)}
+    return {"Explanation": explanation, "Answer": gfr}
 
