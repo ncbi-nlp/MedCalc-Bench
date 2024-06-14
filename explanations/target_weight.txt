@@ -1,8 +1,0 @@
-Explanation:
-The patient's target bmi is 22 kg/m^2. The patient's height is 5 ft 7 in which converts to 5 ft * 12 in/ft + 7 in = 67 in. Hence, the patient's height is 67 in * 0.0254 m/in = 1.702 m. From this, the patient's target weight is 22 kg/m^2 * 1.702 m * 1.702 m = 63.73 kg. 
-Explanation:
-The patient's target bmi is 19.4 kg/m^2. The patient's height is 120 cm, which is 120 cm * 1 m / 100 cm = 1.2 m. From this, the patient's target weight is 19.4 kg/m^2 * 1.2 m * 1.2 m = 27.936 kg. 
-Explanation:
-The patient's target bmi is 23.1 kg/m^2. The patient's height is 74.5 in, which is 74.5 in * 0.0254 m / in = 1.892 m. From this, the patient's target weight is 23.1 kg/m^2 * 1.892 m * 1.892 m = 82.69 kg. 
-Explanation:
-The patient's target bmi is 22.5 kg/m^2. The patient's height is 5 ft, which is 5 ft * 0.3048 m / ft = 1.524 m. From this, the patient's target weight is 22.5 kg/m^2 * 1.524 m * 1.524 m = 52.258 kg. 

@@ -1,8 +1,0 @@
-Explanation:
-The current count of SIRS criteria met is 0.
-The patient's temperature is 102 degrees fahrenheit. To convert to degrees celsius, apply the formula 5/9 * [temperature (degrees fahrenheit) - 32]. This means that the patient's temperature is 5/9 * 70 = 38.889 degrees celsius. Because the temperature is greater than 38 degrees celsius, we increment the criteria count by 1 making the current total 0 + 1 = 1.
-The patient's heart rate is 102 beats per minute. Because the heart rate is greater than 90 beats per minute, this meets SIRS criteria and so we increment the criteria count by 1 making the current total 1 + 1 = 2.
-The patient's concentration of white blood cell is 13000 count/m^3. Because the white blood cell count is greater than 12000 count per m^3, we increment the criteria count by 1 making the current total 2 + 1 = 3.
-The final SIRS criteria is whether the patient has a respiratory rate of more than 20 breaths per minute or if the patient's PaCO₂ partial pressure is less than 32 mm Hg. The patient's respiratory rate is 22 breaths per minute, which is greater than 20 breaths per minute. The patient's PaCO₂ partial pressure is 21 mm Hg, which is less than than 32 mm Hg. At least one of the criteria is met, and so we increment the criteria count by 1 giving us a total of 3 + 1 = 4 criteria met.
-Hence, the the number of SIRS criteria met by the patient is 4.
-
