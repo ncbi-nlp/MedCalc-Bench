@@ -1,19 +1,5 @@
-import json
 import height_conversion
-import os
 from rounding import round_number
-
-def ibw_calculator(input_variables):
-    
-    height = height_conversion.height_conversion_in(input_variables["height"])
-    gender = input_variables["sex"]
-    
-    if gender == "Male":
-        ibw = 50 + 2.3 * (height - 60)
-    elif gender == "Female":
-        ibw = 45.5 + 2.3 * (height - 60)
-
-    return ibw
 
 def ibw_explanation(input_variables):
 
@@ -41,37 +27,7 @@ def ibw_explanation(input_variables):
         
     explanation += f"Hence, the patient's IBW is {ibw} kg."
     
-    return {"Explanation": explanation, "Answer": ibw, "Calculator Answer": ibw_calculator(input_variables)}
+    return {"Explanation": explanation, "Answer": ibw}
 
-
-outputs = {}
-
-test_outputs = [{"height": [5, "ft", 2.5, "in"], "sex": "Male"}, {"height": [120, "cm"], "sex": "Male"},
-{"height": [120.3, "cm"], "sex": "Female"},
-{"height": [73.2, "in"], "sex": "Female"}]
-
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = ibw_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/ideal_body_weight.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/ideal_body_weight.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
 
 
