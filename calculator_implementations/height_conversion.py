@@ -1,27 +1,5 @@
 from rounding import round_number
 
-
-def height_conversion(height_info):
-
-    if len(height_info) == 4:
-        feet = height_info[0]
-        inches = height_info[2]
-        height = feet * 12 + inches
-        return height * 0.0254
-
-    height = height_info[0]
-    h_label = height_info[1]
-
-    if h_label == "cm":
-        return  height / 100
-    elif h_label == "m":
-        return height
-    elif h_label == "ft":
-        return height * 0.3048
-    elif h_label == "in":
-        return height * 0.0254
-    
-
 def height_conversion_explanation(height_info):
 
     if len(height_info) == 4:
@@ -41,27 +19,6 @@ def height_conversion_explanation(height_info):
     elif height_info[-1] == "in":
         height = round_number(height_info[0] * 0.0254)
         return f"The patient's height is {height_info[0]} in, which is {height_info[0]} in * 0.0254 m / in = {height} m. ", height
-
-
-def height_conversion_cm(height_info):
-
-    if len(height_info) == 4:
-        feet = height_info[0]
-        inches = height_info[2]
-        height = feet * 12 + inches
-        return round_number(height * 2.54)
-    
-    height = height_info[0]
-    h_label = height_info[1]
-
-    if h_label == "cm":
-        return height
-    elif h_label == "m":
-        return height * 100
-    elif h_label == "ft":
-        return height * 30.48
-    elif h_label == "in":
-        return height * 2.54
 
 def height_conversion_explanation_cm(height_info):
     if len(height_info) == 4:
@@ -97,26 +54,6 @@ def height_conversion_explanation_cm(height_info):
         explanation = f"The patient's height is {height_in} in, which is {height_in} in * 2.54 cm/in = {centimeters} cm. "
         return explanation, centimeters
 
-
-def height_conversion_in(height_info):
-
-    if len(height_info) == 4:
-        feet = height_info[0]
-        inches = height_info[2]
-        height = feet * 12 + inches
-        return height
-      
-    height = height_info[0]
-    h_label = height_info[1]
-
-    if h_label == "in":
-        return height
-    elif h_label == "cm":
-        return height * 0.393701
-    elif h_label == "m":
-        return height * 39.3701
-    elif h_label == "ft":
-        return height * 12
 
 def height_conversion_explanation_in(height_info):
     if len(height_info) == 4:
