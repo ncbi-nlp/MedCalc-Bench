@@ -94,4 +94,4 @@ def calculate_pe_wells_explanation(variables):
 
    explanation += f"The patient's Well's score for pulmonary embolism is {score}.\n"
 
-   return {"Explanation": explanation, "Answer": score, "Calculator Answer": calculate_pe_wells(variables)}
+   return {"Explanation": explanation, "Answer": score}
