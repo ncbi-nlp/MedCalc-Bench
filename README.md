@@ -13,7 +13,6 @@ MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ab
 We hope this dataset serves as a call to improve the computational reasoning skills of LLMs in medical settings. This dataset contains a training dataset of 10,055 instances and a testing dataset of 1,047 instances.
 
 
-
 ## MedCalc-Bench Dataset
 
 To download the CSV for the MedCalc-Bench evaluation dataset, either download the file, dataset/test_data.csv, from in this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
@@ -39,6 +38,25 @@ Each Instance in the dataset contains the following information:
 
 ## Reproducing Main Results 
 
+To reproduce the Table 2 from the paper, please run the following command: python```run.py --model <model_name> and --prompt```
+
+The options for --model are below:
+
+- Mistral-7B: mistralai/Mistral-7B-Instruct-v0.2
+- Mixtral 8x7B: mistralai/Mixtral-8x7B-Instruct-v0.1
+- Llama3-8B: meta-llama/Meta-Llama-3-8B-Instruct
+- Llama3 70B: meta-llama/Meta-Llama-3-70B-Instruct
+- Meditron 70B: epfl-llm/meditron-70b
+- GPT-3.5: OpenAI/gpt-3.5-turbo
+- GPT-4: OpenAI/gpt-4
+
+The options for --prompt are below:
+
+- Direct Answer: direct_answer 
+- Zero Shot Chain of Thought: zero_shot
+- One Shot Chain of Though: one_shot_cot
+
+From this, you will get one JSON outputting the status of every question. You will also have another JSON reporting the accuracy for individual calculator sub-categories.
 
 ## Acknowledgments and Disclosure of Funding
 
