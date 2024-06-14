@@ -1,5 +1,3 @@
-import os
-import json 
 import age_conversion
 import unit_converter_new
 from rounding import round_number
@@ -82,51 +80,5 @@ def ckd_epi_2021_explanation(input_parameters):
     explanation += f"Plugging in these values, we get 142 * ({creatinine_val}/{a})**{b} * {0.9938}**{age} * {gender_coefficient} = {result}.\n"
     explanation += f"Hence, the GFR value is {result} ml/min/1.73 m².\n"
 
-    return {"Explanation": explanation, "Answer": result, "Calculator Answer": ckd_epi_2021(input_parameters)}
+    return {"Explanation": explanation, "Answer": result}
  
-
-
-test_outputs = [{"age": [50, "years"], 
-                 "sex": "Male",
-                 "creatinine": [90, "µmol/L"]}, 
-
-                {"age": [50, "years"], 
-                 "sex": "Female",
-                 "creatinine": [1.2, "mg/dL"]}, 
-
-                {"age": [50, "years"], 
-                 "sex": "Female",
-                 "creatinine": [90, "µmol/L"]}, 
-                
-                {"age": [50, "years"], 
-                 "sex": "Female",
-                 "creatinine": [1.2, "mg/dL"]}, 
-
-                {"age": [45, "years"], "creatinine": [1.5, "mg/dL"], "sex": "Female"} ,
-                {"age": [35, "years"], "creatinine": [106.08, "µmol/L"], "sex": "Male"}
-                 
-                ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = ckd_epi_2021_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/ckd-epi.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/ckd-epi.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
-
