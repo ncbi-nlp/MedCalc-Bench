@@ -1,44 +1,5 @@
-import os
 import json 
 import unit_converter_new
-
-
-def compute_cardiac_index(input_variables):
-
-    elevated_risk_surgery = input_variables.get('elevated_risk_surgery', False)
-    ischemetic_heart_disease = input_variables.get('ischemetic_heart_disease', False)
-    congestive_heart_failure = input_variables.get('congestive_heart_failure', False)
-    cerebrovascular_disease = input_variables.get('cerebrovascular_disease', False)
-    pre_operatative_insulin_treatment = input_variables.get('pre_operative_insulin_treatment', False)
-    
-    # make sure to convert units for this one to mg/dL 
-    pre_operative_creatinine = unit_converter_new.conversions(input_variables['pre_operative_creatinine'][0], input_variables['pre_operative_creatinine'][1], "mg/dL", 113.12, None)
-
-    elevated_risk_surgery_score = 0
-    ischemetic_heart_disease_score = 0
-    congestive_heart_failure_score = 0
-    cerebrovascular_disease_score = 0
-    pre_operatative_insulin_treatment_score = 0
-    pre_operative_creatinine_score = 0
-
-    
-    if elevated_risk_surgery:
-        elevated_risk_surgery_score += 1
-    if ischemetic_heart_disease:
-        ischemetic_heart_disease_score += 1
-    if congestive_heart_failure:
-        congestive_heart_failure_score += 1
-    if cerebrovascular_disease: 
-        cerebrovascular_disease_score += 1
-    if pre_operatative_insulin_treatment:
-        pre_operatative_insulin_treatment_score += 1
-    if pre_operative_creatinine > 2:
-        pre_operative_creatinine_score += 1
-
-    
-    return elevated_risk_surgery_score + ischemetic_heart_disease_score + congestive_heart_failure_score + cerebrovascular_disease_score + pre_operatative_insulin_treatment_score + pre_operative_creatinine_score
-
-
 
 def compute_cardiac_index_explanation(input_variables):
     # List of parameters and their default values
@@ -91,59 +52,5 @@ def compute_cardiac_index_explanation(input_variables):
 
     output += f"\nThe cardiac risk index score is {cri}.\n"
 
-    return {"Explanation": output, "Answer": cri, "Calculator Answer": compute_cardiac_index(input_variables)}
+    return {"Explanation": output, "Answer": cri}
 
-
-test_outputs = [
-    {
-        'elevated_risk_surgery': True,
-        'ischemetic_heart_disease': False,
-        'congestive_heart_failure': True,
-        'pre_operative_insulin_treatment': False,
-        'pre_operative_creatinine': [1.5, "mg/dL"]
-    },
-    {
-        'elevated_risk_surgery': False,
-        'ischemetic_heart_disease': True,
-        'congestive_heart_failure': False,
-        'pre_operative_insulin_treatment': True,
-        'pre_operative_creatinine': [2.5, "mg/dL"]
-    },
-    {
-        'elevated_risk_surgery': True,
-        'ischemetic_heart_disease': True,
-        'congestive_heart_failure': True,
-        'cerebrovascular_disease': True,
-        'pre_operative_insulin_treatment': False,
-        'pre_operative_creatinine': [3.0, "mg/dL"]
-    },
-    {
-        'elevated_risk_surgery': False,
-        'ischemetic_heart_disease': False,
-        'cerebrovascular_disease': False,
-        'pre_operative_insulin_treatment': False,
-        'pre_operative_creatinine': [1.8, "mg/dL"]
-    }
-]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = compute_cardiac_index_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/cri.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-file_name = "explanations/cri.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
