@@ -1,7 +1,3 @@
-import os 
-import json 
-
-
 def compute_glasgow_coma_score_explanation(input_variables):
 
     glasgow_dictionary = {"best_eye_response": {"eyes open spontaneously": 4, "eye opening to verbal command": 3, "eye opening to pain": 2, "no eye opening": 1, 'not testable': 4},
@@ -45,41 +41,3 @@ def compute_glasgow_coma_score_explanation(input_variables):
     explanation += f"Hence, the patient's glasgow coma score is {glasgow_score}.\n"
 
     return {"Explanation": explanation , "Answer": glasgow_score}
-
-
-test_outputs = [{"best_eye_response": "eye opening to verbal command", 
-                 "best_verbal_response": "inappropriate words",
-                 "best_motor_response": "localizes pain"}, 
-
-                {"best_eye_response": "eyes open spontaneously", 
-                 "best_verbal_response": "oriented",
-                 "best_motor_response": "obeys commands"},
-
-                {"best_eye_response": "no eye opening", 
-                 "best_verbal_response": "no verbal response",
-                 "best_motor_response": "no motor response"},
-                 
-                ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = compute_glasgow_coma_score_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/gcs.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/gcs.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
