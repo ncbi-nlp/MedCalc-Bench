@@ -1,40 +1,5 @@
-import os 
-import json
 import unit_converter_new
 import convert_temperature
-
-
-def sirs_criteria(input_parameters):
-
-    temperature = input_parameters["temperature"]
-
-    temperature = convert_temperature.fahrenheit_to_celsius(temperature[0], temperature[1])
-    heart_rate = input_parameters["heart_rate"][0]
-    wbc = unit_converter_new.convert_to_units_per_liter(input_parameters["wbc"][0], input_parameters["wbc"][1], "m^3")
-
-    respiratory_rate = None
-    if "respiratory_rate" in input_parameters:
-        respiratory_rate = input_parameters["respiratory_rate"][0]
-    
-    paco2 = None
-    if "paco2" in input_parameters:
-        paco2 = input_parameters["paco2"][0]
-    
-    SIRS_count = 0
-
-    if temperature > 38 or temperature < 36:
-        SIRS_count += 1
-    if heart_rate > 90:
-        SIRS_count += 1
-    if respiratory_rate > 20 and not paco2:
-        SIRS_count += 1
-    if not respiratory_rate and paco2 < 32:
-        SIRS_count += 1
-    if wbc > 12000 or wbc < 4000:
-        SIRS_count += 1
-
-    return SIRS_count
-
 
 def SIRS_criteria_explanation(input_parameters):
 
@@ -123,33 +88,5 @@ def SIRS_criteria_explanation(input_parameters):
 
     explanation += f"Hence, the the number of SIRS criteria met by the patient is {criteria_met}.\n"
 
-    return {"Explanation": explanation, "Answer": criteria_met, "Calculator Answer": sirs_criteria(input_parameters)}
+    return {"Explanation": explanation, "Answer": criteria_met}
      
-test_outputs = [
-    {
-        "temperature": [102, "degrees fahrenheit"], "heart_rate": [102, "beats per minute"], "wbc": [13000, "m^3"], 
-        "respiratory_rate": [22, "breaths per minute"], "paco2":  [21, "mm Hg"] 
-    }
-]
-
-outputs = {}
-explanations = ""
-
-for i in range(len(test_outputs)):
-    outputs[i] = SIRS_criteria_explanation(test_outputs[i])
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-file_name = "explanations/SIRS_criteria.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-'''
-file_name = "explanations/SIRS_criteria.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-''' 
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
-
-
