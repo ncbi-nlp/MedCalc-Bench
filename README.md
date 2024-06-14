@@ -40,7 +40,7 @@ Each Instance in the dataset contains the following information:
 
 To reproduce the Table 2 from the paper, please run the following command: python```run.py --model <model_name> and --prompt <prompt_style>.```
 
-The options for --model are below:
+The options for `--model` are below:
 
 - Mistral-7B: mistralai/Mistral-7B-Instruct-v0.2
 - Mixtral 8x7B: mistralai/Mixtral-8x7B-Instruct-v0.1
@@ -51,7 +51,7 @@ The options for --model are below:
 - GPT-4: OpenAI/gpt-4
 - PMC-Llama-13B: pmc_llama
 
-The options for --prompt are below:
+The options for `--prompt` are below:
 
 - Direct Answer: direct_answer 
 - Zero Shot Chain of Thought: zero_shot
