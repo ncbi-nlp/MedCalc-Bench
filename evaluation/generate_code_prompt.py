@@ -11,6 +11,7 @@ import pandas as pd
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import AzureOpenAI
+import os
 
 client = AzureOpenAI(
     api_version="2024-03-01-preview",
@@ -163,12 +164,15 @@ if __name__ == "__main__":
 
     evaluations = {}
 
-    df = pd.read_csv("datasets/test_set.csv")
+    df = pd.read_csv("dataset/test_set.csv")
 
-    output_path = f"code_exec_{model_name}_extra.json" 
+    output_path = f"code_exec_{model_name}.json" 
 
-    with open(output_path) as file:
-        results = json.load(file)
+    if os.path.exists(output_path):
+        with open(output_path) as file:
+            results = json.load(file)
+    else:
+        results = {}
 
     count = 0    
 
@@ -188,8 +192,6 @@ if __name__ == "__main__":
         elif calc_id in results and note_id in results[calc_id] and "Error" in results[calc_id][note_id]:
             row_list.append(row)
 
-        count = 0
-
         for row in row_list:
 
             answer, messages = process_row(row, gpt_model)
@@ -201,12 +203,12 @@ if __name__ == "__main__":
                 "Messages": messages,
             }
 
-            count += 1
-            with open(f"code_exec_{model_name}_extra.json", "w") as file:
+            with open(f"code_exec_{model_name}.json", "w") as file:
                 json.dump(results, file, indent=4)
 
     
-    with open(f"code_exec_{model_name}_extra.json", "w") as file:
+    with open(f"code_exec_{model_name}.json", "w") as file:
         json.dump(results, file, indent=4)
     
+  
   
