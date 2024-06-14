@@ -1,126 +1,5 @@
 from rounding import round_number
 
-def mol_to_mol(mol, src_unit, tgt_unit):
-
-    conversion_factors_mol = {
-        'mol': 1,
-        'mmol': 1e-3,
-        'µmol': 1e-6,
-        'pmol': 1e-9
-    }
-
-
-
-    return mol * conversion_factors_mol[src_unit]/conversion_factors_mol[tgt_unit]
-    
-def g_to_g(grams, src_unit, tgt_unit):
-
-    conversion_factors_g = {
-        'kg': 1e3,
-        'g': 1,
-        'mg': 1e-3,
-        'µg': 1e-6
-    }
-
-    return grams * conversion_factors_g[src_unit]/conversion_factors_g[tgt_unit]
-
-
-def mol_to_g(mol, molar_mass, src_unit, tgt_unit):
-
-    moles = mol_to_mol(mol, src_unit, 'mol')
-
-    grams = moles * molar_mass
-
-    answer = g_to_g(grams, 'g', tgt_unit)
-
-    return answer
-
-
-def g_to_mol(grams, molar_mass, src_unit, tgt_unit):
-
-    gram_unit = g_to_g(grams, src_unit, 'g')
-
-    moles = gram_unit/molar_mass
-
-    answer = mol_to_mol(moles, 'mol', tgt_unit)
-
-    return answer
-
-
-def mEq_mol(mEq_val, valence, tgt_unit):
-
-    mmol_val = mEq_val/valence
-    return mol_to_mol(mmol_val, 'mmol', tgt_unit)
-
-    
-def mol_mEq(mol_val, src_unit, valence):
-
-    mmol_val = mol_to_mol(mol_val, src_unit, 'mmol')
-    mEq = mmol_val * valence
-    return mEq
-
-def vol_to_vol(value, src_vol, tgt_vol):
-
-    conversion_factors_L = {
-        'L': 1,
-        'dL': 1e-1,
-        'mL': 1e-3,
-        'µL': 1e-6,
-        'mm^3': 1e-6,
-        'cm^3': 1e-3,
-        'm^3': 1e3,
-    }
-
-    return value * conversion_factors_L[src_vol]/conversion_factors_L[tgt_vol]
-
-def mass_conversions(value, src_unit, tgt_unit, molar_mass, valence):
-
-    if src_unit == tgt_unit:
-        converted_mass = value
-    elif "g" in src_unit and "g" in tgt_unit:
-        converted_mass = g_to_g(value, src_unit, tgt_unit)
-    elif "mol" in src_unit and "g" in tgt_unit:
-        converted_mass = mol_to_g(value, molar_mass, src_unit, tgt_unit)
-    elif "g" in src_unit and "mol" in tgt_unit:
-        converted_mass = g_to_mol(value, molar_mass, src_unit, tgt_unit)
-    elif "mol" in src_unit and "mol" in tgt_unit:
-        converted_mass = mol_to_mol(value, src_unit, tgt_unit)
-    elif "mEq" in src_unit and "mol" in tgt_unit:
-        converted_mass = mEq_mol(value, valence, tgt_unit)
-    elif "mol" in src_unit and "mEq" in tgt_unit:
-        converted_mass = mol_mEq(value, src_unit, valence)
-    elif "mEq" in src_unit and "g" in tgt_unit:
-        converted_mol = mEq_mol(value, valence, "mmol")
-        converted_mass = mol_to_g(converted_mol, molar_mass, "mmol", tgt_unit)
-    elif "g" in src_unit and "mEq" in tgt_unit:
-        converted_mol = g_to_mol(value, molar_mass, src_unit, "mmol")
-        converted_mass = mol_mEq(converted_mol, "mmol", valence)
- 
-    return converted_mass
-
-
-def conversions(value, src_unit, tgt_unit, molar_mass, valence):
-
-    if "/" in src_unit and "/" in tgt_unit:
-        src_unit_mass = src_unit.split("/")[0]
-        tgt_unit_mass = tgt_unit.split("/")[0]
-
-        src_unit_vol = src_unit.split("/")[1]
-        tgt_unit_vol = tgt_unit.split("/")[1]
-
-        converted_vol = vol_to_vol(1, src_unit_vol, tgt_unit_vol)
-
-        converted_mass = mass_conversions(value, src_unit_mass, tgt_unit_mass, molar_mass, valence)
-
-        return converted_mass/converted_vol
-    
-    elif ("L" in src_unit or "m^3" in src_unit) and ("L" in tgt_unit or "m^3" in tgt_unit):
-        return vol_to_vol(value, src_unit_vol, tgt_unit_vol)
-    
-    elif ("g" in src_unit or "mol" in src_unit or "mEq" in src_unit) and ("g" in tgt_unit or "mol" in tgt_unit or "mEq" in tgt_unit):
-        return mass_conversions(value, src_unit, tgt_unit, molar_mass, valence)
-    
-
 def vol_to_vol_explanation(value, src_unit, tgt_unit, compound="", conversion_factor=False):
         
         conversion_factors_L = {
@@ -395,27 +274,6 @@ def mass_conversion_explanation(value, compound, valence, molar_mass, src_mass_u
 
     return explanation, mass_value
 
-def convert_to_units_per_liter(value, src_unit, unit):
-
-    # Dictionary to define conversion factors to liters
-    unit_to_liter = {
-        'L': 1,
-        'dL': 1e-1,
-        'mL': 1e-3,
-        'µL': 1e-6,
-        'mm^3': 1e-6,
-        'cm^3': 1e-3,
-        'm^3': 1e3,
-    }
-
-    # Convert current unit to liters
-    if unit in unit_to_liter:
-        converted_value = value * unit_to_liter[unit] / unit_to_liter[src_unit]
-    else:
-        raise ValueError("Invalid current unit provided.")
-
-    return  converted_value
-
 
 def convert_to_units_per_liter_explanation(value, unit, compound, target_unit):
   
@@ -446,14 +304,6 @@ def convert_to_units_per_liter_explanation(value, unit, compound, target_unit):
     explanation += f"To convert {value} count/{unit} of {compound} to {target_unit}, multiply by the conversion factor {conversions_factor} {unit}/{target_unit} which will give {value} {compound} count/{unit} * {conversions_factor} {unit}/{target_unit} = {result} {compound} count/{target_unit}. "
     return explanation, result 
 
-
-def mmHg_to_kPa(mmHg):
-    kPa = mmHg * 0.133322
-    return kPa
-
-def kPa_to_mmHg(kPa):
-    mmHg = kPa * 7.50062
-    return mmHg
 
 def mmHg_to_kPa_explanation(mmHg, compound):
     answer = round_number(0.133322 * mmHg)
