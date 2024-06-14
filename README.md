@@ -56,7 +56,28 @@ The options for --prompt are below:
 - Zero Shot Chain of Thought: zero_shot
 - One Shot Chain of Though: one_shot_cot
 
-From this, you will get one JSON outputting the status of every question. You will also have another JSON reporting the accuracy for individual calculator sub-categories.
+From this, you will get one JSON outputting the status of every question: Upon executing run.py, the results will be saved in a file called ```<model>_<prompt>.json```. 
+
+Each instance in the JSON will have the following meta-data associated with them:
+
+<br>
+
+```
+{
+  "Row Number": ,  
+  "Calculator Name": ,
+  "Note ID": ,
+  "Patient Note": ,
+  "Question": , 
+  "LLM Answer": ,
+  "LLM Explanation":  ,
+  "Ground Answer": ,
+  "Ground Truth Explanation": ,  
+  "Result":  
+}
+```
+
+<br>
 
 ## Acknowledgments and Disclosure of Funding
 
