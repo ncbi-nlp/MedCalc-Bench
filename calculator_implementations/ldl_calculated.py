@@ -19,10 +19,5 @@ def compute_ldl_explanation(input_parameters):
 
     explanation += f"The patients concentration of LDL cholestrol is {answer} mg/dL.\n"
 
-    return {"Explanation": explanation, "Answer": answer, "Calculator Answer": compute_ldl(input_parameters)}
-
-test_outputs = [{"total_cholestrol": [4.2, "mmol/L"], "hdl_cholestrol": [0.82, "mmol/L"], "triglycerides": [1.2, "mmol/L"]}, 
-                {"total_cholestrol": [162.41, "mg/dL"], "hdl_cholestrol": [31.71, "mg/dL"], "triglycerides": [106.19, "mg/dL"]}
-              ]
-
+    return {"Explanation": explanation, "Answer": answer}
 
