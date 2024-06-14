@@ -1,19 +1,5 @@
-import os
-import json 
 import weight_conversion
 from rounding import round_number
-
-
-def maintenance_fluid(input_parameters):
-
-    weight = weight_conversion.weight_conversion(input_parameters["weight"])
-
-    if weight <= 10:
-        return weight * 4
-    elif 10 < weight <= 20:
-        return 40 + 2 * (weight - 10)
-    elif weight > 20:
-        return 60 + (weight - 20)
 
 
 def maintenance_fluid_explanation(input_parameters):
@@ -36,39 +22,7 @@ def maintenance_fluid_explanation(input_parameters):
 
     explanation += f"Hence, the patient's fluid maintenance is {answer} mL/hr.\n"
 
-    return {"Explanation": explanation, "Answer": answer, "Calculator Answer": maintenance_fluid(input_parameters)}
+    return {"Explanation": explanation, "Answer": answer}
 
 
-test_outputs = [
-    {"weight": [220.26, "lbs"]},  
-    {"weight": [100, "kg"]},  
-    {"weight": [11, "kg"]}, 
-    {"weight": [24.25, "lbs"]},  
-    {"weight": [5, "kg"]}, 
-    {"weight": [11.07, "lbs"]}, 
-
-]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] =  maintenance_fluid_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/maintenance_fluid.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/maintenance_fluid.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
 
