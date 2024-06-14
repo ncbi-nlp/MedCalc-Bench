@@ -1,6 +1,6 @@
 # MedCalc-Bench
 
-<br><br>
+<br>
 
 <div style="text-align: center;">
   <img alt="MedCalc-Bench" src="https://github.com/ncbi-nlp/MedCalc-Bench/blob/main/instance_illustration/instance_illustration.png">
