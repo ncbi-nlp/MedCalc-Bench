@@ -1,31 +1,5 @@
-import os
-import json 
 import age_conversion
 import unit_converter_new
-
-def curb_65(input_parameters):
-
-    curb_65_score = 0
-
-    confusion = input_parameters.get("confusion", False)
-    bun = unit_converter_new.conversions(input_parameters["bun"][0], input_parameters["bun"][1], "mg/dL", 28.02, None)
-    respiratory_rate = input_parameters["respiratory_rate"][0]
-    sys_bp = input_parameters["sys_bp"][0]
-    dia_bp = input_parameters["dia_bp"][0]
-    age = age_conversion.age_conversion(input_parameters["age"])
-
-    if confusion:
-        curb_65_score += 1
-    if bun > 19:
-        curb_65_score += 1
-    if respiratory_rate >= 30:
-        curb_65_score += 1
-    if sys_bp < 90 or dia_bp <= 60:
-        curb_65_score += 1
-    if age >= 65:
-        curb_65_score += 1
-
-    return curb_65_score
 
 def curb_65_explanation(input_parameters):
 
@@ -82,32 +56,5 @@ def curb_65_explanation(input_parameters):
 
     explanation += f"The patient's Curb-65 score is {curb_65_score}.\n"
 
-    return {"Explanation": explanation, "Answer": curb_65_score, "Calculator Answer": curb_65(input_parameters)}
+    return {"Explanation": explanation, "Answer": curb_65_score}
 
-
-test_outputs = [{"confusion": True, "bun": [8, "mmol/L"], "respiratory_rate": [56, "breaths per minute"], "sys_bp": [85, "mm Hg"], "dia_bp": [55, "mm Hg"], "age": [66, "years"]}, 
-               {"confusion": False, "bun": [6, "mmol/L"], "respiratory_rate": [29, "breaths per minute"], "sys_bp": [91, "mm Hg"], "dia_bp": [61, "mm Hg"], "age": [63, "years"]}, 
-              ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = curb_65_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/bsa.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/curb-65.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
