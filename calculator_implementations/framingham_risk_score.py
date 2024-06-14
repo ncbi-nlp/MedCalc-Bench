@@ -1,39 +1,7 @@
-import os
-import json
 import unit_converter_new
 import age_conversion
 import math
 from rounding import round_number
-
-def framingham_risk_score(input_parameters):
-
-    age = age_conversion.age_conversion(input_parameters["age"])
-    gender = input_parameters["sex"]
-    smoker = 0 if not input_parameters.get("bp_medicine", False) else 1
-    total_cholestrol = unit_converter_new.conversions(input_parameters["total_cholestrol"][0], input_parameters["total_cholestrol"][1], "mmol/L", 386.65, None)
-    hdl_cholestrol = unit_converter_new.conversions(input_parameters["hdl_cholestrol"][0], input_parameters["hdl_cholestrol"][1], "mmol/L", 386.65, None)
-    sys_bp = input_parameters["sys_bp"][0]
-    bp_medicine = 0 if not input_parameters.get("bp_medicine", False) else 1
-
-
-    if gender == "Male":
-        if age > 70:
-            age_smoke = 70
-        else:
-            age_smoke = age
-
-    if gender == "Female":
-        if age > 78:
-            age_smoke = 78
-        else:
-            age_smoke = age
-
-    if gender == "Male":
-        risk_score = round(52.00961 * math.log(age) + 20.014077 * math.log(total_cholestrol) - 0.905964 * math.log(hdl_cholestrol) + 1.305784 * math.log(sys_bp) + 0.241549 * bp_medicine + 12.096316 * smoker - 4.605038 * (math.log(age) * math.log(total_cholestrol)) - 2.84367 * (math.log(age_smoke) * smoker) - 2.93323 * (math.log(age) * math.log(age)) - 172.300168, 1)
-        return 1 - 0.9402**math.exp(risk_score)
-
-    risk_score = round(31.764001 * math.log(age) + 22.465206 * math.log(total_cholestrol) - 1.187731 * math.log(hdl_cholestrol) + 2.552905 * math.log(sys_bp) + 0.420251 * bp_medicine + 13.07543 * smoker - 5.060998 * (math.log(age) * math.log(total_cholestrol)) - 2.996945 * (math.log(age_smoke) * smoker) - 146.5933061, 1)
-    return 1 - 0.98767**math.exp(risk_score)
 
 def framingham_risk_score_explanation(input_parameters):
 
@@ -113,50 +81,5 @@ def framingham_risk_score_explanation(input_parameters):
 
     explanation += f"The patient's percentage of getting MI or dying is {percentage} %.\n"
     
-    return {"Explanation": explanation, "Answer": percentage, "Calculator Answer": framingham_risk_score(input_parameters)}
-
-
-test_outputs = [
-    {"age": [59, "years"], 
-        "sex": "Female",
-        "sys_bp": [110, "mm Hg"], 
-        "smoker": False,
-        "total_cholestrol": [175.3, "mg/dL"], 
-        "hdl_cholestrol": [30.1, "mg/dL"],
-        "bp_medicine": False
-    }, 
-    
-     {"age": [59, "years"], 
-        "sex": "Female",
-        "sys_bp": [110, "mm Hg"], 
-        "smoker": True,
-        "total_cholestrol": [4.53, "mmol/L"], 
-        "hdl_cholestrol": [0.78, "mmol/L"],
-        "bp_medicine": True
-    }, 
-     
-]
-
-   
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = framingham_risk_score_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/framingham_risk_score.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-file_name = "explanations/framingham_risk_score.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
+    return {"Explanation": explanation, "Answer": percentage}
 
