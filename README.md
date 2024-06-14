@@ -10,7 +10,7 @@ Dataset info:
 
 | Row Number | Calculator ID | Calculator Name | Category | Output Type | Note ID | Note Type | Patient Note | Question | Relevant Entities | Ground Truth Answer | Lower Limit | Upper Limit | Ground Truth Explanation |
 |------------|----------------|-----------------|----------|-------------|---------|-----------|---------------|----------|-------------------|---------------------|-------------|-------------|--------------------------|
-| 1          | Integer ID     | Clinical Task   | Sub-category | Output format | Note ID | Note source | Note info   | Question | Relevant Entities | Ground Truth Value  | Lower Limit | Upper Limit | Ground Truth Explanation |
+| Row Index          | Integer ID     | Clinical Task   | Sub-category | Output format | Note ID | Note source | Note info   | Question | Relevant Entities | Ground Truth Value  | Lower Limit | Upper Limit | Ground Truth Explanation |
 
 ### Column Information
 
