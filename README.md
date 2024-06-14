@@ -38,7 +38,7 @@ Each Instance in the dataset contains the following information:
 
 ## Reproducing Main Results 
 
-To reproduce the Table 2 from the paper, please run the following command: python```run.py --model <model_name> and --prompt```
+To reproduce the Table 2 from the paper, please run the following command: python```run.py --model <model_name> and --prompt <prompt_style>.```
 
 The options for --model are below:
 
