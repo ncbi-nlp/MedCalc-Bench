@@ -2,10 +2,42 @@
 
 ## MedCalc-Bench Dataset
 
-To download the MedCalc-Bench Dataset CSV, either download the file, test_data.csv, from in this repository or from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
+To download the CSV for the MedCalc-Bench evaluation dataset, either download the file, dataset/test_data.csv, from in this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
 
+In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs. 
 
+Dataset info:
 
+Each row of the CSV contains the following information: 
+
+    - name: Row Number
+      info: Specifies the index of the instance. 
+    - name: Calculator ID
+      info: Specifies the integer ID of the calculator.
+    - name: Calculator Name
+      info: Specifies the name of the clinical calculation task. 
+    - name: Category
+      info: Specifies the sub-category of the calculator. For equation-based calculators, the options are lab test, dosage, date, or physical and for rule-based calculators, the options are risk, severity, and diagnosis. 
+    - name: Output Type
+      info: Specifies the format type that the calculator will return. The options are decimal, integer, date (MM/DD/YY), or time in terms of weeks and days (i.e. (17 weeks, 4 days)).
+    - name: Note ID
+      info: Specifies the ID of the patient note. The ID of the note will either be the ID given by Open-Patients or it will be an integer value if the patient note was handwritten by clinicians or synthesized by a template. 
+    - name: Note Type
+      info: Specifies whether the patient note was synthesized by a clinician (Handwritten), produced from a template (Template), or was extracted from PMC-Patients (extracted). 
+    - name: Patient Note
+      info: Specifies whether the patient note which provides the information needed to compute the final answer. 
+    - name: Question
+      info: Specifies the question that is asked to the model to compute a specific medical value based on a particular calculator. 
+    - name: Relevant Entities
+      info: Provides a dictionary of the parameters and their extracted values based on the patient note. 
+    - name: Ground Truth Answer
+      dtype: Specifies the ground truth value without any units for the medical value that needs to be calculated.
+    - name: Lower Limit
+      info: For equation-based calculators whose output is a decimal, this value is 95% of the ground truth answer value. For all other cases, the lower limit is the same as the ground-truth value.
+    - name: Upper Limit
+      info: For equation-based calculators whose output is a decimal, this is value is 105\% of the ground truth answer value. For all other cases, the upper limit is the same as the ground-truth value. 
+    - name: Ground Truth Explanation
+      info: The ground truth explanation for the data instance providing a step-by-step explanation for how the computation was performed. 
 
 ## Reproducing Main Results 
 
