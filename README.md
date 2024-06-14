@@ -6,7 +6,7 @@ To download the CSV for the MedCalc-Bench evaluation dataset, either download th
 
 In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs. 
 
-# Each Instance in the dataset contains the following information: 
+Each Instance in the dataset contains the following information: 
 
 - **Row Number**: Specifies the index of the instance.
 - **Calculator ID**: Specifies the integer ID of the calculator.
