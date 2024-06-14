@@ -64,16 +64,16 @@ Each instance in the JSON will have the following meta-data associated with them
 
 ```
 {
-  "Row Number": ,  
-  "Calculator Name": ,
-  "Note ID": ,
-  "Patient Note": ,
-  "Question": , 
-  "LLM Answer": ,
-  "LLM Explanation":  ,
-  "Ground Answer": ,
-  "Ground Truth Explanation": ,  
-  "Result":  
+  "Row Number": (Row Index of the instance from MedCalc-Bench),  
+  "Calculator Name": (Calculator name),
+  "Note ID": (Note ID),
+  "Patient Note": (Patient Note),
+  "Question": (Question asking for a specific medical value to be computed), 
+  "LLM Answer": (Final Answer Value from LLM)),
+  "LLM Explanation": (Step-by-Step explanation by LLM),
+  "Ground Truth Answer": (Ground truth answer vakue),
+  "Ground Truth Explanation": (Step-by-step ground truth explanation),  
+  "Result":  (Correct or Incorrect)
 }
 ```
 
