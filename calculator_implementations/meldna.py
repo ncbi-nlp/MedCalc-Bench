@@ -1,58 +1,6 @@
-import json 
-import os
 import math 
 import unit_converter_new
 from rounding import round_number
-
-def compute_meldna(input_variables):
-
-    creatinine = input_variables["creatinine"]
-    creatinine = unit_converter_new.conversions(creatinine[0], creatinine[1], "mg/dL", 113.12, None)
-
-    dialysis_twice = input_variables.get("dialysis_twice", False)
-    cvvhd_present = input_variables.get("cvvhd", False)
-
-
-    if creatinine < 1.0:
-        creatinine = 1.0
-    elif creatinine > 4.0:
-        creatinine = 4.0
-    elif dialysis_twice or cvvhd_present:
-        creatinine = 4.0
-
-
-    bilirubin = input_variables["bilirubin"]
-    bilirubin = unit_converter_new.conversions(bilirubin[0], bilirubin[1], "mg/dL", None, None)
-
-    if bilirubin < 1.0:
-        bilirubin = 1.0
-
-    sodium = input_variables["sodium"]
-    sodium = unit_converter_new.conversions(sodium[0], sodium[1], "mEq/L", 22.99, 1)
-
-    if sodium < 125:
-        sodium = 125
-    elif sodium > 137:
-        sodium = 137
-
-
-    inr = input_variables["inr"]
-
-    if inr < 1.0:
-        inr = 1.0
-
-    meld_1 = 0.957 * math.log(creatinine) + 0.378 * math.log(bilirubin) + 1.120 * math.log(inr) + 0.643
-    meld_1 = round(meld_1, 1) * 10
-
-    if meld_1 > 11:
-        
-        meld = meld_1 + 1.32 * (137 - sodium) - (0.033 * meld_1 * (137 - sodium))
-        meld = min(40, meld)
-        return round(meld)
-
-    meld = min(meld_1, 40)
-
-    return round(meld)
 
 def compute_meldna_explanation(input_variables):
     
@@ -150,51 +98,4 @@ def compute_meldna_explanation(input_variables):
         meldna = meld_10
         explanation += f"The patient's MELD (i) score is less than 11, and so we do not apply the second equation, making the patient's MELD Na score, {round(meldna)} points.\n"
 
-    return {"Explanation": explanation, "Answer": round(meldna),  "Calculator Answer": compute_meldna(input_variables)}
-
-
-'''
-test_outputs = [{"sodium": [130, "mmol/L"],
-                 "creatinine": [4.0, "mg/dL"],
-                 "bilirubin": [1.9, "mg/dL"],
-                 "inr": [2]
-                 }, 
-                 
-                {"sodium": [130, "mmol/L"],
-                 "creatinine": [1.0, "mg/dL"],
-                 "bilirubin": [1.0, "mg/dL"],
-                 "inr": [1.0], 
-                 "dialysis_twice": True},
-
-                 {"sodium": [120, "mmol/L"],
-                 "creatinine": [0.9, "mg/dL"],
-                 "bilirubin": [0.9, "mg/dL"],
-                 "inr": [0.9], 
-                 "dialysis_twice": False},
-                 
-                 ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] =  compute_meldna_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-
-file_name = "explanations/meldna_score.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-
-
-
-file_name = "explanations/meldna_score.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
-
-'''
+    return {"Explanation": explanation, "Answer": round(meldna)}
