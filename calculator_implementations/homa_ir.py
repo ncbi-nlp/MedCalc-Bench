@@ -2,7 +2,6 @@ import unit_converter_new
 from rounding import round_number
 
 
-
 def compute_homa_ir_explanation(input_variables):
 
     explanation = "The formula for computing HOMA-IR score is (insulin (µIU/mL) * glucose mg/dL)/405.\n"
