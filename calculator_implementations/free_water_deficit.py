@@ -1,29 +1,7 @@
-import os 
-import json
 import age_conversion
 import weight_conversion
 import unit_converter_new
 from rounding import round_number
-
-def free_water_deficit(input_variables):
-    age = age_conversion.age_conversion(input_variables["age"])
-    gender = input_variables["sex"]
-    weight = weight_conversion.weight_conversion(input_variables["weight"])
-    sodium = unit_converter_new.conversions(input_variables["sodium"][0], input_variables["sodium"][1], "mmol/L", 22.99, 1)
-    ideal_sodium = 140
-
-    if 0 <= age < 18:
-        tbw = 0.6
-    elif 18 <= age < 65 and gender == "Male":
-        tbw = 0.6
-    elif 18 <= age < 65 and gender == "Female":
-        tbw = 0.5
-    elif age >= 65 and gender == "Male":
-        tbw = 0.5
-    elif age >= 65 and gender == "Female":
-        tbw = 0.45
-
-    return tbw * weight * (sodium/ideal_sodium - 1)
 
 def free_water_deficit_explanations(input_variables):
     
@@ -68,34 +46,5 @@ def free_water_deficit_explanations(input_variables):
     explanation += f"The patient's free body water deficit is {answer} L.\n"
 
 
-    return {"Explanation": explanation, "Answer": answer, "Calculator Answer": free_water_deficit(input_variables)}
-
-
-test_outputs = [{"sex": "Female", "age": [15, "years"], "weight": [90.72, "kg"], "sodium": [139.00, "mmol/L"]}, 
-             {"sex": "Male", "age": [67, "years"], "weight": [200, "lbs"], "sodium": [155.00, "mEq/L"]}
-              ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = free_water_deficit_explanations(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/free_water_deficit.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-
-file_name = "explanations/free_water_deficit.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
-
+    return {"Explanation": explanation, "Answer": answer}
 
