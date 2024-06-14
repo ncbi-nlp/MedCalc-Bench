@@ -66,12 +66,12 @@ Each instance in the JSON will have the following meta-data associated with them
 {
   "Row Number": (Row Index of the instance from MedCalc-Bench),  
   "Calculator Name": (Calculator name),
-  "Note ID": (Note ID),
-  "Patient Note": (Patient Note),
+  "Note ID": (ID of the note taken directly from MedCalc-Bench),
+  "Patient Note": (Paragraph which is the patient note taken directly from MedCalc-Bench),
   "Question": (Question asking for a specific medical value to be computed), 
   "LLM Answer": (Final Answer Value from LLM)),
   "LLM Explanation": (Step-by-Step explanation by LLM),
-  "Ground Truth Answer": (Ground truth answer vakue),
+  "Ground Truth Answer": (Ground truth answer value),
   "Ground Truth Explanation": (Step-by-step ground truth explanation),  
   "Result":  (Correct or Incorrect)
 }
