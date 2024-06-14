@@ -49,6 +49,7 @@ The options for --model are below:
 - Meditron 70B: epfl-llm/meditron-70b
 - GPT-3.5: OpenAI/gpt-3.5-turbo
 - GPT-4: OpenAI/gpt-4
+- PMC-Llama-13B: pmc_llama
 
 The options for --prompt are below:
 
