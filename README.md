@@ -78,8 +78,6 @@ Each instance in the JSON will have the following meta-data associated with them
 }
 ```
 
-<br>
-
 ## Acknowledgments and Disclosure of Funding
 
 This research was supported by the NIH Intramural Research Program, National Library of Medicine. Additionally, the contributions made by Soren Dunn were done using the Delta advanced computing and data resource which is supported by the National Science Foundation (award OAC tel:2005572) and the State of Illinois. Delta is a joint effort of the University of Illinois Urbana-Champaign (UIUC) and its National Center for Supercomputing Applications (NCSA).
