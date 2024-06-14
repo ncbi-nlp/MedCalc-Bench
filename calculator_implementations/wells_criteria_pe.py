@@ -1,37 +1,6 @@
 import os
 import json
 
-
-def calculate_pe_wells(variables):
-   clinical_dvt = variables.get('clinical_dvt', 'False')
-   pe_diagnosis_likely = variables.get('pe_number_one', 'False')
-   heart_rate = variables.get('heart_rate')[0]
-   immobilization = variables.get('immobilization_for_3days', 'False')
-   surgery_in_last_4_weeks = variables.get('surgery_in_past4weeks', 'False')
-   previous_pe = variables.get('previous_pe', 'False')
-   previous_dvt = variables.get('previous_dvt', 'False')
-   hemoptysis = variables.get('hemoptysis', 'False')
-   malignancy_or_palliative = variables.get('malignancy_with_treatment', 'False')
-
-   score = 0
-   
-   if clinical_dvt:
-      score += 3
-   if pe_diagnosis_likely:
-      score += 3
-   if heart_rate > 100:
-      score += 1.5
-   if immobilization or surgery_in_last_4_weeks:
-      score += 1.5
-   if previous_pe or previous_dvt:
-      score += 1.5
-   if hemoptysis:
-        score += 1
-   if malignancy_or_palliative:
-      score += 1
-
-   return score 
-
 def calculate_pe_wells_explanation(variables):
 
    explanation = "The Well's score for pulmonary embolism is currently 0.\n"
@@ -126,58 +95,3 @@ def calculate_pe_wells_explanation(variables):
    explanation += f"The patient's Well's score for pulmonary embolism is {score}.\n"
 
    return {"Explanation": explanation, "Answer": score, "Calculator Answer": calculate_pe_wells(variables)}
-
-
-test_outputs = [{'clinical_dvt': False, 
-                 "pe_number_one": False, 
-                 "heart_rate": [90, "beats per minute"], 
-                 'immobilization_for_3days': False,
-                 'surgery_in_past4weeks': False, 
-                 'previous_pe': False, 
-                 'previous_dvt': False, 
-                 'hemoptysis':False, 
-                 'malignancy_with_treatment': False}, 
-
-               {'clinical_dvt': True, 
-                 "pe_number_one": True, 
-                 "heart_rate": [110, "beats per minute"], 
-                 'immobilization_for_3days': True,
-                 'surgery_in_past4weeks': True, 
-                 'previous_pe': True, 
-                 'previous_dvt': True, 
-                 'hemoptysis': True, 
-                 'malignancy_with_treatment': True}, 
-
-               {'clinical_dvt': True, 
-                 "pe_number_one": True, 
-                 "heart_rate": [100, "beats per minute"], 
-                 'immobilization_for_3days': True,
-                 'surgery_in_past4weeks': False, 
-                 'previous_pe': True, 
-                 'previous_dvt': False, 
-                 'hemoptysis': True, 
-                 'malignancy_with_treatment': True}, 
-
-               {"heart_rate": [100, "beats per minute"]}, 
-
-                ]
-
-outputs = {}
-
-text = ""
-
-for i in range(len(test_outputs)):
-    text += "Explantion:\n" + calculate_pe_wells_explanation(test_outputs[i])["Explanation"] + "\n"
-
-
-file_name = "explanations/wells_critera_pe.txt"
-
-with open(file_name, 'w') as file:
-   file.write(text)
-
-'''
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
