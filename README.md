@@ -1,5 +1,9 @@
 # MedCalc-Bench
 
+MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, an final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks. We hope this dataset serves as a call to improve the computational reasoning skills of LLMs in medical settings.
+
+This dataset contains a training dataset of 10,055 instances and a testing dataset of 1047 instances.
+
 ## MedCalc-Bench Dataset
 
 To download the CSV for the MedCalc-Bench evaluation dataset, either download the file, dataset/test_data.csv, from in this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
