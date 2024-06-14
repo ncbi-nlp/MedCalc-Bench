@@ -34,7 +34,7 @@ Each Instance in the dataset contains the following information:
 - **Ground Truth Answer**: Specifies the ground truth value without any units for the medical value that needs to be calculated.
 - **Lower Limit**: For equation-based calculators whose output is a decimal, this value is 95% of the ground truth answer value. For all other cases, the lower limit is the same as the ground-truth value.
 - **Upper Limit**: For equation-based calculators whose output is a decimal, this value is 105% of the ground truth answer value. For all other cases, the upper limit is the same as the ground-truth value.
-- **Ground Truth Explanation**: The ground truth explanation for the data instance providing a step-by-step explanation for how the computation was performed.
+- **Ground Truth Explanation**: The ground truth explanation for the data instance providing a step-by-step explanation for how the final answer was obtained.
 
 ## Reproducing Main Results 
 
