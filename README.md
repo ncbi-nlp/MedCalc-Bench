@@ -73,7 +73,7 @@ Each instance in the JSON will have the following meta-data associated with them
   "LLM Explanation": (Step-by-Step explanation by LLM),
   "Ground Truth Answer": (Ground truth answer value),
   "Ground Truth Explanation": (Step-by-step ground truth explanation),  
-  "Result":  (Correct or Incorrect)
+  "Result":  "Correct" or "Incorrect"
 }
 ```
 
