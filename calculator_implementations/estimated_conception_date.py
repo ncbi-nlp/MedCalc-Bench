@@ -1,23 +1,4 @@
-import json 
-import os
 from datetime import datetime, timedelta
-
-
-def add_2_weeks(input_data):
-
-    input_date_str = input_data["menstrual_date"]
-    cycle_length = input_data["cycle_length"]
-
-    input_date = datetime.strptime(input_date_str, "%m/%d/%Y")
-
-    future_date = input_date + timedelta(weeks=2)
-
-    cycle_length_gap = cycle_length - 28
-
-    future_date = future_date + timedelta(days=cycle_length_gap)
-    
-    return future_date.strftime('%m/%d/%Y')
-
 
 def add_2_weeks_explanation(input_data):
 
@@ -32,4 +13,4 @@ def add_2_weeks_explanation(input_data):
 
     explanation += f"Hence, the estimated date of conception after adding 2 weeks to the patient's last menstrual period date is {future_date.strftime('%m-%d-%Y')}. \n"
 
-    return {"Explanation": explanation, "Answer": future_date.strftime('%m/%d/%Y'), "Calculator Answer": add_2_weeks(input_data)}
+    return {"Explanation": explanation, "Answer": future_date.strftime('%m/%d/%Y')}
