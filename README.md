@@ -8,13 +8,10 @@
 
 <br><br>
 
-<p>
-    MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. <br>
-    Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. <br>
-    Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. <br>
-    We hope this dataset serves as a call to improve the computational reasoning skills of LLMs in medical settings. <br><br>
-    This dataset contains a training dataset of 10,055 instances and a testing dataset of 1,047 instances.
-</p>
+MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators.Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. <br>
+
+We hope this dataset serves as a call to improve the computational reasoning skills of LLMs in medical settings. This dataset contains a training dataset of 10,055 instances and a testing dataset of 1,047 instances.
+
 
 
 ## MedCalc-Bench Dataset
