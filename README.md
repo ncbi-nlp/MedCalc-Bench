@@ -6,7 +6,7 @@
   <img alt="MedCalc-Bench" src="https://github.com/ncbi-nlp/MedCalc-Bench/blob/main/instance_illustration/instance_illustration.png">
 </div>
 
-<br><br>
+<br>
 
 MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators.Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. <br>
 
