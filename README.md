@@ -6,13 +6,7 @@ To download the CSV for the MedCalc-Bench evaluation dataset, either download th
 
 In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs. 
 
-Dataset info:
-
-| Row Number | Calculator ID | Calculator Name | Category | Output Type | Note ID | Note Type | Patient Note | Question | Relevant Entities | Ground Truth Answer | Lower Limit | Upper Limit | Ground Truth Explanation |
-|------------|----------------|-----------------|----------|-------------|---------|-----------|---------------|----------|-------------------|---------------------|-------------|-------------|--------------------------|
-| Row Index          | Integer ID     | Clinical Task   | Sub-category | Output format | Note ID | Note source | Note info   | Question | Relevant Entities | Ground Truth Value  | Lower Limit | Upper Limit | Ground Truth Explanation |
-
-### Column Information
+# Each Instance in the dataset contains the following information: 
 
 - **Row Number**: Specifies the index of the instance.
 - **Calculator ID**: Specifies the integer ID of the calculator.
