@@ -1,45 +1,11 @@
-import json
 import weight_conversion
 import height_conversion
 import ideal_body_weight
 import adjusted_body_weight
 import bmi_calculator
-import os
 import unit_converter_new
 import age_conversion
 from rounding import round_number
-
-
-def cockcroft_gault(params):
-
-    weight = weight_conversion.weight_conversion(params["weight"])
-    height = height_conversion.height_conversion_explanation_in(params["height"])
-    is_male = True if params["sex"] == "Male" else False
-    bmi = bmi_calculator.bmi_calculator({"weight": [weight, "kg"] ,"height": params["height"]})
-
-    creatinine_concentration = params["creatinine"][0]
-    creatinine_units = params["creatinine"][1]
-    age = age_conversion.age_conversion(params["age"])
-    
-    creatinine_concentration = unit_converter_new.conversions(creatinine_concentration, creatinine_units, "mg/dL", 113.12, None)
-    
-    
-    if bmi < 18.5:  # Underweight
-        adjusted_weight = weight
-    elif 18.5 <= bmi <= 24.9:  # Normal weight
-        ideal_weight = ideal_body_weight.ibw_calculator({"height": params["height"], "sex": params["sex"]})
-        adjusted_weight = min(weight, ideal_weight)
-    else:  # Overweight / obese
-        ideal_weight = ideal_body_weight.ibw_calculator({"height": params["height"], "sex": params["sex"]})
-        adjusted_weight = adjusted_body_weight.abw_calculator({"height": params["height"], "sex": params["sex"], "weight": params["weight"]})
-    
-    if is_male:
-        constant = 1
-    else:
-        constant = 0.85
-
-    creatinine_clearance = ((140 - age) * adjusted_weight * constant) / (creatinine_concentration * 72)
-    return round_number(creatinine_clearance)
 
 
 def generate_cockcroft_gault_explanation(params):
@@ -110,42 +76,6 @@ def generate_cockcroft_gault_explanation(params):
     output += f"Plugging the patient's values gives us ((140 - {age}) * {adjusted_weight} * {gender_coefficient}) / ({serum_creatinine} * 72) = {creatinine_clearance} mL/min. "
     output += f"Hence, the patient's creatinine clearance is {creatinine_clearance} mL/min.\n"
 
-    return {"Explanation": output, "Answer": creatinine_clearance, "Calculator Answer": cockcroft_gault(params)}
+    return {"Explanation": output, "Answer": creatinine_clearance}
 
-
-test_outputs = [{"weight": [143, "lbs"], 
-                 "height": [100.4, "cm"], 
-                 "sex": "Male", 
-                 "age": [43, "years"], 
-                 "creatinine": [90, "µmol/L"] },
-
-                 {"weight": [40, "kg"], 
-                 "height": [65.4, "in"], 
-                 "sex": "Female", 
-                 "age": [20, "years"], 
-                 "creatinine": [1.2, "mg/dL"] }
-                ]
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = generate_cockcroft_gault_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-  
-
-file_name = "explanations/creatinine_clearance.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-
-
-
-file_name = "explanations/creatinine_clearance.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
 
