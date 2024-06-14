@@ -14,7 +14,7 @@ We hope this dataset serves as a call to improve the computational reasoning ski
 
 ## MedCalc-Bench Dataset
 
-To download the CSV for the MedCalc-Bench evaluation dataset, please download the file, dataset/test_data.csv, from in this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
+To download the CSV for the MedCalc-Bench evaluation dataset, please download the file, `test_data.csv` inside the `dataset` folder of this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
 
 In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix).
 
@@ -56,7 +56,7 @@ The options for `--prompt` are below:
 - Zero Shot Chain of Thought: zero_shot
 - One Shot Chain of Though: one_shot_cot
 
-From this, you will get one JSON outputting the status of every question: Upon executing run.py, the results will be saved in a file called ```<model>_<prompt>.json```. 
+From this, you will get one JSON outputting the status of every question: Upon executing `run.py`, the results will be saved in a file called ```<model>_<prompt>.json```. 
 
 Each instance in the JSON will have the following meta-data associated with them:
 
