@@ -1,26 +1,3 @@
-def age_conversion(input):
-
-    count = 0
-
-    while count < len(input):
-        
-        if  "year" in input[count + 1]:
-            return input[count]
-        
-        elif "months" in input[count + 1]:
-
-            return input[count]//12
-        
-        elif "weeks" in input[count + 1]:
-            return input[count]//52
-        
-        elif "days" in input[count + 1]:
-            return 0
-
-        count += 2
-
-
-    
 def age_conversion_explanation(input):
 
     count = 0
@@ -61,14 +38,3 @@ def age_conversion_explanation(input):
 
     return text, age_conversion(input)
         
-'''
-
-test_output = [{"age": [4, "years"]}, {"age": [5, "months"]}, {"age": [10, "years", 5, "months", 2, "days"]}]
-results = []
-
-
-for i in range(len(test_output)):
-
-    results.append(age_conversion_explanation(test_output[i]))
-
-'''
