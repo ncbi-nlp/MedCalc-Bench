@@ -1,5 +1,3 @@
-import json
-import os
 import convert_temperature
 import age_conversion
 
@@ -77,47 +75,4 @@ def compute_centor_score_explanation(input_variables):
 
     explanation += f"Hence, the Centor score for the patient is {centor_score}.\n"
 
-    return {"Explanation": explanation, "Answer": centor_score, "Calculator Answer": compute_centor_score(input_variables)}
-
-
-test_outputs = [{"age": [45, "years"], 
-                "temperature": [102, "degrees fahreinheit"],
-                "cough_absent": True, 
-                "tender_lymph_nodes": False,
-                "exudate_swelling_tonsils": True
-                }, 
-
-                {"age": [43, "years"], 
-                "temperature": [40, "degrees celsius"],
-                "cough_absent": True, 
-                "exudate_swelling_tonsils": True
-                }, 
-
-                {"age": [50, "years"], 
-                "temperature": [40, "degrees celsius"],
-                "cough_absent": True, 
-                "tender_lymph_nodes": False,
-                }]
-
-
-outputs = {}
-explanations = ""
-for i, test_case in enumerate(test_outputs):
-    outputs[i] = compute_centor_score_explanation(test_case)
-    explanations += "Explanation:\n"
-    explanations += outputs[i]["Explanation"]
-    explanations += "\n"
-
-'''
-file_name = "explanations/centor_score.json"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    json.dump(outputs, file, indent=4)
-'''
-
-file_name = "explanations/centor_score.txt"
-os.makedirs(os.path.dirname(file_name), exist_ok=True)
-
-with open(file_name, 'w') as file:
-    file.write(explanations)
+    return {"Explanation": explanation, "Answer": centor_score}
