@@ -12,6 +12,8 @@ MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ab
 
 We hope this dataset serves as a call to improve the computational reasoning skills of LLMs in medical settings. This dataset contains a training dataset of 10,055 instances and a testing dataset of 1,047 instances.
 
+Our preprint is available at: https://arxiv.org/abs/2406.12036.
+
 ## MedCalc-Bench Dataset
 
 To download the CSV for the MedCalc-Bench evaluation dataset, please download the file, `test_data.csv` inside the `dataset` folder of this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
@@ -121,3 +123,16 @@ Open-Patients is an aggregated dataset of 180k patient notes coming from three d
 The second source of our dataset are the Trec Clinical Decision Support and Trec Clinical Trial which are available for redistribution because they are both government-owned datasets released to the public. Lastly, PMC-Patients is released under the CC-BY-SA 4.0 license and so we have permission to incorporate PMC-Patients inside Open-Patients and MedCalc-Bench, but the dataset must be released under the same lisense. Hence, our source of notes, Open-Patients, and the dataset curated from it, MedCalc-Bench, are both released under the CC-BY-SA 4.0 license. 
 
 Based on the justification of license rules, both Open-Patients and MedCalc-Bench comply with the license CC-BY-SA 4.0, but the authors of this paper will bear all responsibility in case of violation of rights. 
+
+## Citation
+
+```bibtex
+@misc{khandekar2024medcalcbench,
+      title={MedCalc-Bench: Evaluating Large Language Models for Medical Calculations}, 
+      author={Nikhil Khandekar and Qiao Jin and Guangzhi Xiong and Soren Dunn and Serina S Applebaum and Zain Anwar and Maame Sarfo-Gyamfi and Conrad W Safranek and Abid A Anwar and Andrew Zhang and Aidan Gilson and Maxwell B Singer and Amisha Dave and Andrew Taylor and Aidong Zhang and Qingyu Chen and Zhiyong Lu},
+      year={2024},
+      eprint={2406.12036},
+      archivePrefix={arXiv},
+      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
+}
+```
