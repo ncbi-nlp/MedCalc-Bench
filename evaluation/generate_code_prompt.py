@@ -10,8 +10,8 @@ import sys
 import pandas as pd
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from openai import AzureOpenAI
 import os
+import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
