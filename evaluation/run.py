@@ -123,15 +123,13 @@ def extract_answer(answer, calid):
                         answer = "N/A"
         if answer != "N/A":
             answer = str(answer)           
-    return extracted_answer
+    return answer
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Parse arguments')
     parser.add_argument('--model', type=str, help='Specify which model you are using. Options are mistralai/Mistral-7B-Instruct-v0.2, mistralai/Mixtral-8x7B-Instruct-v0.1, meta-llama/Meta-Llama-3-8B-Instruct, meta-llama/Meta-Llama-3-70B-Instruct, epfl-llm/meditron-70b, axiong/PMC_LLaMA_13B')
     parser.add_argument('--prompt', type=str, help='Specify prompt type. Options are one_shot, zero_shot, direct_answer')
-    parser.add_argument('--ground_truth_path', type=str, default="../data/ground_truth_data.csv", help='Path to ground truth data')
-    parser.add_argument('--one_shot_example_path', type=str, default="../one_shot_finalized_explanation.json", help='Path to one shot example data')
 
     args = parser.parse_args()
 
@@ -157,7 +155,7 @@ if __name__ == "__main__":
 
     llm = ExecuteLLM(llm_name=model_name)
 
-    one_shot_json = json.load(open(args.one_shot_example_path))
+    one_shot_json = json.load("one_shot_finalized_explanation.json")
 
     df = pd.read_csv(args.ground_truth_path)
 
