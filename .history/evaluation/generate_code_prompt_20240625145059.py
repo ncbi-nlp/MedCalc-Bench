@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import openai
 
-openai.api_key = os.environ("OPENAI_API_KEY")
+openai.api_key = "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"
 
 def capture_exec_output_and_errors(code):
     """
@@ -113,7 +113,7 @@ def apply_calc(question, patient_note, model_name):
 
                 If there was an error, or the computed answer is obviously incorrect, please revise your code. Otherwise please output your final answer in the following format:
 
-                <answer> YOUR_ANSWER_HERE <\\answer> where YOUR_ANSWER_HERE is your final answer.
+                <answer>  <\\answer> where YOUR_ANSWER_HERE is your final answer value.
 
                 Decimal Example:
                 <answer> 17.29 <\\answer>

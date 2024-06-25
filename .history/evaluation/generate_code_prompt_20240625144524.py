@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import openai
 
-openai.api_key = os.environ("OPENAI_API_KEY")
+openai.api_key = "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"
 
 def capture_exec_output_and_errors(code):
     """
@@ -182,28 +182,25 @@ if __name__ == "__main__":
         calc_id = str(row["Calculator ID"])
         note_id = str(row["Note ID"])
 
-        if calc_id not in results:
-            results[calc_id] = {}
-            
-        if note_id not in results[calc_id]:
+        if calc_id in results and note_id not in results[calc_id]:
             row_list.append(row)
         
         elif calc_id in results and note_id in results[calc_id] and "Error" in results[calc_id][note_id]:
             row_list.append(row)
 
-    for row in row_list:
+        for row in row_list:
 
-        answer, messages = process_row(row, gpt_model)
-        calc_id = str(row["Calculator ID"])
-        note_id = str(row["Note ID"])
+            answer, messages = process_row(row, gpt_model)
+            calc_id = str(row["Calculator ID"])
+            note_id = str(row["Note ID"])
 
-        results[calc_id][note_id] = {
-            "Answer": answer,
-            "Messages": messages,
-        }
+            results[calc_id][note_id] = {
+                "Answer": answer,
+                "Messages": messages,
+            }
 
-        with open(f"code_exec_{model_name}.json", "w") as file:
-            json.dump(results, file, indent=4)
+            with open(f"code_exec_{model_name}.json", "w") as file:
+                json.dump(results, file, indent=4)
 
     
     with open(f"code_exec_{model_name}.json", "w") as file:

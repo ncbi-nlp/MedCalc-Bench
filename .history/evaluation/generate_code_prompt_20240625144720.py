@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import openai
 
-openai.api_key = os.environ("OPENAI_API_KEY")
+openai.api_key = "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"
 
 def capture_exec_output_and_errors(code):
     """
@@ -182,10 +182,8 @@ if __name__ == "__main__":
         calc_id = str(row["Calculator ID"])
         note_id = str(row["Note ID"])
 
-        if calc_id not in results:
-            results[calc_id] = {}
-            
-        if note_id not in results[calc_id]:
+        if calc_id in results
+        note_id not in results[calc_id]:
             row_list.append(row)
         
         elif calc_id in results and note_id in results[calc_id] and "Error" in results[calc_id][note_id]:

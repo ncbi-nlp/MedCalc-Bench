@@ -153,7 +153,7 @@ if __name__ == "__main__":
         direct_answer = direct_answer_meditron
         one_shot = one_shot_meditron
 
-    llm = LLMInference(llm_name=model_name)
+    llm = InLLM(llm_name=model_name)
 
     one_shot_json = json.load("one_shot_finalized_explanation.json")
 

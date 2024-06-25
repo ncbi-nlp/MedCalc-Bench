@@ -103,7 +103,7 @@ dependencies:
     - notebook==7.1.3
     - notebook-shim==0.2.4
     - numpy==1.26.4
-    - openai==0.28
+    - openai==1.23.2
     - openai-parallel-toolkit==0.5.1
     - openpyxl==3.1.2
     - overrides==7.7.0
