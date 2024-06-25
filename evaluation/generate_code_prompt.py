@@ -109,15 +109,16 @@ def apply_calc(question, patient_note, model_name):
             elif "input(" in message_code:
                 return "N/A", messages
             else:
+
+                console_output = capture_exec_output_and_errors(message_code)
+                
                 new_output = f"""I have executed your code, and the output is:
 
-                {capture_exec_output_and_errors(message_code)}
+                {console_output}
 
                 If there was an error, or the computed answer is obviously incorrect, please revise your code. Otherwise please output your final answer in the following format:
 
-                <answer> YOUR_ANSWER_HERE <\\answer>
-
-                where YOUR_ANSWER_HERE is your final answer.
+                <answer> YOUR_ANSWER_HERE <\\answer> where YOUR_ANSWER_HERE is your final answer.
 
                 Decimal Example:
                 <answer> 17.29 <\\answer>
@@ -134,8 +135,8 @@ def apply_calc(question, patient_note, model_name):
                 All of the information needed is in the patient note and you should not need to prompt the user for any more information.
                 """
 
-                print("CODE OUTPUT:\n")
-                print(capture_exec_output_and_errors(message_code))
+                print("CONSOLE OUTPUT:\n")
+                print(console_output)
                 print("\n")
 
                 messages.append({"role": "user", "content": new_output})
