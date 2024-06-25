@@ -13,11 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import AzureOpenAI
 import os
 
-client = AzureOpenAI(
-    api_version="2024-03-01-preview",
-    azure_endpoint=os.getenv("OPENAI_ENDPOINT"),
-    api_key=os.getenv("OPENAI_API_KEY"),
-)
+openai.api_key = os.getenv("OPENAI_API_KEY") 
 
 def capture_exec_output_and_errors(code):
     """
@@ -69,10 +65,9 @@ def apply_calc(question, patient_note, model_name):
     n = 0
 
     while True:
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=messages,
-            temperature=0,
+        response = openai.ChatCompletion.create(
+                    model=model_name,
+                    messages=messages
         )
 
         output = response.choices[0].message.content
