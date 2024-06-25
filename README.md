@@ -18,7 +18,7 @@ Our preprint is available at: https://arxiv.org/abs/2406.12036.
 
 To download the CSV for the MedCalc-Bench evaluation dataset, please download the file, `test_data.csv` inside the `dataset` folder of this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench.
 
-In addition to the 1047 evaluation instances, we also provide a training dataset of 10,055 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix).
+In addition to the 1,047 evaluation instances, we also provide a training dataset of 10,053 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix).
 
 Each Instance in the dataset contains the following information: 
 
