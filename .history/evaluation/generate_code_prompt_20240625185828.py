@@ -13,7 +13,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import openai
 
-#openai.api_key
 
 def capture_exec_output_and_errors(code):
     """
