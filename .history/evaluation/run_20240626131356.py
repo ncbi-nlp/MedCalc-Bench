@@ -269,10 +269,7 @@ if __name__ == "__main__":
         with open(f"outputs/{output_path}", "a") as f:
             f.write(json.dumps(outputs) + "\n")
 
-
-    category_accuracy = {}
-
-    with open(f"outputs/{output_path}") as file:
+    with open("/Users/khandekarns/Documents/MedCalc-BenchNew/evaluation/outputs/OpenAI_gpt-3.5-turbo_direct_answer.jsonl") as file:
         for line in file:
             data = json.loads(line)
             
@@ -311,7 +308,7 @@ if __name__ == "__main__":
         "std": overall_std
     }
 
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
+    with open("overall_stats.json", "w") as file:
         json.dump(category_stats, file, indent=4)
 
     

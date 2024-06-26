@@ -272,7 +272,7 @@ if __name__ == "__main__":
 
     category_accuracy = {}
 
-    with open(f"outputs/{output_path}") as file:
+    with open("outputs/{output_path}") as file:
         for line in file:
             data = json.loads(line)
             
@@ -311,7 +311,7 @@ if __name__ == "__main__":
         "std": overall_std
     }
 
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
+    with open("overall_stats.json", "w") as file:
         json.dump(category_stats, file, indent=4)
 
     

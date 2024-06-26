@@ -269,50 +269,47 @@ if __name__ == "__main__":
         with open(f"outputs/{output_path}", "a") as f:
             f.write(json.dumps(outputs) + "\n")
 
+    with open("/Users/khandekarns/Documents/MedCalc-BenchNew/evaluation/outputs/OpenAI_gpt-3.5-turbo_direct_answer.jsonl") as file:
+    for line in file:
+        data = json.loads(line)
+        
+        category = data["Category"]
 
-    category_accuracy = {}
+        if category not in category_accuracy:
+            category_accuracy[category] = []
 
-    with open(f"outputs/{output_path}") as file:
-        for line in file:
-            data = json.loads(line)
-            
-            category = data["Category"]
+        if data["Result"] == "Correct":
+            category_accuracy[category].append(1)
+        else:
+            category_accuracy[category].append(0)
 
-            if category not in category_accuracy:
-                category_accuracy[category] = []
+# Compute average and standard deviation for each category
+category_stats = {}
+all_results = []
 
-            if data["Result"] == "Correct":
-                category_accuracy[category].append(1)
-            else:
-                category_accuracy[category].append(0)
-
-    # Compute average and standard deviation for each category
-    category_stats = {}
-    all_results = []
-
-    for cat, results in category_accuracy.items():
-        results_array = np.array(results)
-        category_mean = np.mean(results_array)
-        category_std = np.std(results_array)
-        category_stats[cat] = {
-            "average": category_mean,
-            "std": category_std
-        }
-        all_results.extend(results)
-
-    # Compute overall average and standard deviation
-    all_results_array = np.array(all_results)
-    overall_average = np.mean(all_results_array)
-    overall_std = np.std(all_results_array)
-
-
-    category_stats["overall"] = {
-        "average": overall_average, 
-        "std": overall_std
+for cat, results in category_accuracy.items():
+    results_array = np.array(results)
+    category_mean = np.mean(results_array)
+    category_std = np.std(results_array)
+    category_stats[cat] = {
+        "average": category_mean,
+        "std": category_std
     }
+    all_results.extend(results)
 
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
-        json.dump(category_stats, file, indent=4)
+# Compute overall average and standard deviation
+all_results_array = np.array(all_results)
+overall_average = np.mean(all_results_array)
+overall_std = np.std(all_results_array)
+
+
+category_stats["overall"] = {
+    "average": overall_average, 
+    "std": overall_std
+}
+
+with open("overall_stats.json", "w") as file:
+    json.dump(category_stats, file, indent=4)
 
     
 

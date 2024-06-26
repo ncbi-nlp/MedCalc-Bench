@@ -311,7 +311,7 @@ if __name__ == "__main__":
         "std": overall_std
     }
 
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
+    with open(f"results_{model_name}_{prompt}.json", "w") as file:
         json.dump(category_stats, file, indent=4)
 
     

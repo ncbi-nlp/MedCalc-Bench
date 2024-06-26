@@ -269,22 +269,19 @@ if __name__ == "__main__":
         with open(f"outputs/{output_path}", "a") as f:
             f.write(json.dumps(outputs) + "\n")
 
+    with open("/Users/khandekarns/Documents/MedCalc-BenchNew/evaluation/outputs/OpenAI_gpt-3.5-turbo_direct_answer.jsonl") as file:
+    for line in file:
+        data = json.loads(line)
+        
+        category = data["Category"]
 
-    category_accuracy = {}
+        if category not in category_accuracy:
+            category_accuracy[category] = []
 
-    with open(f"outputs/{output_path}") as file:
-        for line in file:
-            data = json.loads(line)
-            
-            category = data["Category"]
-
-            if category not in category_accuracy:
-                category_accuracy[category] = []
-
-            if data["Result"] == "Correct":
-                category_accuracy[category].append(1)
-            else:
-                category_accuracy[category].append(0)
+        if data["Result"] == "Correct":
+            category_accuracy[category].append(1)
+        else:
+            category_accuracy[category].append(0)
 
     # Compute average and standard deviation for each category
     category_stats = {}
@@ -311,7 +308,7 @@ if __name__ == "__main__":
         "std": overall_std
     }
 
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
+    with open("overall_stats.json", "w") as file:
         json.dump(category_stats, file, indent=4)
 
     
