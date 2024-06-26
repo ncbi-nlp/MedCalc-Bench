@@ -48,36 +48,3 @@ def check_correctness(answer: str, ground_truth, calid, upper_limit, lower_limit
     else:
         raise ValueError(f"Unknown calculator ID: {calid}")
     return correctness
-
-if __name__ == "__main__":
-
-    parser = argparse.ArgumentParser(description='Parse arguments')
-    parser.add_argument('--fpath', type=str)
-
-    args = parser.parse_args()
-
-    fpath = args.fpath
-    
-    df = pd.read_csv("ground_truth_data.csv")
-    answers = open(fpath).read().splitlines()
-
-    correctness_list = []
-    for index in range(len(answers)):
-        truth = df.iloc[index]
-        try:
-            correctness = check_correctness(answers[index], truth["Ground Truth Answer"], truth["Calculator ID"], truth["Upper Limit"], truth["Lower Limit"])
-        except Exception as e:
-            # print(f"Error at index {index}: {e}")
-            correctness = 0
-        correctness_list.append(correctness)
-
-    df["correctness"] = correctness_list
-
-    scores = []
-    for category in categories:
-        df_cat = df[df["Category"] == category]
-        acc = df_cat["correctness"].sum()/len(df_cat["correctness"])
-        print(f"Category: {category} | Accuracy: {acc*100:.2f}% | Std: {np.sqrt(acc * (1-acc) / len(df_cat)):.2f}")
-        scores += df_cat["correctness"].tolist()
-    
-    print(f"Overall Accuracy: {np.mean(scores)*100:.2f}% | Std: {np.sqrt(np.mean(scores) * (1-np.mean(scores)) / len(scores)):.2f}")

@@ -12,6 +12,11 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import openai
+from run import extract_answer
+from evaluate import check_correctness
+import numpy as np
+from table_stats import compute_overall_accuracy
+
 
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
@@ -163,13 +168,18 @@ if __name__ == "__main__":
 
     df = pd.read_csv("../dataset/test_data.csv")
 
-    output_path = f"code_exec_{model_name}.json" 
+    if not os.path.exists("output"):
+        os.makedirs("output")
+
+    output_path = f"output/code_exec_{model_name}.jsonl" 
 
     if os.path.exists(output_path):
-        with open(output_path) as file:
-            results = json.load(file)
+        existing = pd.read_json(output_path, lines=True)
+        existing["Calculator ID"] = existing["Calculator ID"].astype(str)
+        existing["Note ID"] = existing["Note ID"].astype(str)
+
     else:
-        results = {}
+        existing = None
 
     count = 0    
 
@@ -183,14 +193,11 @@ if __name__ == "__main__":
         calc_id = str(row["Calculator ID"])
         note_id = str(row["Note ID"])
 
-        if calc_id not in results:
-            results[calc_id] = {}
-            
-        if note_id not in results[calc_id]:
-            row_list.append(row)
+        if existing is not None:
+            if existing[(existing["Calculator ID"] == calc_id) & (existing["Note ID"] == str(row["Note ID"]))].shape[0] > 0:
+                continue
         
-        elif calc_id in results and note_id in results[calc_id] and "Error" in results[calc_id][note_id]:
-            row_list.append(row)
+        row_list.append(row_list)
 
     for row in row_list:
 
@@ -198,16 +205,46 @@ if __name__ == "__main__":
         calc_id = str(row["Calculator ID"])
         note_id = str(row["Note ID"])
 
-        results[calc_id][note_id] = {
-            "Answer": answer,
-            "Messages": messages,
+        if not answer: 
+            extracted_answer = "None"
+            result = "Incorrect"
+        else:
+       
+            try:
+                extracted_answer = extract_answer(f"{{'answer': {answer}}}")
+            except:
+                extracted_answer = answer
+
+            try:
+                status = check_correctness(extracted_answer, row["Ground Truth Answer"], calc_id, row["Upper Limit"], row["Lower Limit"])
+
+                if status:
+                    result = "Correct"
+                else:
+                    result = "Incorrect"
+
+            except:
+                result = "Incorrect"
+                
+            
+        outputs = {
+            "Row Number": int(row["Row Number"]),
+            "Calculator Name": row["Calculator Name"],
+            "Calculator ID": calc_id,
+            "Category": row["Category"],
+            "Note ID": note_id,
+            "Patient Note": row["Patient Note"],
+            "Question": row["Question"], 
+            "LLM Answer": extracted_answer,
+            "LLM Chat History": messages,
+            "Ground Truth Answer": row["Ground Truth Answer"],
+            "Ground Truth Explanation": row["Ground Truth Explanation"],
+            "Result": result
         }
 
-        with open(f"code_exec_{model_name}.json", "w") as file:
-            json.dump(results, file, indent=4)
+        with open(f"{output_path}", "a") as f:
+            f.write(outputs + "\n")
 
-    with open(f"code_exec_{model_name}.json", "w") as file:
-        json.dump(results, file, indent=4)
-    
-  
-  
+
+        compute_overall_accuracy(output_path, model_name, "code_augmented")
+

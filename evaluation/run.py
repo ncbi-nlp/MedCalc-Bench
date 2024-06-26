@@ -10,6 +10,7 @@ from evaluate import check_correctness
 import math
 import numpy as np
 import ast
+from table_stats import compute_overall_accuracy
 
 def zero_shot(note, question):
     system_msg = 'You are a helpful assistant for calculating a score for a given patient note. Please think step-by-step to solve the question and then generate the required score. Your output should only contain a JSON dict formatted as {"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(short_and_direct_answer_of_the_question)}.'
@@ -270,49 +271,9 @@ if __name__ == "__main__":
             f.write(json.dumps(outputs) + "\n")
 
 
-    category_accuracy = {}
-
-    with open(f"outputs/{output_path}") as file:
-        for line in file:
-            data = json.loads(line)
-            
-            category = data["Category"]
-
-            if category not in category_accuracy:
-                category_accuracy[category] = []
-
-            if data["Result"] == "Correct":
-                category_accuracy[category].append(1)
-            else:
-                category_accuracy[category].append(0)
-
-    # Compute average and standard deviation for each category
-    category_stats = {}
-    all_results = []
-
-    for cat, results in category_accuracy.items():
-        results_array = np.array(results)
-        category_mean = np.mean(results_array)
-        category_std = np.std(results_array)
-        category_stats[cat] = {
-            "average": category_mean,
-            "std": category_std
-        }
-        all_results.extend(results)
-
-    # Compute overall average and standard deviation
-    all_results_array = np.array(all_results)
-    overall_average = np.mean(all_results_array)
-    overall_std = np.std(all_results_array)
+    compute_overall_accuracy(output_path, model_name, prompt_style)
 
 
-    category_stats["overall"] = {
-        "average": overall_average, 
-        "std": overall_std
-    }
-
-    with open(f"results_{model_name}_{prompt_style}.json", "w") as file:
-        json.dump(category_stats, file, indent=4)
 
     
 

@@ -18,7 +18,7 @@ Our preprint is available at: https://arxiv.org/abs/2406.12036.
 
 To download the CSV for the MedCalc-Bench evaluation dataset, please download the file, `test_data.csv` inside the `dataset` folder of this repository. You can also download the test set split from HuggingFace at https://huggingface.co/datasets/ncbi/MedCalc-Bench. 
 
-In addition to the 1,047 evaluation instances, we also provide a training dataset of 10,053 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix). The training data can be found in the ```dataset/training_data.csv.zip``` file and can be unzipped to obtain ```training_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
+In addition to the 1,047 evaluation instances, we also provide a training dataset of 10,053 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix). The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
 
 Each Instance in the dataset contains the following information: 
 
@@ -60,7 +60,7 @@ The options for `--prompt` are below:
 - Zero Shot Chain of Thought: zero_shot
 - One Shot Chain of Though: one_shot_cot
 
-From this, you will get one jsonl file outputting the status of every question: Upon executing `run.py`, the results will be saved in a file called ```<model>_<prompt>.jsonl```. 
+From this, you will get one jsonl file outputting the status of every question: Upon executing `run.py`, the results will be saved in a file called ```<model>_<prompt>.jsonl```. This file can be found in the ```outputs``` folder. 
 
 Each instance in the jsonl will have the following meta-data associated with them:
 
@@ -83,24 +83,24 @@ Each instance in the jsonl will have the following meta-data associated with the
 }
 ```
 
-Additionally, we provide the mean accuracy and standard deviation percentage for each sub-category in a json titled ```results_<model>_<prompt_style>.json```. The cumulative accuracy and standard deviation among all 1,047 instances can be found under "overall" key of the JSON. 
+Additionally, we provide the mean accuracy and standard deviation percentage for each sub-category in a json titled ```results_<model>_<prompt_style>.json```. The cumulative accuracy and standard deviation among all 1,047 instances can be found under "overall" key of the JSON. This file can be found in the ```results``` folder. 
 
 ## Reproducing Code Interpreter Results
 
-In addition to the results for Table 2 in the main paper, we also prompted LLMs to write code to perform arithmetic instead of having the LLM do this itself. Due to limited compute, we only ran the results for GPT-3.5 and GPT-4. To examine the prompts and run under this setting, please examine the ```generate_code_prompt.py``` file in the ```evaluation``` folder. 
+In addition to the results for Table 2 in the main paper, we also prompted LLMs to write code to perform arithmetic instead of having the LLM do this itself. The results for this can be found in Appendix D. Due to limited compute, we only ran the results for GPT-3.5 and GPT-4. To examine the prompts and run under this setting, please examine the ```generate_code_prompt.py``` file in the ```evaluation``` folder. 
 
-To run this code, simply `cd` into the ```evaluations``` folder and run the following: ```python generate_code_prompt.py --gpt <gpt_model>```. The options for ```<gpt_model>``` are either `4` for running GPT-4 or `35` to run GPT-3.5-turbo-16k. The results will then get saved in a JSON file named: ```code_exec_{model_name}.json```. In this case, ```model_name``` will either be ```gpt_4``` if you chose to run using GPT-4. Otherwise, ```model_name``` will be ```gpt_35_16k``` if you selected to run with GPT-3.5-turbo.
+To run this code, simply `cd` into the ```evaluations``` folder and run the following: ```python generate_code_prompt.py --gpt <gpt_model>```. The options for ```<gpt_model>``` are either `4` for running GPT-4 or `35` to run GPT-3.5-turbo-16k. The results will then get saved in a jsonl file named: ```code_exec_{model_name}.jsonl``` in the  ```outputs``` folder. Note that in this case, ```model_name``` will be ```gpt_4``` if you chose to run using GPT-4. Otherwise, ```model_name``` will be ```gpt_35_16k``` if you selected to run with GPT-3.5-turbo. 
 
-You can then obtain the accuracy by running ```python compute_score_code_prompt.py --file <file>``` in the ```evaluation``` folder. Note that ```<file>``` must be ```code_exec_gpt_4.json``` or ```code_exec_gpt_35_16k.json```.
+The metadata for each instance in the jsonl file for the code interprepter results is the same as the instance info provided in the section above. The only difference is that we store the LLM chat history between the user and the assistant and have a "LLM Chat History" key instead of the "LLM Explanation" key. Additionally, the sub-category and overall accuracy is stored in a JSON file named 
+```results_<model>_<prompt_style>.json```
 
 ## Acknowledgments and Disclosure of Funding
 
 This research was supported by the NIH Intramural Research Program, National Library of Medicine. Additionally, the contributions made by Soren Dunn were done using the Delta advanced computing and data resource which is supported by the National Science Foundation (award OAC tel:2005572) and the State of Illinois. Delta is a joint effort of the University of Illinois Urbana-Champaign (UIUC) and its National Center for Supercomputing Applications (NCSA).
 
 ## Ethics Statement
-For curating the patient notes in MedCalc-Bench, we only use publicly available patient notes from published case report articles in PubMed Central and clinician-generated anonymous patient vignettes. As such, no identifiable personal health information is revealed in this study. While MedCalc-Bench is designed to evaluate the medical calculation capabilities of LLMs, it should be noted that the dataset is not intended for direct diagnostic use or medical decision-making
-without review and oversight by a clinical professional. Individuals should not change their health
-behavior solely on the basis of our study.
+
+For curating the patient notes in MedCalc-Bench, we only use publicly available patient notes from published case report articles in PubMed Central and clinician-generated anonymous patient vignettes. As such, no identifiable personal health information is revealed in this study. While MedCalc-Bench is designed to evaluate the medical calculation capabilities of LLMs, it should be noted that the dataset is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of our study.
 
 
 ## Broader Impacts 
