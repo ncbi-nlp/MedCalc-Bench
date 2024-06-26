@@ -271,6 +271,7 @@ if __name__ == "__main__":
 
     category_accuracy = {}
 
+
     with open(f"outputs/{output_path}", "r") as file:
         predictions = json.load(file)
 
