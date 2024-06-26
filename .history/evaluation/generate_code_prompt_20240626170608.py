@@ -168,15 +168,15 @@ if __name__ == "__main__":
 
     df = pd.read_csv("../dataset/test_data.csv")
 
-    if not os.path.exists("outputs"):
-        os.makedirs("outputs")
+    if not os.path.exists("output"):
+        os.makedirs("output")
 
-    output_path = f"code_exec_{model_name}.jsonl" 
+    output_path = f"output/code_exec_{model_name}.jsonl" 
 
-    if os.path.exists("outputs/" + output_path):
+    if os.path.exists(output_path):
         existing = pd.read_json(output_path, lines=True)
-        existing["Calculator ID"] = existing["Calculator ID"].astype(str)
-        existing["Note ID"] = existing["Note ID"].astype(str)
+        existing["Calculator ID"] = str(existing["Calculator ID"]).astype(str)
+        existing["Note ID"] = str(existing["Note ID"].astype(str)
 
     else:
         existing = None
@@ -242,8 +242,8 @@ if __name__ == "__main__":
             "Result": result
         }
 
-        with open(f"outputs/{output_path}", "a") as f:
+        with open(f"{output_path}", "a") as f:
             f.write(json.dumps(outputs) + "\n")
 
-    compute_overall_accuracy(output_path, model_name, "code_augmented")
+        compute_overall_accuracy(output_path, model_name, "code_augmented")
 

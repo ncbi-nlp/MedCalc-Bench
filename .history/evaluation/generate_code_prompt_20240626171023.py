@@ -242,7 +242,7 @@ if __name__ == "__main__":
             "Result": result
         }
 
-        with open(f"outputs/{output_path}", "a") as f:
+        with open(f"{output_path}", "a") as f:
             f.write(json.dumps(outputs) + "\n")
 
     compute_overall_accuracy(output_path, model_name, "code_augmented")
