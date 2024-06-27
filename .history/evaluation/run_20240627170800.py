@@ -13,7 +13,8 @@ import ast
 from table_stats import compute_overall_accuracy
 from huggingface_hub import login
 
-login(token=os.getenv("HUGGINGFACE_TOKEN"))
+login(token=os.get)
+
 
 
 def zero_shot(note, question):

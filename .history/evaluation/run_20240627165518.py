@@ -11,9 +11,7 @@ import math
 import numpy as np
 import ast
 from table_stats import compute_overall_accuracy
-from huggingface_hub import login
 
-login(token=os.getenv("HUGGINGFACE_TOKEN"))
 
 
 def zero_shot(note, question):
@@ -62,9 +60,10 @@ def extract_answer(answer, calid):
     if matches:
     # Select the last match
         last_match = matches[-1]
-        explanation = last_match    
+        explnation = last_match    
     else:
         explanation = "No Explanation"
+
 
 
     if len(extracted_answer) == 0:
