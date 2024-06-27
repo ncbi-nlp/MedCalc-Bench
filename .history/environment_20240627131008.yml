@@ -1,4 +1,4 @@
-name: medcalc-bench
+name: medcalc-bench-final
 channels:
   - defaults
 dependencies:
