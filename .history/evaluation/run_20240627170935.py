@@ -11,6 +11,7 @@ import math
 import numpy as np
 import ast
 from table_stats import compute_overall_accuracy
+from huggingface_hub import login
 
 
 def zero_shot(note, question):
