@@ -47,7 +47,7 @@ def compute_overall_accuracy(output_path, model_name, prompt_style):
     if not os.path.exists("results"):
         os.makedirs("results")
 
-    model_name = model_name.replace("-", "_")
+    
 
     if "/" in model_name:
         model_name = model_name.split('/')[1]
