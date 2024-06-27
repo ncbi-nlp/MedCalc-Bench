@@ -57,14 +57,14 @@ def extract_answer(answer, calid):
         dict_ = ast.literal_eval(answer)
         explanation = dict_["step_by_step_thinking"]
     except:
-        explanation = "No Explanation"
+        explanation = "no explanation"
 
     if len(extracted_answer) == 0:
-        extracted_answer = "Not Found"
+        extracted_answer = "not found"
     else:
         extracted_answer = extracted_answer[-1].strip().strip('"')
         if extracted_answer == "str(short_and_direct_answer_of_the_question)" or extracted_answer == "str(value which is the answer to the question)" or extracted_answer == "X.XX":
-            extracted_answer = "Not Found"
+            extracted_answer = "not found"
     
     if calid in [13, 68]:
         # Output Type: date

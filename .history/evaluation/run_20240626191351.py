@@ -64,7 +64,7 @@ def extract_answer(answer, calid):
     else:
         extracted_answer = extracted_answer[-1].strip().strip('"')
         if extracted_answer == "str(short_and_direct_answer_of_the_question)" or extracted_answer == "str(value which is the answer to the question)" or extracted_answer == "X.XX":
-            extracted_answer = "Not Found"
+            extracted_answer = "not found"
     
     if calid in [13, 68]:
         # Output Type: date

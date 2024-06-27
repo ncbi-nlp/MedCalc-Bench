@@ -2,7 +2,6 @@ import json
 import numpy as np
 import os
 
-
 def compute_overall_accuracy(output_path, model_name, prompt_style): 
     category_accuracy = {}
 
@@ -54,4 +53,3 @@ def compute_overall_accuracy(output_path, model_name, prompt_style):
         json.dump(category_stats, file, indent=4)
 
     return category_stats
-
