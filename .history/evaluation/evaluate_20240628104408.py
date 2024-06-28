@@ -15,6 +15,9 @@ def check_correctness(answer: str, ground_truth, calid, upper_limit, lower_limit
     if calid in [13, 68]:
         # Output Type: date
 
+        date_obj = datetime.strptime(ground_truth, "%m/%d/%Y").strftime("%-m/%-d/%Y")
+        formatted_date = date_obj.strftime("%-m/%-d/%Y")
+
         if datetime.strptime(answer, "%m/%d/%Y").strftime("%-m/%-d/%Y") == datetime.strptime(ground_truth, "%m/%d/%Y").strftime("%-m/%-d/%Y"):
             correctness = 1
         else:

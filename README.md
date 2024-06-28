@@ -111,7 +111,7 @@ medical calculations. Surprisingly, the evaluation results on our MedCalc-Bench 
 
 ## Maintenance and Responsibility 
 
-For any changes to this dataset, (i.e. adding new notes or calculators), we will update the REAMDE instructions, test_set.csv, and train_set.csv. We will still keep older versions of these datasets in an `archive/` folder. We will also update train and test sets for HuggingFace as well. 
+For any changes to this dataset, (i.e. adding new notes or calculators), we will update the README instructions, test_set.csv, and train_set.csv. We will still keep older versions of these datasets in an `archive/` folder. We will also update train and test sets for HuggingFace as well. 
 
 ## Acknowledgement
 
