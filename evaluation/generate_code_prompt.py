@@ -21,7 +21,6 @@ from table_stats import compute_overall_accuracy
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
 
-
 def capture_exec_output_and_errors(code):
     """
     Executes the given code and captures its printed output and any error messages.

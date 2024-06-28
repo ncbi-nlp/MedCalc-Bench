@@ -23,7 +23,6 @@ login(token=os.getenv("HUGGINGFACE_TOKEN"))
 
 openai.api_key = os.getenv("OPENAI_API_KEY") 
 
-
 class LLMInference:
 
     def __init__(self, llm_name="OpenAI/gpt-3.5-turbo", cache_dir="../../huggingface/hub"):
