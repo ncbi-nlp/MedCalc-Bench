@@ -3,7 +3,7 @@ import height_conversion
 import weight_conversion
 from rounding import round_number
 
-def bsa_calculator_explaination(input_variables):
+def bsa_calculator_explanation(input_variables):
 
     height_explaination, height = height_conversion.height_conversion_explanation_cm(input_variables["height"])
     weight_explanation, weight = weight_conversion.weight_conversion_explanation(input_variables["weight"])
