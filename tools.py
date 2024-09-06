@@ -8,7 +8,7 @@ from langchain.tools import StructuredTool
 
 RESOURCE_NAMES = []
 CALCULATOR_DIR = "/Users/caravanuden/git-repos/qualified-health/qh-agent/src/calculators/"
-CALCULATOR_METADATA_PATH = os.path.join(CALCULATOR_DIR, "processed_metadata.json")
+CALCULATOR_METADATA_PATH = os.path.join(CALCULATOR_DIR, "metadata/processed.json")
 CALCULATOR_EXAMPLES_PATH = os.path.join(CALCULATOR_DIR, "dataset/test_data.csv")
 CALCULATOR_IMPL_DIR = os.path.join(CALCULATOR_DIR, "calculator_implementations")
 
