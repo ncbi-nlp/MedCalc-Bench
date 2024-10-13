@@ -114,10 +114,6 @@ medical calculations. Surprisingly, the evaluation results on our MedCalc-Bench 
 
 For any changes to this dataset, (i.e. adding new notes or calculators), we will update the README instructions, test_set.csv, and train_set.csv. We will still keep older versions of these datasets in an `archive/` folder. We will also update train and test sets for HuggingFace as well. 
 
-## Acknowledgement
-
-This research was supported by the NIH Intramural Research Program, National Library of Medicine. Additionally, the contributions made by Soren Dunn were done using the Delta advanced computing and data resource which is supported by the National Science Foundation (award OAC tel:2005572) and the State of Illinois. Delta is a joint effort of the University of Illinois Urbana-Champaign (UIUC) and its National Center for Supercomputing Applications (NCSA).
-
 ## Disclaimer
 
 This tool shows the results of research conducted in the Computational Biology Branch, NCBI/NLM. The information produced on this website is not intended for direct diagnostic use or medical decision-making without review and oversight by a clinical professional. Individuals should not change their health behavior solely on the basis of information produced on this website. NIH does not independently verify the validity or utility of the information produced by this tool. If you have questions about the information produced on this website, please see a health care professional. More information about NCBI's disclaimer policy is available.
