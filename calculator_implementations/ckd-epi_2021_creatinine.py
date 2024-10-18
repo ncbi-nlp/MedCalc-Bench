@@ -14,7 +14,7 @@ def ckd_epi_2021(input_parameters):
         b = -0.241
 
     elif creatinine_val <= 0.9 and gender == "Male":
-        a = 0.7
+        a = 0.9
         b = -0.302
 
     elif creatinine_val > 0.7 and gender == "Female":
