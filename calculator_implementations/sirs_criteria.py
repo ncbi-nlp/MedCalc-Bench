@@ -1,7 +1,7 @@
 import unit_converter_new
 import convert_temperature
 
-def SIRS_criteria_explanation(input_parameters):
+def sirs_criteria_explanation(input_parameters):
 
     explanation = "The current count of SIRS criteria met is 0.\n"
 
