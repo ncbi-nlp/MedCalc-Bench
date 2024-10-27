@@ -3,7 +3,7 @@ import weight_conversion
 import unit_converter_new
 from rounding import round_number
 
-def free_water_deficit_explanations(input_variables):
+def free_water_deficit_explanation(input_variables):
     
     explanation = ""
 
