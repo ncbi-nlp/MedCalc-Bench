@@ -1,3 +1,9 @@
+import os
+import json 
+import unit_converter_new
+import age_conversion
+import convert_temperature
+
 def psi_score_explanation(input_variables):
 
     age = age_conversion.age_conversion(input_variables["age"])
