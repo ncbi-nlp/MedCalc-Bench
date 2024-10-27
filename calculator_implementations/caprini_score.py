@@ -24,7 +24,7 @@ param_full_name = {
                     "positive_lupus_anticoagulant": ("positive lupus anticoagulant", 3),
                     "elevated_anticardiolipin_antibody": ("elevated anticardiolipin antibody", 3),
                     "heparin_induced_thrombocytopenia": ("heparin-induced thrombocytopenia", 3),
-                    "congenital_acquired_thrombophilia": ("0ther congenital or acquired thrombophilia", 3),
+                    "congenital_acquired_thrombophilia": ("Other congenital or acquired thrombophilia", 3),
                     "mobility": "mobility",
                     "inflammatory_bowel_disease": ("history of inflammatory bowel disease", 1),
                     "acute_myocardial_infarction": ("acute Myocardial infarction", 1),
