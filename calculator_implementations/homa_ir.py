@@ -19,7 +19,6 @@ def compute_homa_ir_explanation(input_variables):
         insulin = input_variables["insulin"][0] * 24.8
         explanation += f"The concentration of insulin is {insulin} ng/mL. We to need convert the concentration of insulin to µIU/mL, by multiplying by the conversion factor 24.8 µIU/mL/ng/mL. This makes the insulin concentration {input_variables['insulin'][0]} * 24.8 µIU/mL/ng/mL = {insulin} ng/mL.\n"
 
-    #insulin_exp, insulin = unit_converter_new.conversion_explanation(input_variables["insulin"][0], "insulin", 5734, None, input_variables["glucose"][1], "µIU/mL")
     glucose_exp, glucose = unit_converter_new.conversion_explanation(input_variables["glucose"][0], "glucose", 180.16, None, input_variables["glucose"][1], "mg/dL")
 
     explanation += glucose_exp + "\n"
