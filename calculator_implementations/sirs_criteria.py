@@ -9,7 +9,7 @@ def sirs_criteria_explanation(input_parameters):
 
     temp_exp, temperature = convert_temperature.fahrenheit_to_celsius_explanation(temperature[0], temperature[1])
     heart_rate = input_parameters["heart_rate"][0]
-    wbc_exp, wbc = unit_converter_new.convert_to_units_per_liter_explanation(input_parameters["wbc"][0], input_parameters["wbc"][1], "white blood cell", "m^3")
+    wbc_exp, wbc = unit_converter_new.convert_to_units_per_liter_explanation(input_parameters["wbc"][0], input_parameters["wbc"][1], "white blood cell", "mm^3")
 
     criteria_met = 0
 
@@ -36,13 +36,13 @@ def sirs_criteria_explanation(input_parameters):
     explanation += wbc_exp
 
     if wbc > 12000:
-        explanation += f"Because the white blood cell count is greater than 12000 count per m^3, we increment the criteria count by 1 making the current total {criteria_met} + 1 = {criteria_met + 1}.\n"
+        explanation += f"Because the white blood cell count is greater than 12000 count per mm^3, we increment the criteria count by 1 making the current total {criteria_met} + 1 = {criteria_met + 1}.\n"
         criteria_met += 1
     elif wbc < 4000:
-        explanation += f"Because the white blood cell count is less than 4000 count per m^3, we increment the criteria count by 1 making the current total {criteria_met} + 1 = {criteria_met + 1}.\n"
+        explanation += f"Because the white blood cell count is less than 4000 count per mm^3, we increment the criteria count by 1 making the current total {criteria_met} + 1 = {criteria_met + 1}.\n"
         criteria_met += 1
     else:
-        explanation += f"Because the white blood cell count is between 4000 and 12000 count per m^3, this does not meet SIRS criteria for white blood cell count, and so the current total remains at {criteria_met}.\n"
+        explanation += f"Because the white blood cell count is between 4000 and 12000 count per mm^3, this does not meet SIRS criteria for white blood cell count, and so the current total remains at {criteria_met}.\n"
 
     explanation += "The final SIRS criteria is whether the patient has a respiratory rate of more than 20 breaths per minute or if the patient's PaCO₂ partial pressure is less than 32 mm Hg. "
 
