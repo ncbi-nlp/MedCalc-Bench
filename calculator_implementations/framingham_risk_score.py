@@ -72,14 +72,14 @@ def framingham_risk_score_explanation(input_parameters):
         risk_score = round(52.00961 * math.log(age) + 20.014077 * math.log(total_cholestrol) - 0.905964 * math.log(hdl_cholestrol) + 1.305784 * math.log(sys_bp) + 0.241549 * bp_medicine + 12.096316 * smoker - 4.605038 * (math.log(age) * math.log(total_cholestrol)) - 2.84367 * (math.log(age_smoke) * smoker) - 2.93323 * (math.log(age) * math.log(age)) - 172.300168, 1)
         percentage = round(1 - 0.9402**math.exp(risk_score), 1)
         explanation += f"Plugging in these values will give us the risk score:  52.00961 * ln({age}) + 20.014077 * ln({total_cholestrol}) + -0.905964 * ln({hdl_cholestrol}) + 1.305784 * ln({sys_bp}) + 0.241549 * {bp_medicine}  + 12.096316 * {smoker} + -4.605038 * ln({age}) * ln({total_cholestrol}) + -2.84367 * ln({age_smoke}) * {smoker} + -2.93323 * ln({age}) * ln({age}) -  172.300168 = {risk_score}.\n"
-        explanation += f"Plugging this into the MI risk equation gives us 1 - 0.9402^exp({risk_score}) = {percentage} %.\n"
+        explanation += f"Plugging this into the MI risk equation gives us 1 - 0.9402^exp({risk_score}) = {percentage}. We then multiply this by a 100 to obtain the percentage which gives us {percentage} * 100 = {round(percentage * 100, 3)}%.\n"
     else:
         risk_score = round(31.764001 * math.log(age) + 22.465206 * math.log(total_cholestrol) - 1.187731 * math.log(hdl_cholestrol) + 2.552905 * math.log(sys_bp) + 0.420251 * bp_medicine + 13.07543 * smoker - 5.060998 * (math.log(age) * math.log(total_cholestrol)) - 2.996945 * (math.log(age_smoke) * smoker) - 146.5933061, 1)
         percentage = round(1 - 0.98767**math.exp(risk_score), 1)
         explanation +=  f"Plugging in these values will give us the risk score: 31.764001 * ln({age}) + 22.465206 * ln({total_cholestrol}) - 1.187731 * ln({hdl_cholestrol}) + 2.552905 * ln({sys_bp}) + 0.420251 * {bp_medicine} + 13.07543 * {smoker} + -5.060998 * ln({age}) * ln({total_cholestrol}) + -2.996945 * ln({age_smoke}) * {smoker} - 146.5933061 = {risk_score}.\n"
-        explanation += f"Plugging this into the MI risk formula gives us 1 - 0.98767^exp({risk_score}) = {percentage} %.\n"
+        explanation += f"Plugging this into the MI risk formula gives us 1 - 0.98767^exp({risk_score}) = {percentage}. We then multiply this by a 100 to obtain the percentage which gives us {percentage} * 100 = {round(percentage * 100, 3)}%.\n"
 
-    explanation += f"The patient's percentage of getting MI or dying is {percentage} %.\n"
+    explanation += f"The patient's percentage of getting MI or dying is {round(pecentage * 100, 3)} %.\n"
     
-    return {"Explanation": explanation, "Answer": percentage}
+    return {"Explanation": explanation, "Answer": round(pecentage * 100, 3)}
 
