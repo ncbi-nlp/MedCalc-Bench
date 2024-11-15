@@ -12,7 +12,7 @@ def compute_centor_score_explanation(input_variables):
        4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
        5. Cough: Cough present = 0 points, Cough absent = +1 point
     
-    The total score is calculated by summing the points for each criterion.\n\n
+    The Centor score is calculated by summing the points for each criterion.\n\n
     """
    
     centor_score = 0
