@@ -4,7 +4,21 @@ import unit_converter_new
 def curb_65_explanation(input_parameters):
 
     curb_65_score = 0
-    explanation = "The Curb-65 score is current at 0 points.\n"
+
+    explanation  = """
+    The CURB-65 Score criteria are listed below:
+
+       1. Confusion: No = 0 points, Yes = +1 point
+       2. BUN >19 mg/dL (>7 mmol/L urea): No = 0 points, Yes = +1 point
+       3. Respiratory Rate ≥30: No = 0 points, Yes = +1 point
+       4. Systolic BP <90 mmHg or Diastolic BP ≤60 mmHg: No = 0 points, Yes = +1 point
+       5. Age ≥65: No = 0 points, Yes = +1 point
+    
+    The total CURB-65 score is calculated by summing the points for each criterion.\n\n
+    """
+
+    
+    explanation += "The CURB-65 score is current at 0 points.\n"
 
     bun_exp, bun = unit_converter_new.conversion_explanation(input_parameters["bun"][0], "BUN", 28.02, None, input_parameters["bun"][1], "mg/dL")
     
