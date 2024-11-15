@@ -68,7 +68,7 @@ def curb_65_explanation(input_parameters):
     else:
         explanation += f"For a point a point to be added, the systiolic blood pressure must be less than 90 mm Hg or the diastolic blood pressure must be less than or equal to 60 mm Hg. Because neither of these statements are true, 0 points are added to score, keeping the current total to {curb_65_score}.\n"
 
-    explanation += f"The patient's Curb-65 score is {curb_65_score}.\n"
+    explanation += f"The patient's CURB-65 score is {curb_65_score}.\n"
 
     return {"Explanation": explanation, "Answer": curb_65_score}
 
