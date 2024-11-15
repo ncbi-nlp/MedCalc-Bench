@@ -6,7 +6,7 @@ def compute_fever_pain_explanation(input_parameters):
     fever_pain_score = 0
 
     explanation = """
-    The FeverPAIN Score for assessing the likelihood of streptococcal pharyngitis is shown below:
+    The criteria for the FeverPAIN score are listed below:
     
        1. Fever in past 24 hours: No = 0 points, Yes = +1 point
        2. Absence of cough or coryza: No = 0 points, Yes = +1 point
@@ -14,7 +14,7 @@ def compute_fever_pain_explanation(input_parameters):
        4. Purulent tonsils: No = 0 points, Yes = +1 point
        5. Severe tonsil inflammation: No = 0 points, Yes = +1 point
     
-    The total score is calculated by summing the points for each criterion, with higher scores indicating a higher likelihood of streptococcal infection.\n\n
+    The FeverPAIN score is calculated by summing the points for each criterion.\n\n
     """
 
     explanation += "The patient's current FeverPain score is 0.\n"
