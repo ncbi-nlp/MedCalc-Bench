@@ -3,7 +3,24 @@ from rounding import round_number
 
 def mme_explanation(input_parameters):
 
-    explanation = "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\n"
+    explanation = """
+    The Opioid Conversion Table with MME (Morphine Milligram Equivalent) conversion factors are listed below:
+    
+       1. Codeine: MME conversion factor = 0.15
+       2. FentaNYL buccal: MME conversion factor = 0.13
+       3. HYDROcodone: MME conversion factor = 1
+       4. HYDROmorphone: MME conversion factor = 5
+       5. Methadone: MME conversion factor = 4.7
+       6. Morphine: MME conversion factor = 1
+       7. OxyCODONE: MME conversion factor = 1.5
+       8. OxyMORphone: MME conversion factor = 3
+       9. Tapentadol: MME conversion factor = 0.4
+       10. TraMADol: MME conversion factor = 0.2
+       11. Buprenorphine: MME conversion factor = 10
+    
+    """
+
+    explanation += "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\n"
     
     mme_drug = {"Codeine": 0.15, 
             "FentaNYL buccal": 0.13,
