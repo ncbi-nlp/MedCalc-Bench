@@ -15,7 +15,7 @@ def compute_wells_criteria_dvt_explanation(input_parameters):
     ]
 
     output = """
-    The Wells' Criteria for Deep Vein Thrombosis (DVT) is shown below:
+    The criteria for the Wells' Criteria for Deep Vein Thrombosis (DVT) score are listed below:
 
        1. Active cancer (treatment or palliation within 6 months): No = 0 points, Yes = +1 point
        2. Bedridden recently >3 days or major surgery within 12 weeks: No = 0 points, Yes = +1 point
