@@ -2,6 +2,23 @@ import unit_converter_new
 
 def glasgow_bleeding_score_explanation(input_parameters):
 
+    explanation = """
+    The Glasgow-Blatchford Score (GBS) for assessing the severity of gastrointestinal bleeding is shown below:
+    
+       1. Hemoglobin level (g/dL): Enter value (norm: 12-17 g/dL)
+       2. BUN level (mg/dL): Enter value (norm: 8-20 mg/dL)
+       3. Initial systolic blood pressure (mm Hg): Enter value (norm: 100-120 mm Hg)
+       4. Sex: Female = +1 point, Male = 0 points
+       5. Heart rate ≥100: No = 0 points, Yes = +1 point
+       6. Melena present: No = 0 points, Yes = +1 point
+       7. Recent syncope: No = 0 points, Yes = +2 points
+       8. Hepatic disease history: No = 0 points, Yes = +2 points
+       9. Cardiac failure present: No = 0 points, Yes = +2 points
+    
+    The total score is calculated by summing the points for each criterion (additional lab values may also be factored into the score).\n\n
+    """
+
+
     score = 0
 
     hemoglobin_exp, hemoglobin = unit_converter_new.conversion_explanation(input_parameters["hemoglobin"][0], "hemoglobin", 64500, None, input_parameters["hemoglobin"][1], "g/dL")
@@ -10,7 +27,7 @@ def glasgow_bleeding_score_explanation(input_parameters):
     systiolic_bp = input_parameters["sys_bp"][0]
     heart_rate = input_parameters["heart_rate"][0]
     
-    explanation = f"The current glasgow bleeding score is 0. The patient's gender is {gender}.\n"
+    explanation += f"The current glasgow bleeding score is 0. The patient's gender is {gender}.\n"
     explanation += hemoglobin_exp 
 
     if gender == "Male":
