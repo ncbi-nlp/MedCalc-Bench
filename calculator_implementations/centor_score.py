@@ -3,7 +3,7 @@ import age_conversion
 
 def compute_centor_score_explanation(input_variables):
 
-    explanation = centor_score_criteria = """
+    explanation = """
     The Centor Score formula is shown below:
     
        1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
