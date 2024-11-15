@@ -17,7 +17,7 @@ def compute_centor_score_explanation(input_variables):
    
     centor_score = 0
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
-    explanation = f"The current Centor score is 0.\n"
+    explanation += f"The current Centor score is 0.\n"
     explanation += age_explanation
 
     if 3 <= age <= 14:
