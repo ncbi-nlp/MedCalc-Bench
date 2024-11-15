@@ -19,8 +19,35 @@ def psi_score_explanation(input_variables):
     hemocratit = input_variables["hemocratit"][0]
     partial_pressure_oxygen = input_variables.get("partial_pressure_oxygen")
 
+    explanation = """
+    The Pneumonia Severity Index (PSI) for assessing the severity of pneumonia is shown below:
+    
+       1. Age: Enter age in years (age score will be equal to age in years)
+       2. Sex: Female = -10 points, Male = 0 points
+       3. Nursing home resident: No = 0 points, Yes = +10 points
+       4. Neoplastic disease: No = 0 points, Yes = +30 points
+       5. Liver disease history: No = 0 points, Yes = +20 points
+       6. Congestive heart failure (CHF) history: No = 0 points, Yes = +10 points
+       7. Cerebrovascular disease history: No = 0 points, Yes = +10 points
+       8. Renal disease history: No = 0 points, Yes = +10 points
+       9. Altered mental status: No = 0 points, Yes = +20 points
+       10. Respiratory rate ≥30 breaths/min: No = 0 points, Yes = +20 points
+       11. Systolic blood pressure <90 mmHg: No = 0 points, Yes = +20 points
+       12. Temperature <35°C (95°F) or >39.9°C (103.8°F): No = 0 points, Yes = +15 points
+       13. Pulse ≥125 beats/min: No = 0 points, Yes = +10 points
+       14. pH <7.35: No = 0 points, Yes = +30 points
+       15. BUN ≥30 mg/dL or ≥11 mmol/L: No = 0 points, Yes = +20 points
+       16. Sodium <130 mmol/L: No = 0 points, Yes = +20 points
+       17. Glucose ≥250 mg/dL or ≥14 mmol/L: No = 0 points, Yes = +10 points
+       18. Hematocrit <30%: No = 0 points, Yes = +10 points
+       19. Partial pressure of oxygen <60 mmHg or <8 kPa: No = 0 points, Yes = +10 points
+       20. Pleural effusion on x-ray: No = 0 points, Yes = +10 points
+    
+    The total score is calculated by summing the points for each criterion, with higher scores indicating increased severity of pneumonia.\n\n
+    """
 
-    explanation = f"The current PSI score is 0.\n"
+
+    explanation += f"The current PSI score is 0.\n"
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
     explanation += age_explanation
     explanation += f"We add the the number of years of age of the patient to the psi score, making the current total 0 + {age} = {age}.\n"
