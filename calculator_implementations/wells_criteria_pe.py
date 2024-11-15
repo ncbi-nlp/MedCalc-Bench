@@ -3,7 +3,7 @@ import json
 
 def calculate_pe_wells_explanation(variables):
 
-   explanation = """The Wells' Criteria for Pulmonary Embolism formula is shown below:
+   explanation = """The Wells' Criteria for Pulmonary Embolism formula are listed below:
 
    1. Clinical signs and symptoms of DVT: No = 0 points, Yes = +3 points
    2. PE is #1 diagnosis OR equally likely: No = 0 points, Yes = +3 points
