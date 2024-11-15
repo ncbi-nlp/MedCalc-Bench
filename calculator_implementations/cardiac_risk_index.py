@@ -11,11 +11,23 @@ def compute_cardiac_index_explanation(input_variables):
         'pre_operative_insulin_treatment': "pre-operative insulin treatment",
         'pre_operative_creatinine': "pre-operative creatinine" 
     }
+
+    output = """
+    The Revised Cardiac Risk Index (RCRI) for perioperative cardiac complications is shown below:
     
+       1. Elevated-risk surgery (intraperitoneal, intrathoracic, or suprainguinal vascular): No = 0 points, Yes = +1 point
+       2. History of ischemic heart disease (history of myocardial infarction, positive exercise test, current chest pain due to myocardial ischemia, use of nitrate therapy, or ECG with pathological Q waves): No = 0 points, Yes = +1 point
+       3. History of congestive heart failure (pulmonary edema, bilateral rales or S3 gallop, paroxysmal nocturnal dyspnea, or chest x-ray showing pulmonary vascular redistribution): No = 0 points, Yes = +1 point
+       4. History of cerebrovascular disease (prior transient ischemic attack or stroke): No = 0 points, Yes = +1 point
+       5. Pre-operative treatment with insulin: No = 0 points, Yes = +1 point
+       6. Pre-operative creatinine >2 mg/dL (176.8 μmol/L): No = 0 points, Yes = +1 point
+    
+    The total score is calculated by summing the points for each criterion.\n\n
+    """
 
     # Initializing scores and output explanation
     cri = 0
-    output = "The current cardiac risk index is 0.\n"
+    output += "The current cardiac risk index is 0.\n"
     #output += "Total Score = elevated_risk_surgery_score + ischemetic_heart_disease_score + congestive_heart_failure_score + cerebrovascular_disease_score + pre_operative_insulin_treatment_score + pre_operative_creatinine_score.\n\n"    
 
     for param_name, full_name in parameters.items():
