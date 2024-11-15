@@ -28,12 +28,12 @@ def compute_wells_criteria_dvt_explanation(input_parameters):
        9. Previously documented DVT: No = 0 points, Yes = +1 point
        10. Alternative diagnosis to DVT as likely or more likely: No = 0 points, Yes = -2 points
     
-       The total score is calculated by summing the points for each criterion.\n\n
+    The total score is calculated by summing the points for each criterion.\n\n
     """
 
     # Initializing points and output explanation
     score = 0
-    output = "The current Well's DVT Score is 0.\n"
+    output += "The current Well's DVT Score is 0.\n"
 
     count = 0 
 
