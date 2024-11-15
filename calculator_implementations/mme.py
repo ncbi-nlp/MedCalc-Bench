@@ -17,10 +17,10 @@ def mme_explanation(input_parameters):
        9. Tapentadol: MME conversion factor = 0.4
        10. TraMADol: MME conversion factor = 0.2
        11. Buprenorphine: MME conversion factor = 10
-    
+
     """
 
-    explanation += "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\n"
+    explanation += "\n\nThe curent Morphine Milligram Equivalents (MME) is 0 MME per day.\n"
     
     mme_drug = {"Codeine": 0.15, 
             "FentaNYL buccal": 0.13,
