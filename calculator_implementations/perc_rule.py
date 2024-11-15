@@ -4,7 +4,7 @@ def compute_perc_rule_explanation(input_parameters):
 
     perc_count = 0
 
-    explanation = perc_rule_criteria = """
+    explanation = """
     The PERC Rule critiera are listed below:
     
        1. Age ≥50: No = 0 points, Yes = +1 point
