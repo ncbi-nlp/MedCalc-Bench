@@ -19,8 +19,18 @@ def compute_glasgow_coma_score_explanation(input_variables):
     verbal_point = "points" if verbal_score == 0 or verbal_score > 1 else "point"
     motor_point = "points" if motor_score == 0 or motor_score > 1 else "point"
 
+    explanation = """
+    The Glasgow Coma Scale (GCS) for assessing a patient’s level of consciousness is shown below:
     
-    explanation = "The current glasgow coma score is 0.\n" 
+       1. Best Eye Response: Spontaneously = +4 points, To verbal command = +3 points, To pain = +2 points, No eye opening = +1 point
+       2. Best Verbal Response: Oriented = +5 points, Confused = +4 points, Inappropriate words = +3 points, Incomprehensible sounds = +2 points, No verbal response = +1 point
+       3. Best Motor Response: Obeys commands = +6 points, Localizes pain = +5 points, Withdrawal from pain = +4 points, Flexion to pain = +3 points, Extension to pain = +2 points, No motor response = +1 point
+
+    For each criteria, if a patient's value is not mentioned/not testable in the note, we assume that it gets the full score for that attribute.  The total GCS score is calculated by summing the points for each of the three components.\n\n
+    """
+
+    
+    explanation += "The current glasgow coma score is 0.\n" 
 
     if best_eye_response_value == 'not testable': 
         explanation += f"Based on the patient note, the best eye response for the patient is '{best_eye_response_value}', and so we assume the the patient can open his or her eyes spontaneously. Hence, we add {eye_score} {eye_point}, making the current total {glasgow_score} + {eye_score} = {glasgow_score + eye_score}.\n"
