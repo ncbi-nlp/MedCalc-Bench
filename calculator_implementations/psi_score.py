@@ -20,7 +20,7 @@ def psi_score_explanation(input_variables):
     partial_pressure_oxygen = input_variables.get("partial_pressure_oxygen")
 
     explanation = """
-    The Pneumonia Severity Index (PSI) for assessing the severity of pneumonia is shown below:
+    The rules for computing the Pneumonia Severity Index (PSI) are shown below:
     
        1. Age: Enter age in years (age score will be equal to age in years)
        2. Sex: Female = -10 points, Male = 0 points
@@ -43,7 +43,7 @@ def psi_score_explanation(input_variables):
        19. Partial pressure of oxygen <60 mmHg or <8 kPa: No = 0 points, Yes = +10 points
        20. Pleural effusion on x-ray: No = 0 points, Yes = +10 points
     
-    The total score is calculated by summing the points for each criterion, with higher scores indicating increased severity of pneumonia.\n\n
+    The total score is calculated by summing the points for each criterion.\n\n
     """
 
 
