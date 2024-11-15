@@ -42,7 +42,7 @@ def caprini_score_explanation(input_parameters):
 
 
     explanation = """
-    The criteria for the Caprini Score are shown below:
+    The criteria for the Caprini Score are listed below:
   
      1. Age, years: ≤40 = 0 points, 41-60 = +1 point, 61-74 = +2 points, ≥75 = +3 points
      2. Sex: Male = 0 points, Female = +1 point
