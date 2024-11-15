@@ -13,9 +13,34 @@ def compute_cci_explanation(input_parameters):
     
      
     two_point_params = set(['hemiplegia', "moderate_to_severe_ckd", "leukemia", "lymphoma"])
+
+    explanation = charlson_comorbidity_index_criteria = """
+    The Charlson Comorbidity Index (CCI) for assessing comorbidity-related risk is shown below:
+    
+       1. Age: <50 years = 0 points, 50-59 years = +1 point, 60-69 years = +2 points, 70-79 years = +3 points, ≥80 years = +4 points
+       2. Myocardial infarction (history of definite or probable MI with EKG changes and/or enzyme changes): No = 0 points, Yes = +1 point
+       3. Congestive heart failure (CHF) (exertional or paroxysmal nocturnal dyspnea, responsive to digitalis, diuretics, or afterload reducing agents): No = 0 points, Yes = +1 point
+       4. Peripheral vascular disease (intermittent claudication, past bypass for chronic arterial insufficiency, history of gangrene or acute arterial insufficiency, untreated thoracic or abdominal aneurysm ≥6 cm): No = 0 points, Yes = +1 point
+       5. Cerebrovascular accident (CVA) or transient ischemic attack (TIA) (history with minor or no residuals): No = 0 points, Yes = +1 point
+       6. Dementia (chronic cognitive deficit): No = 0 points, Yes = +1 point
+       7. Chronic obstructive pulmonary disease (COPD): No = 0 points, Yes = +1 point
+       8. Connective tissue disease: No = 0 points, Yes = +1 point
+       9. Peptic ulcer disease (any history of treatment for ulcer disease or ulcer bleeding): No = 0 points, Yes = +1 point
+       10. Liver disease: None = 0 points, Mild = +1 point, Moderate to severe = +3 points
+       11. Diabetes mellitus: None or diet-controlled = 0 points, Uncomplicated = +1 point, End-organ damage = +2 points
+       12. Hemiplegia: No = 0 points, Yes = +2 points
+       13. Moderate to severe chronic kidney disease (CKD): No = 0 points, Yes = +2 points
+       14. Solid tumor: None = 0 points, Localized = +2 points, Metastatic = +6 points
+       15. Leukemia: No = 0 points, Yes = +2 points
+       16. Lymphoma: No = 0 points, Yes = +2 points
+       17. AIDS: No = 0 points, Yes = +6 points
+    
+    The total score is calculated by summing the points for each criterion, with higher scores indicating greater comorbidity-related risk.\n\n
+    """
+
  
     age_exp, age = age_conversion.age_conversion_explanation(input_parameters["age"])
-    explanation = "The current CCI is value is 0.\n"
+    explanation += "The current CCI is value is 0.\n"
     explanation += age_exp
     cci = 0
 
