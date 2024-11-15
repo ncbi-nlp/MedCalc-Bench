@@ -13,7 +13,7 @@ def compute_cardiac_index_explanation(input_variables):
     }
 
     output = """
-    The Revised Cardiac Risk Index (RCRI) for perioperative cardiac complications is shown below:
+    The criteria for the Revised Cardiac Risk Index (RCRI) are listed below:
     
        1. Elevated-risk surgery (intraperitoneal, intrathoracic, or suprainguinal vascular): No = 0 points, Yes = +1 point
        2. History of ischemic heart disease (history of myocardial infarction, positive exercise test, current chest pain due to myocardial ischemia, use of nitrate therapy, or ECG with pathological Q waves): No = 0 points, Yes = +1 point
