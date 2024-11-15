@@ -1,39 +1,19 @@
 import convert_temperature
 import age_conversion
 
-def compute_centor_score(input_parameters):
-
-    centor_score = 0
-    
-    age = age_conversion.age_conversion(input_parameters["age"])
-    temperature, temp_units = input_parameters["temperature"][0], input_parameters["temperature"][1]
-
-    temperature = convert_temperature.fahrenheit_to_celsius(temperature, temp_units)
-    
-    cough_absent_value = input_parameters.get("cough_absent", True)
-    tender_lymph_nodes_value = input_parameters.get("tender_lymph_nodes", False)
-    swelling_tonsils_value = input_parameters.get("exudate_swelling_tonsils", False)
-
-    if 3 <= age <= 14:
-        centor_score += 1 
-    elif age >= 45:
-        centor_score = -1    
-
-    if cough_absent_value:
-        centor_score += 1
-
-    if tender_lymph_nodes_value:
-        centor_score += 1
-   
-    if swelling_tonsils_value:
-        centor_score += 1
-
-    if temperature > 38:
-        centor_score += 1
-        
-    return centor_score
-
 def compute_centor_score_explanation(input_variables):
+
+    explanation = centor_score_criteria = """
+    The Centor Score formula is shown below:
+    
+       1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
+       2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
+       3. Tender/swollen anterior cervical lymph nodes: No = 0 points, Yes = +1 point
+       4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
+       5. Cough: Cough present = 0 points, Cough absent = +1 point
+    
+    The total score is calculated by summing the points for each criterion.\n\n
+    """
    
     centor_score = 0
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
