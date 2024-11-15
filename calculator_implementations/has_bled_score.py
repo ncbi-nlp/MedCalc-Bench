@@ -2,11 +2,24 @@ import age_conversion
 
 def compute_has_bled_score_explanation(input_variables):
 
+    explanation = """
+    The Centor Score for assessing the likelihood of streptococcal pharyngitis is shown below:
+    
+       1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
+       2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
+       3. Tender/swollen anterior cervical lymph nodes: No = 0 points, Yes = +1 point
+       4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
+       5. Cough: Cough present = 0 points, Cough absent = +1 point
+    
+    The total score is calculated by summing the points for each criterion.\n\n
+    """
+
+
     has_bled_score = 0
 
     num_alcolic_drinks = input_variables["alcoholic_drinks"]
 
-    explanation = f"The current HAS-BLED score is 0.\n"
+    explanation += f"The current HAS-BLED score is 0.\n"
     age_explanation, age_value = age_conversion.age_conversion_explanation(input_variables["age"])
     explanation += age_explanation
 
