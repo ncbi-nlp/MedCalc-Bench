@@ -3,7 +3,7 @@ from rounding import round_number
 
 def compute_sofa_explanation(input_parameters):
 
-    explanation = sofa_score_criteria = """
+    explanation = """
     The criteria for the SOFA Score are shown below:
     
        1. PaO₂/FiO₂ ratio (mm Hg): ≥400 = 0 points, 300-399 = +1 point, 200-299 = +2 points, 100-199 (with respiratory support) = +3 points, <100 (with respiratory support) = +4 points
@@ -16,7 +16,7 @@ def compute_sofa_explanation(input_parameters):
     The total SOFA Score is calculated by summing the points for each criterion.\n\n
     """ 
 
-    explanation = "The patient's current SOFA score is 0.\n"
+    explanation += "The patient's current SOFA score is 0.\n"
 
     sofa_score = 0
 
