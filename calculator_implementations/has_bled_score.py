@@ -2,18 +2,21 @@ import age_conversion
 
 def compute_has_bled_score_explanation(input_variables):
 
-    explanation = """
-    The Centor Score for assessing the likelihood of streptococcal pharyngitis is shown below:
+   explanation = """
+   The criteria for the HAS-BLED score are listed below below:
     
-       1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
-       2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
-       3. Tender/swollen anterior cervical lymph nodes: No = 0 points, Yes = +1 point
-       4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
-       5. Cough: Cough present = 0 points, Cough absent = +1 point
+       1. Hypertension (Uncontrolled, >160 mmHg systolic): No = 0 points, Yes = +1 point
+       2. Renal disease (Dialysis, transplant, Cr >2.26 mg/dL or >200 µmol/L): No = 0 points, Yes = +1 point
+       3. Liver disease (Cirrhosis or bilirubin >2x normal with AST/ALT/AP >3x normal): No = 0 points, Yes = +1 point
+       4. Stroke history: No = 0 points, Yes = +1 point
+       5. Prior major bleeding or predisposition to bleeding: No = 0 points, Yes = +1 point
+       6. Labile INR (Unstable/high INRs, time in therapeutic range <60%): No = 0 points, Yes = +1 point
+       7. Age >65: No = 0 points, Yes = +1 point
+       8. Medication usage predisposing to bleeding (Aspirin, clopidogrel, NSAIDs): No = 0 points, Yes = +1 point
+       9. Alcohol use (≥8 drinks/week): No = 0 points, Yes = +1 point
     
-    The total score is calculated by summing the points for each criterion.\n\n
+    The total HAS-BLED score is calculated by summing the points for each criterion.
     """
-
 
     has_bled_score = 0
 
