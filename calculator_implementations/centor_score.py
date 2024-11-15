@@ -4,7 +4,7 @@ import age_conversion
 def compute_centor_score_explanation(input_variables):
 
     explanation = """
-    The Centor Score formula is shown below:
+    The criteria listed in the Centor Score formula are listed below:
     
        1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
        2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
