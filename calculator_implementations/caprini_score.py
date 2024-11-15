@@ -42,7 +42,7 @@ def caprini_score_explanation(input_parameters):
 
 
     explanation = """
-    The Caprini Score for assessing the risk of venous thromboembolism (VTE) is shown below:
+    The criteria for the Caprini Score are shown below:
   
      1. Age, years: ≤40 = 0 points, 41-60 = +1 point, 61-74 = +2 points, ≥75 = +3 points
      2. Sex: Male = 0 points, Female = +1 point
@@ -53,7 +53,7 @@ def caprini_score_explanation(input_parameters):
      7. Mobility: Normal, out of bed = 0 points, Medical patient currently on bed rest = +1 point, Patient confined to bed >72 hours = +2 points
      8. Other present and past history: History of inflammatory bowel disease = +1 point, BMI ≥25 = +1 point, Acute myocardial infarction = +1 point, Chronic obstructive pulmonary disease (COPD) = +1 point, Present or previous malignancy = +2 points
   
-    The total Caprini Score is calculated by summing the points for each criterion, with higher scores indicating an increased risk of VTE.
+    The total Caprini Score is calculated by summing the points for each criterion.\n\n
     """
 
 
