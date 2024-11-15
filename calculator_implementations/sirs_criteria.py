@@ -11,7 +11,7 @@ def sirs_criteria_explanation(input_parameters):
        3. Respiratory rate >20 or PaCO₂ <32 mm Hg: No = 0 points, Yes = +1 point
        4. White blood cell count (WBC) >12,000/mm³, <4,000/mm³, or >10% bands: No = 0 points, Yes = +1 point
     
-    The total number of criteria met is taken by summing all of the sub-criteria values.\n\n
+    The total number of criteria met is taken by summing the score for each criteria.\n\n
     """
 
 
