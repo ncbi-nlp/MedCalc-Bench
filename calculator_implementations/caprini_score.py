@@ -40,7 +40,24 @@ mobility = {"normal": 0, "on bed rest": 1, "confined to bed >72 hours": 2}
 
 def caprini_score_explanation(input_parameters):
 
-    explanation = "The patient's current caprini score is 0.\n"
+
+    explanation = """
+    The Caprini Score for assessing the risk of venous thromboembolism (VTE) is shown below:
+  
+     1. Age, years: ≤40 = 0 points, 41-60 = +1 point, 61-74 = +2 points, ≥75 = +3 points
+     2. Sex: Male = 0 points, Female = +1 point
+     3. Type of surgery: None = 0 points, Minor = +1 point, Major >45 min (laparoscopic or arthroscopic) = +2 points, Elective major lower extremity arthroplasty = +5 points
+     4. Recent (≤1 month) event: Major surgery = +1 point, Congestive heart failure (CHF) = +1 point, Sepsis = +1 point, Pneumonia = +1 point, Immobilizing plaster cast = +1 point, Hip, pelvis, or leg fracture = +5 points, Stroke = +5 points, Multiple trauma = +5 points, Acute spinal cord injury causing paralysis = +5 points
+     5. Venous disease or clotting disorder: Varicose veins = +1 point, Current swollen legs = +1 point, Current central venous access = +2 points, History of deep vein thrombosis (DVT) or pulmonary embolism (PE) = +3 points, Family history of thrombosis = +3 points, Positive Factor V Leiden = +3 points, Positive prothrombin 20210A = +3 points, Elevated serum homocysteine = +3 points
+     6. Other congenital or acquired thrombophilia: Positive lupus anticoagulant = +3 points, Elevated anticardiolipin antibody = +3 points, Heparin-induced thrombocytopenia = +3 points
+     7. Mobility: Normal, out of bed = 0 points, Medical patient currently on bed rest = +1 point, Patient confined to bed >72 hours = +2 points
+     8. Other present and past history: History of inflammatory bowel disease = +1 point, BMI ≥25 = +1 point, Acute myocardial infarction = +1 point, Chronic obstructive pulmonary disease (COPD) = +1 point, Present or previous malignancy = +2 points
+  
+    The total Caprini Score is calculated by summing the points for each criterion, with higher scores indicating an increased risk of VTE.
+    """
+
+
+    explanation += "The patient's current caprini score is 0.\n"
     score = 0
 
     gender = input_parameters["sex"]
