@@ -14,8 +14,8 @@ def compute_cci_explanation(input_parameters):
      
     two_point_params = set(['hemiplegia', "moderate_to_severe_ckd", "leukemia", "lymphoma"])
 
-    explanation = charlson_comorbidity_index_criteria = """
-    The Charlson Comorbidity Index (CCI) for assessing comorbidity-related risk is shown below:
+    explanation = """
+    The Charlson Comorbidity Index (CCI) are listed below:
     
        1. Age: <50 years = 0 points, 50-59 years = +1 point, 60-69 years = +2 points, 70-79 years = +3 points, ≥80 years = +4 points
        2. Myocardial infarction (history of definite or probable MI with EKG changes and/or enzyme changes): No = 0 points, Yes = +1 point
@@ -35,7 +35,7 @@ def compute_cci_explanation(input_parameters):
        16. Lymphoma: No = 0 points, Yes = +2 points
        17. AIDS: No = 0 points, Yes = +6 points
     
-    The total score is calculated by summing the points for each criterion, with higher scores indicating greater comorbidity-related risk.\n\n
+    The total score is calculated by summing the points for each criterion.\n\n
     """
 
  
