@@ -20,7 +20,7 @@ def compute_glasgow_coma_score_explanation(input_variables):
     motor_point = "points" if motor_score == 0 or motor_score > 1 else "point"
 
     explanation = """
-    The Glasgow Coma Scale (GCS) for assessing a patient’s level of consciousness is shown below:
+    The Glasgow Coma Scale (GCS) for assessing a patient's level of consciousness is shown below:
     
        1. Best Eye Response: Spontaneously = +4 points, To verbal command = +3 points, To pain = +2 points, No eye opening = +1 point
        2. Best Verbal Response: Oriented = +5 points, Confused = +4 points, Inappropriate words = +3 points, Incomprehensible sounds = +2 points, No verbal response = +1 point

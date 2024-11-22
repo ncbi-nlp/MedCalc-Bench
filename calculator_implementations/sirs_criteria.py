@@ -43,7 +43,6 @@ def sirs_criteria_explanation(input_parameters):
         criteria_met += 1
     else:
         explanation += f"Because the heart rate is less than 90 beats per minute, this does not meet SIRS criteria for heart rate, and so the current total remains at {criteria_met}.\n"
-        criteria_met += 1
 
     explanation += wbc_exp
 
@@ -89,7 +88,7 @@ def sirs_criteria_explanation(input_parameters):
         
         explanation += res
     else:
-        explanation += "The patient's PaCO₂ partial pressure is not provided and so we assume that the patient's partial pressure is greater than or equal to 32 mm Hg."
+        explanation += "The patient's PaCO₂ partial pressure is not provided and so we assume that the patient's partial pressure is greater than or equal to 32 mm Hg. "
         paco2_met = False 
 
     if resp_met or paco2_met:
@@ -102,3 +101,4 @@ def sirs_criteria_explanation(input_parameters):
 
     return {"Explanation": explanation, "Answer": criteria_met}
      
+

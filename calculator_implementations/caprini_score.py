@@ -87,21 +87,21 @@ def caprini_score_explanation(input_parameters):
         elif param == "mobility":
             value = input_parameters[param]
 
-            explanation += f"The patient's mobility status is '{value}'. Hence, we add {mobility[value]} points to the total, making the current total {mobility[value]} + {score} = {mobility[value] + score}.\n "
+            explanation += f"The patient's mobility status is determined to be '{value}'. Hence, we add {mobility[value]} points to the total, making the current total {mobility[value]} + {score} = {mobility[value] + score}.\n "
             score += mobility[value]
 
         elif param == "surgery_type":
             value = input_parameters[param]
-            explanation += f"The patient's surgery type is reported to be '{value}'. Hence, we add {surgery_type[value]} points to the total, making the current total {surgery_type[value]} + {score} = {surgery_type[value] + score}.\n "
+            explanation += f"The patient's surgery type is determined to be '{value}'. Hence, we add {surgery_type[value]} points to the total, making the current total {surgery_type[value]} + {score} = {surgery_type[value] + score}.\n "
             score += surgery_type[value]
 
         elif param == "bmi":
         
             if input_parameters["bmi"][0] > 25:
-                explanation += f"The patient's BMI is {input_parameters['bmi'][0]} kg/m^2 which is greater than 25 kg/m^2, and so we add 2 points to the total, making the current total {score} + 2 = {score + 2}.\n"
+                explanation += f"The patient's BMI is {input_parameters['bmi'][0]} kg/m^2, which is greater than 25 kg/m^2, and so we add 2 points to the total, making the current total {score} + 2 = {score + 2}.\n"
                 score += 2
             else:
-                explanation += f"The patient's BMI is {input_parameters['bmi'][0]} kg/m^2 which is less than 25 kg/m^2, and so we add 0 points to the total, keeping the total at {score}.\n"
+                explanation += f"The patient's BMI is {input_parameters['bmi'][0]} kg/m^2, which is less than 25 kg/m^2, and so we add 0 points to the total, keeping the total at {score}.\n"
 
         elif input_parameters[param]:
             points = param_full_name[param][1]

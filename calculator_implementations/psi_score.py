@@ -84,10 +84,10 @@ def psi_score_explanation(input_variables):
         if parameter not in input_variables:
             explanation += f"{parameters[parameter][0]} is not reported for the patient and so we assume it to be false. Hence, we do not add any points to the current total keeping it at {psi_score}.\n"
         elif not input_variables[parameter]:
-            explanation += f"{parameters[parameter][0]} is reported to be false for the patient and so we do not add any points to the current total keeping it at {psi_score}.\n"
+            explanation += f"{parameters[parameter][0]} is determined to be false for the patient and so we do not add any points to the current total keeping it at {psi_score}.\n"
         elif input_variables[parameter]:
             points = parameters[parameter][1]
-            explanation += f"{parameters[parameter][0]} is reported to be present for the patient and so we add {points} points to the score, making the current total {psi_score} + {points} = {psi_score + points}.\n"
+            explanation += f"{parameters[parameter][0]} is determined to be present for the patient and so we add {points} points to the score, making the current total {psi_score} + {points} = {psi_score + points}.\n"
             psi_score += points
 
     explanation += f"The patient's pulse is {pulse} beats per minute. "
@@ -149,7 +149,7 @@ def psi_score_explanation(input_variables):
         explanation += f"The patient's sodium is less than 130 mmol/L, and so we add 20 points to the score, making the current total {psi_score} + 20 = {psi_score + 20}.\n"
         psi_score += 20
     else:
-        explanation += f"The patient's sodium is greater than or equal to 130 mmol/L, and so we do not add any points to the scor, keeping the total at {psi_score}.\n"
+        explanation += f"The patient's sodium is greater than or equal to 130 mmol/L, and so we do not add any points to the score, keeping the total at {psi_score}.\n"
 
     explanation += glucose_exp
 
@@ -159,13 +159,13 @@ def psi_score_explanation(input_variables):
     else:
         explanation += f"The patient's glucose concentration is less than or equal to than 250 mg/dL, and so we not add any points to the current total, keeping it at {psi_score}.\n"
 
-    explanation += f"The patient's hemocratit is {hemocratit} %. "
+    explanation += f"The patient's hematocrit is {hemocratit} %. "
 
     if hemocratit < 30:
-        explanation += f"The patient's hemocratit is less than 30%, and so we add 10 points to the score, making the current total {psi_score} + 10 = {psi_score + 10}.\n"
+        explanation += f"The patient's hematocrit is less than 30%, and so we add 10 points to the score, making the current total {psi_score} + 10 = {psi_score + 10}.\n"
         psi_score += 10
     else:
-        explanation += f"The patient's hemocratit is greater than or equal to 30%, and so we not add any points to the current total, keeping it at {psi_score}.\n"
+        explanation += f"The patient's hematocrit is greater than or equal to 30%, and so we not add any points to the current total, keeping it at {psi_score}.\n"
 
 
     if partial_pressure_oxygen[1] == "mm Hg":

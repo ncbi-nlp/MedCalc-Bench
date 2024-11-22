@@ -43,42 +43,42 @@ def compute_child_pugh_score_explanation(input_variables):
 
     # Bilirubin score calculation
     if bilirubin < 2: 
-        explanation += f"Because the Bilirubin concentration is less than 2 mg/dL, we add 1 to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+        explanation += f"Because the bilirubin concentration is less than 2 mg/dL, we add 1 to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
         cp_score += 1
-    elif 2 < bilirubin < 3:
-        explanation += f"Because the Bilirubin concentration is between 2 mg/dL and 3 mg/dL, we add 2 to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
+    elif 2 <= bilirubin <= 3:
+        explanation += f"Because the bilirubin concentration is between 2 mg/dL and 3 mg/dL, we add 2 to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
         cp_score += 2
-    elif bilirubin >= 3:
-        explanation += f"Because the Bilirubin concentration is greater than 3 mg/dL, we add 3 to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
+    elif bilirubin > 3:
+        explanation += f"Because the bilirubin concentration is greater than 3 mg/dL, we add 3 to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
         cp_score += 3
 
     explanation += albumin_exp
 
     # Albumin score calculation
     if albumin > 3.5: 
-        explanation += f"Because the Albumin concentration is greater than 3.5 g/dL, we add 1 to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+        explanation += f"Because the albumin concentration is greater than 3.5 g/dL, we add 1 point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
         cp_score += 1
-    elif 2.8 < albumin <= 3.5:
-        explanation += f"Because the Albumin concentration is between 2.8 g/dL and 3.5 g/dL, we add 2 to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
+    elif 2.8 <= albumin <= 3.5:
+        explanation += f"Because the albumin concentration is between 2.8 g/dL and 3.5 g/dL, we add 2 points to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
         cp_score += 2 
-    elif albumin <= 2.8:
-        explanation += f"Because the Albumin concentration is less than 2.8 g/dL, we add 3 to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
+    elif albumin < 2.8:
+        explanation += f"Because the albumin concentration is less than 2.8 g/dL, we add 3 points to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
         cp_score += 3
 
     # Ascites score calculation
     if 'ascites' in input_variables:
 
-        if input_variables['ascites'] == 'Absent':
-            explanation += f"Ascites is reported to be 'absent' and so we add 1 point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+        if input_variables['ascites'] == 'absent':
+            explanation += f"The patient's ascites state is determined to be 'absent' and so we add 1 point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
             cp_score += 1
-        elif ascites_state == 'Slight':
-            explanation += f"Ascites is reported to be 'slight' and so we add 2 points to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
+        elif ascites_state == 'slight':
+            explanation += f"The patient's ascites state is determined to be 'slight' and so we add 2 points to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
             cp_score += 2
-        elif ascites_state == 'Moderate':
-            explanation += f"Ascites is reported to be 'moderate' and so we add 3 points to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
+        elif ascites_state == 'moderate':
+            explanation += f"The patient's ascites state is determined to be 'moderate' and so we add 3 points to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
             cp_score += 3
     else:
-        explanation += f"The Ascites state not specified, assuming and so we will assume it to be absent. This means we add 1 point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+        explanation += f"The patient's ascites state is not specified and so we will assume it to be absent. This means we add 1 point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
         cp_score += 1
 
     if 'encephalopathy' in input_variables:

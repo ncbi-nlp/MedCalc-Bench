@@ -486,7 +486,6 @@
         "Patient Note": "A 43-year-old man comes to the physician because of nasal congestion and fatigue for 12 days. During this period, he has had fevers and severe pain over his cheeks. His nasal discharge was initially clear, but it has turned yellowish over the last couple of days. He has no visual complaints. He has been taking an over-the-counter nasal decongestant and acetaminophen without much relief. He has type 2 diabetes mellitus and hypertension. He underwent an appendectomy 23 years ago. He does not smoke or drink alcohol. His current medications include metformin, sitagliptin, and enalapril. He appears tired. His temperature is 38.5\u00b0C (101.3\u00b0F), pulse is 96/min, and blood pressure is 138/86 mm Hg. Examination shows purulent discharge in the nose and pharynx and normal appearing ears. The left maxillary sinus is tender to palpation.",
         "input_parameters": {
             "purulent_tonsils": false,
-            "altered_mental_status_": true,
             "symptom_onset": true,
             "severe_tonsil_inflammation": false
         }

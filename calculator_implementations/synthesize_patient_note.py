@@ -6,7 +6,7 @@ import importlib.util
 import height_conversion
 from rounding import round_number
 
-random.seed(42)
+#random.seed(42)
 
 
 def random_date():
@@ -89,9 +89,9 @@ def qt_interval_patient_notes_bazett():
 
     heart_rate = round(random.uniform(45, 180))
 
-    qt_interval = round(330, 470)
+    qt_interval = round(random.uniform(200, 500))
 
-    note = f"Patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
+    note = f"A patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
 
     input_parameters = {"heart_rate": [heart_rate, "beats per minute"], "qt_interval": [qt_interval, "msec"]}
     
@@ -102,9 +102,9 @@ def qt_interval_patient_notes_framingham():
 
     heart_rate = round(random.uniform(45, 180))
 
-    qt_interval = round(330, 470)
+    qt_interval = round(random.uniform(200, 500))
 
-    note = f"Patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
+    note = f"A patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
 
     input_parameters = {"heart_rate": [heart_rate, "beats per minute"], "qt_interval": [qt_interval, "msec"]}
     
@@ -115,9 +115,9 @@ def qt_interval_patient_notes_fridericia():
 
     heart_rate = round(random.uniform(45, 180))
 
-    qt_interval = round(330, 470)
+    qt_interval = round(random.uniform(200, 500))
 
-    note = f"Patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
+    note = f"A patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
 
     input_parameters = {"heart_rate": [heart_rate, "beats per minute"], "qt_interval": [qt_interval, "msec"]}
     
@@ -128,9 +128,9 @@ def qt_interval_patient_notes_hodges():
 
     heart_rate = round(random.uniform(45, 180))
 
-    qt_interval = round(330, 470)
+    qt_interval = round(random.uniform(200, 500))
 
-    note = f"Patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
+    note = f"A patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
 
     input_parameters = {"heart_rate": [heart_rate, "beats per minute"], "qt_interval": [qt_interval, "msec"]}
     
@@ -142,9 +142,9 @@ def qt_interval_patient_notes_rautaharju():
 
     heart_rate = round(random.uniform(45, 180))
 
-    qt_interval = round(330, 470)
+    qt_interval = round(random.uniform(200, 500))
 
-    note = f"Patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
+    note = f"A patient has a heart rate of {heart_rate} bpm and a QT interval of {qt_interval} msec."
 
     input_parameters = {"heart_rate": [heart_rate, "beats per minute"], "qt_interval": [qt_interval, "msec"]}
     
@@ -153,24 +153,26 @@ def qt_interval_patient_notes_rautaharju():
 
 def mme_conversion():
     
-    mme_drugs = ["Codeine", "FentaNYL buccal", "FentANYL patch", "HYDROcodone", "HYDROmorphone", "Methadone", "Morphine", "OxyCODONE", "OxyMORphone", "Tapentadol", "TraMADol"]
+    mme_drugs = ["Codeine", "FentaNYL buccal", "HYDROcodone", "HYDROmorphone", "Methadone", "Morphine", "OxyCODONE", "OxyMORphone", "Tapentadol", "TraMADol"]
     
 
-    drugs = random.sample(mme_drugs, 3)
+    num_instances = random.randint(1,3)
 
-    note = "The patient takes "
+    drugs = random.sample(mme_drugs, num_instances)
+
+    note = "A patient takes "
 
     input_parameters = {}
 
-    for i in range(3):
+    for i in range(num_instances):
 
         num_doses = random.randint(1, 3)
-        num_amount = round(random.randint(1, 7)) * 10
+        num_amount = round(random.randint(1, 3)) * 10
 
         key_name_dose = drugs[i] + " Dose"
         key_name_dose_per_day = drugs[i] + " Dose Per Day"
 
-        if drugs[i] == "FentaNYL buccal" or drugs[i] == "FentaNYL patch":
+        if drugs[i] == "FentaNYL buccal":
             input_parameters[key_name_dose] = [num_amount , "µg"]
         else:
             input_parameters[key_name_dose] = [num_amount , "mg"]
@@ -182,10 +184,14 @@ def mme_conversion():
         if num_doses == 1:
             add_s = ''
 
-        if i == len(drugs) - 1:
+        if (num_instances == 2 or num_instances == 3) and i == len(drugs) - 1:
             note += f"and {num_amount} mg of {drugs[i]} {num_doses} time{add_s} a day."
-        else:
+        elif (num_instances == 1 and i == 0):
+            note += f"{num_amount} mg of {drugs[i]} {num_doses} time{add_s} a day. "
+        elif (num_instances == 3):
             note += f"{num_amount} mg of {drugs[i]} {num_doses} time{add_s} a day, "
+        elif (num_instances == 2):
+            note += f"{num_amount} mg of {drugs[i]} {num_doses} time{add_s} a day "
 
     return note, input_parameters
 
@@ -202,7 +208,7 @@ def steroid_conversion():
     
     amount = round_number(steroid_conversion_calculator.compute_steroid_conversion(input_parameters))
 
-    note = f"Patient has taken {amount} mg of {choices[0]}. "
+    note = f"A patient has taken {amount} mg of {choices[0]}. "
 
     input_parameters = {"input steroid": [choices[0], round_number(amount), "mg"], "target steroid": choices[1]}
 
@@ -234,12 +240,14 @@ def target_weight():
     return note, input_parameters
 
 
-with open("/Users/khandekarns/Documents/GSM8k-Med/calculator_implementations/calc_info.json") as file:
+with open("/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/name_to_python.json") as file:
     calc_info  = json.load(file)
 
 problems = {}
 
-calc_ids = ["11", "13", "24", "56", "57", "58", "59", "61", "49", "68", "69"]
+# calc_ids = ["11", "13", "24", "56", "57", "58", "59", "61", "49", "68", "69"]
+
+calc_ids = ["11", "49", "56", "57", "58", "59"]
 
 
 calculator_id_to_name = {
@@ -259,13 +267,13 @@ calculator_id_to_name = {
 
 data = {}
 
-for calc_id in calculator_id_to_name:
+for calc_id in calc_ids:
 
     calculator_name_formal = calc_info[calc_id]["calculator name"]
 
     data[calc_id] = {}
 
-    for i in range(21, 101):
+    for i in range(0, 21):
 
         function_name = calculator_id_to_name[calc_id]
 
@@ -279,7 +287,7 @@ for calc_id in calculator_id_to_name:
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
 
-            function = getattr(module, calc_info[calc_id]["explanation"])
+            function = getattr(module, calc_info[calc_id]["explanation function"])
 
             gt_result = function(input_parameters)
 
@@ -290,7 +298,9 @@ for calc_id in calculator_id_to_name:
             data[calc_id][key_name]["Patient Note"] = note
             data[calc_id][key_name]["input_parameters"] = input_parameters
 
-with open("synthetic_instances.json") as file:
+print(data)
+
+with open("synthetic_instances.json", "w") as file:
     json.dump(data, file, indent=4)
 
 

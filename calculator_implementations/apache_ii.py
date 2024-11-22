@@ -63,7 +63,7 @@ def apache_ii_explanation(input_parameters):
                 explanation += f"The patient's surgery type is classified as 'Elective' and so 2 points are added to the total, making the current total 0 + 2 = 2.\n"
                 score += 2
             elif surgery_type == "Emergency":
-                explanation += f"The patient's surgery type is classified as 'Emergency' and so 5 points are added to the total, making the current total 0 + 2 = 5.\n"
+                explanation += f"The patient's surgery type is classified as 'Emergency' and so 5 points are added to the total, making the current total 0 + 5 = 5.\n"
                 score += 5
         elif not input_parameters['organ_failure_immunocompromise']:
             explanation += f"The patient is reported to not have any organ failure immunocompromise and so 0 points are added to the total, keeping the total at 0 points.\n"
@@ -71,7 +71,7 @@ def apache_ii_explanation(input_parameters):
         explanation += f"The patient note does not report any history on immunocompromise and so we assume this to be false. Hence, 0 points are added to the total, keeping the total at 0 points.\n"
     
     if age < 45:
-        explanation += "Because the patient's age is less than 45, no points are added to the score, keeping it at 0."
+        explanation += f"Because the patient's age is less than 45, no points are added to the score, keeping it at {score}."
     elif 45 < age <= 54:
         explanation += f"Because the patient's age is between 45 and 54, 2 points are added to the total, making the current total, {score} + 2 = {score + 2}.\n"
         score += 2
@@ -81,8 +81,8 @@ def apache_ii_explanation(input_parameters):
     elif 65 <= age <= 74:
         explanation += f"Because the patient's age is between 65 and 74, 5 points are added to the total, making the current total, {score} + 5 = {score + 5}.\n"
         score += 5
-    elif age > 75:
-        explanation += f"Because the patient's age is greater than 75 years, 6 points are added to the total, making the current total, {score} + 6 = {score + 6}.\n"
+    elif age >= 75:
+        explanation += f"Because the patient's age is at least 75 years, 6 points are added to the total, making the current total, {score} + 6 = {score + 6}.\n"
         score += 6
 
     explanation += f"The patient's FiO2 percentage is {fio2} %. "
@@ -102,19 +102,16 @@ def apache_ii_explanation(input_parameters):
             score += 2
         elif a_a_gradient < 200:
             explanation += f"Because the patient's A-a gradient is less than 200, we do not add any points to the total, keeing the current total at {score}.\n"
-            score += 0  # This line is technically not needed
     else:
         partial_pressure_oxygen = input_parameters['partial_pressure_oxygen'][0]
         explanation += "Because the patent's FiO2 percentrage is less than 50%, we need to examine the patient's A-a-gradient to compute the APACHE II score. "
         explanation += f"The patient's partial pressure of oxygen is {partial_pressure_oxygen} mm Hg. "
         if partial_pressure_oxygen > 70:
             explanation += f"Because the patient's partial pressure of oxygen is more than 70 mm Hg, we do not add any points to the total, keeing the current total at {score}.\n"
-            score += 0
         elif 61 <= partial_pressure_oxygen <= 70:
             explanation += f"Because the patient's partial pressure of oxygen is between 61 and 70 mm Hg, we do add one point to the total, making the current total {score} + 1 {score + 1}.\n"
             score += 1
         elif 55 <= partial_pressure_oxygen <= 60:
-            explanation += f"Because the patient's partial pressure of oxygen is between 61 and 70 mm Hg, we do add one point to the total, making the current total {score} + 1 {score + 1}.\n"
             explanation += f"Because the patient's partial pressure of oxygen is between 55 and 60 mm Hg, we add three points to the total, making the current total {score} + 3 = {score + 3}.\n"
             score += 3
         elif partial_pressure_oxygen < 55:
@@ -199,7 +196,7 @@ def apache_ii_explanation(input_parameters):
         explanation += f"Because the patient's pH is above 7.70, 4 points are added to the score, making the current total {score} + 4 = {score + 4}.\n"
         score += 4
     elif 7.60 <= pH < 7.70:
-        explanation += f"Because the patient's pH is between 7.60 and 7.69, 3 points are added to the score, making the current total {score} + 3 = {score + 4}.\n"
+        explanation += f"Because the patient's pH is between 7.60 and 7.69, 3 points are added to the score, making the current total {score} + 3 = {score + 3}.\n"
         score += 3
     elif 7.50 <= pH < 7.60:
         explanation += f"Because the patient's pH is between 7.50 and 7.59, 1 point is added to the score, making the current total {score} + 1 = {score + 1}.\n"
@@ -294,7 +291,10 @@ def apache_ii_explanation(input_parameters):
     elif 3 <= wbc < 15:
         explanation += f"Because the patient's white blood cell count is between 3 and 14.9 x10^9/L, 0 points are added to the patient's score, keeping the total at {score}. "
 
-    explanation += f"The patient's Glasgow Coma Score is {gcs}, and so we add {gcs} points to the total making the current total {gcs} + {score} = {gcs + score}. Hence, the patient's APACHE II score is {gcs + score}.\n"
-    score += gcs
+
+    # Glasgow Coma Score
+    apache_ii_gcs = 15 - gcs
+    explanation += f"The patient's Glasgow Coma Score is {gcs}. For this criterion, we subtract 15 from the {gcs} points and add that to the total score. 15 - {gcs} = {apache_ii_gcs}. Hence, we add {apache_ii_gcs} to the total making the current total {apache_ii_gcs} + {score} = {apache_ii_gcs + score}. Hence, the patient's APACHE II score is {apache_ii_gcs + score}.\n"
+    score += apache_ii_gcs
 
     return {"Explanation": explanation, "Answer": score}

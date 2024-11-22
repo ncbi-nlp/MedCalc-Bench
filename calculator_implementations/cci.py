@@ -68,7 +68,7 @@ def compute_cci_explanation(input_parameters):
             explanation += "At least one of transient ischemic attack or cerebral vascular accident must be present in the patient for a point to be added to the current total.\n"
 
             if 'tia' not in input_parameters:
-                explanation += f"Transient ischemic attacks is not reported for the patient and so we assume it to be absent.\n"
+                explanation += f"Transient ischemic attacks is not mentioned for the patient and so we assume it to be absent.\n"
                 input_parameters["tia"] = False
             elif input_parameters['tia']:
                 explanation += f"Transient ischemic attacks is reported to be present for the patient.\n"

@@ -1,0 +1,2214 @@
+{
+    "11": {
+        "1": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 49 beats per minute.\nThe QT interval is 276 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/49 = 1.224.\nHence, plugging in these values, we will get 276/\u221a(1.224) = 249.47.\nThe patient's corrected QT interval (QTc) is 249.47 msec. ",
+            "Ground Truth Answer": 249.47,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 49 bpm and a QT interval of 276 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    49,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    276,
+                    "msec"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 84 beats per minute.\nThe QT interval is 378 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/84 = 0.714.\nHence, plugging in these values, we will get 378/\u221a(0.714) = 447.345.\nThe patient's corrected QT interval (QTc) is 447.345 msec. ",
+            "Ground Truth Answer": 447.345,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 84 bpm and a QT interval of 378 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    84,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    378,
+                    "msec"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 154 beats per minute.\nThe QT interval is 293 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/154 = 0.39.\nHence, plugging in these values, we will get 293/\u221a(0.39) = 469.175.\nThe patient's corrected QT interval (QTc) is 469.175 msec. ",
+            "Ground Truth Answer": 469.175,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 154 bpm and a QT interval of 293 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    154,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    293,
+                    "msec"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 46 beats per minute.\nThe QT interval is 444 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/46 = 1.304.\nHence, plugging in these values, we will get 444/\u221a(1.304) = 388.816.\nThe patient's corrected QT interval (QTc) is 388.816 msec. ",
+            "Ground Truth Answer": 388.816,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 46 bpm and a QT interval of 444 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    46,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    444,
+                    "msec"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 111 beats per minute.\nThe QT interval is 458 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/111 = 0.541.\nHence, plugging in these values, we will get 458/\u221a(0.541) = 622.683.\nThe patient's corrected QT interval (QTc) is 622.683 msec. ",
+            "Ground Truth Answer": 622.683,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 111 bpm and a QT interval of 458 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    111,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    458,
+                    "msec"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 161 beats per minute.\nThe QT interval is 218 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/161 = 0.373.\nHence, plugging in these values, we will get 218/\u221a(0.373) = 356.946.\nThe patient's corrected QT interval (QTc) is 356.946 msec. ",
+            "Ground Truth Answer": 356.946,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 161 bpm and a QT interval of 218 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    161,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    218,
+                    "msec"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 55 beats per minute.\nThe QT interval is 442 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/55 = 1.091.\nHence, plugging in these values, we will get 442/\u221a(1.091) = 423.165.\nThe patient's corrected QT interval (QTc) is 423.165 msec. ",
+            "Ground Truth Answer": 423.165,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 55 bpm and a QT interval of 442 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    55,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    442,
+                    "msec"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 84 beats per minute.\nThe QT interval is 239 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/84 = 0.714.\nHence, plugging in these values, we will get 239/\u221a(0.714) = 282.845.\nThe patient's corrected QT interval (QTc) is 282.845 msec. ",
+            "Ground Truth Answer": 282.845,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 84 bpm and a QT interval of 239 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    84,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    239,
+                    "msec"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 63 beats per minute.\nThe QT interval is 260 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/63 = 0.952.\nHence, plugging in these values, we will get 260/\u221a(0.952) = 266.474.\nThe patient's corrected QT interval (QTc) is 266.474 msec. ",
+            "Ground Truth Answer": 266.474,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 63 bpm and a QT interval of 260 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    63,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    260,
+                    "msec"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 167 beats per minute.\nThe QT interval is 274 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/167 = 0.359.\nHence, plugging in these values, we will get 274/\u221a(0.359) = 457.302.\nThe patient's corrected QT interval (QTc) is 457.302 msec. ",
+            "Ground Truth Answer": 457.302,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 167 bpm and a QT interval of 274 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    167,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    274,
+                    "msec"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 47 beats per minute.\nThe QT interval is 348 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/47 = 1.277.\nHence, plugging in these values, we will get 348/\u221a(1.277) = 307.953.\nThe patient's corrected QT interval (QTc) is 307.953 msec. ",
+            "Ground Truth Answer": 307.953,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 47 bpm and a QT interval of 348 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    47,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    348,
+                    "msec"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 106 beats per minute.\nThe QT interval is 299 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/106 = 0.566.\nHence, plugging in these values, we will get 299/\u221a(0.566) = 397.432.\nThe patient's corrected QT interval (QTc) is 397.432 msec. ",
+            "Ground Truth Answer": 397.432,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 106 bpm and a QT interval of 299 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    106,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    299,
+                    "msec"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 172 beats per minute.\nThe QT interval is 447 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/172 = 0.349.\nHence, plugging in these values, we will get 447/\u221a(0.349) = 756.65.\nThe patient's corrected QT interval (QTc) is 756.65 msec. ",
+            "Ground Truth Answer": 756.65,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 172 bpm and a QT interval of 447 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    172,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    447,
+                    "msec"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 104 beats per minute.\nThe QT interval is 226 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/104 = 0.577.\nHence, plugging in these values, we will get 226/\u221a(0.577) = 297.523.\nThe patient's corrected QT interval (QTc) is 297.523 msec. ",
+            "Ground Truth Answer": 297.523,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 104 bpm and a QT interval of 226 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    104,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    226,
+                    "msec"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 55 beats per minute.\nThe QT interval is 293 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/55 = 1.091.\nHence, plugging in these values, we will get 293/\u221a(1.091) = 280.514.\nThe patient's corrected QT interval (QTc) is 280.514 msec. ",
+            "Ground Truth Answer": 280.514,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 55 bpm and a QT interval of 293 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    55,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    293,
+                    "msec"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 175 beats per minute.\nThe QT interval is 211 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/175 = 0.343.\nHence, plugging in these values, we will get 211/\u221a(0.343) = 360.276.\nThe patient's corrected QT interval (QTc) is 360.276 msec. ",
+            "Ground Truth Answer": 360.276,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 175 bpm and a QT interval of 211 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    175,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    211,
+                    "msec"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 47 beats per minute.\nThe QT interval is 406 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/47 = 1.277.\nHence, plugging in these values, we will get 406/\u221a(1.277) = 359.278.\nThe patient's corrected QT interval (QTc) is 359.278 msec. ",
+            "Ground Truth Answer": 359.278,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 47 bpm and a QT interval of 406 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    47,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    406,
+                    "msec"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 157 beats per minute.\nThe QT interval is 236 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/157 = 0.382.\nHence, plugging in these values, we will get 236/\u221a(0.382) = 381.839.\nThe patient's corrected QT interval (QTc) is 381.839 msec. ",
+            "Ground Truth Answer": 381.839,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 157 bpm and a QT interval of 236 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    157,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    236,
+                    "msec"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 72 beats per minute.\nThe QT interval is 254 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/72 = 0.833.\nHence, plugging in these values, we will get 254/\u221a(0.833) = 278.299.\nThe patient's corrected QT interval (QTc) is 278.299 msec. ",
+            "Ground Truth Answer": 278.299,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 72 bpm and a QT interval of 254 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    72,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    254,
+                    "msec"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 120 beats per minute.\nThe QT interval is 404 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/120 = 0.5.\nHence, plugging in these values, we will get 404/\u221a(0.5) = 571.342.\nThe patient's corrected QT interval (QTc) is 571.342 msec. ",
+            "Ground Truth Answer": 571.342,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 120 bpm and a QT interval of 404 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    120,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    404,
+                    "msec"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The corrected QT interval using the Bazett formula is computed as  QTc = QT interval / \u221a (RR interval), where the QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 149 beats per minute.\nThe QT interval is 449 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/149 = 0.403.\nHence, plugging in these values, we will get 449/\u221a(0.403) = 707.284.\nThe patient's corrected QT interval (QTc) is 707.284 msec. ",
+            "Ground Truth Answer": 707.284,
+            "calculator name": "QTc Bazett Calculator",
+            "Patient Note": "A patient has a heart rate of 149 bpm and a QT interval of 449 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    149,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    449,
+                    "msec"
+                ]
+            }
+        }
+    },
+    "49": {
+        "1": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of TraMADol is 30 mg. The patient takes 1 doses/day of TraMADol. This means that the patient takes 30 mg/dose TraMADol * 1 dose/day = 30 mg/day. To convert to mme/day of TraMADol, multiply the 30 mg/day by the mme conversion factor, 0.2 mme/mg, giving us 6.0 mme/day. Adding the mme/day of TraMADol to the total mme/day gives us 0 + 6.0 = 6.0 mme/day.\nThe patient's mme/day is 6.0 mme/day.",
+            "Ground Truth Answer": 6.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of TraMADol 1 time a day. ",
+            "input_parameters": {
+                "TraMADol Dose": [
+                    30,
+                    "mg"
+                ],
+                "TraMADol Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of Morphine is 30 mg. The patient takes 1 doses/day of Morphine. This means that the patient takes 30 mg/dose Morphine * 1 dose/day = 30 mg/day. To convert to mme/day of Morphine, multiply the 30 mg/day by the mme conversion factor, 1 mme/mg, giving us 30 mme/day. Adding the mme/day of Morphine to the total mme/day gives us 0 + 30 = 30 mme/day.\nThe patient's dose of Methadone is 50 mg. The patient takes 3 doses/day of Methadone. This means that the patient takes 50 mg/dose Methadone * 3 dose/day = 150 mg/day. To convert to mme/day of Methadone, multiply the 150 mg/day by the mme conversion factor, 4.7 mme/mg, giving us 705.0 mme/day. Adding the mme/day of Methadone to the total mme/day gives us 30 + 705.0 = 735.0 mme/day.\nThe patient's mme/day is 735.0 mme/day.",
+            "Ground Truth Answer": 735.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of Morphine 1 time a day and 50 mg of Methadone 3 times a day.",
+            "input_parameters": {
+                "Morphine Dose": [
+                    30,
+                    "mg"
+                ],
+                "Morphine Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Methadone Dose": [
+                    50,
+                    "mg"
+                ],
+                "Methadone Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROmorphone is 30 mg. The patient takes 1 doses/day of HYDROmorphone. This means that the patient takes 30 mg/dose HYDROmorphone * 1 dose/day = 30 mg/day. To convert to mme/day of HYDROmorphone, multiply the 30 mg/day by the mme conversion factor, 5 mme/mg, giving us 150 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 0 + 150 = 150 mme/day.\nThe patient's dose of Morphine is 70 mg. The patient takes 1 doses/day of Morphine. This means that the patient takes 70 mg/dose Morphine * 1 dose/day = 70 mg/day. To convert to mme/day of Morphine, multiply the 70 mg/day by the mme conversion factor, 1 mme/mg, giving us 70 mme/day. Adding the mme/day of Morphine to the total mme/day gives us 150 + 70 = 220 mme/day.\nThe patient's dose of TraMADol is 60 mg. The patient takes 2 doses/day of TraMADol. This means that the patient takes 60 mg/dose TraMADol * 2 dose/day = 120 mg/day. To convert to mme/day of TraMADol, multiply the 120 mg/day by the mme conversion factor, 0.2 mme/mg, giving us 24.0 mme/day. Adding the mme/day of TraMADol to the total mme/day gives us 220 + 24.0 = 244.0 mme/day.\nThe patient's mme/day is 244.0 mme/day.",
+            "Ground Truth Answer": 244.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of HYDROmorphone 1 time a day, 70 mg of Morphine 1 time a day, and 60 mg of TraMADol 2 times a day.",
+            "input_parameters": {
+                "HYDROmorphone Dose": [
+                    30,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Morphine Dose": [
+                    70,
+                    "mg"
+                ],
+                "Morphine Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "TraMADol Dose": [
+                    60,
+                    "mg"
+                ],
+                "TraMADol Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROmorphone is 50 mg. The patient takes 1 doses/day of HYDROmorphone. This means that the patient takes 50 mg/dose HYDROmorphone * 1 dose/day = 50 mg/day. To convert to mme/day of HYDROmorphone, multiply the 50 mg/day by the mme conversion factor, 5 mme/mg, giving us 250 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 0 + 250 = 250 mme/day.\nThe patient's mme/day is 250 mme/day.",
+            "Ground Truth Answer": 250,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 50 mg of HYDROmorphone 1 time a day. ",
+            "input_parameters": {
+                "HYDROmorphone Dose": [
+                    50,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of OxyCODONE is 40 mg. The patient takes 3 doses/day of OxyCODONE. This means that the patient takes 40 mg/dose OxyCODONE * 3 dose/day = 120 mg/day. To convert to mme/day of OxyCODONE, multiply the 120 mg/day by the mme conversion factor, 1.5 mme/mg, giving us 180.0 mme/day. Adding the mme/day of OxyCODONE to the total mme/day gives us 0 + 180.0 = 180.0 mme/day.\nThe patient's dose of TraMADol is 60 mg. The patient takes 2 doses/day of TraMADol. This means that the patient takes 60 mg/dose TraMADol * 2 dose/day = 120 mg/day. To convert to mme/day of TraMADol, multiply the 120 mg/day by the mme conversion factor, 0.2 mme/mg, giving us 24.0 mme/day. Adding the mme/day of TraMADol to the total mme/day gives us 180.0 + 24.0 = 204.0 mme/day.\nThe patient's dose of Codeine is 70 mg. The patient takes 3 doses/day of Codeine. This means that the patient takes 70 mg/dose Codeine * 3 dose/day = 210 mg/day. To convert to mme/day of Codeine, multiply the 210 mg/day by the mme conversion factor, 0.15 mme/mg, giving us 31.5 mme/day. Adding the mme/day of Codeine to the total mme/day gives us 204.0 + 31.5 = 235.5 mme/day.\nThe patient's mme/day is 235.5 mme/day.",
+            "Ground Truth Answer": 235.5,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 40 mg of OxyCODONE 3 times a day, 60 mg of TraMADol 2 times a day, and 70 mg of Codeine 3 times a day.",
+            "input_parameters": {
+                "OxyCODONE Dose": [
+                    40,
+                    "mg"
+                ],
+                "OxyCODONE Dose Per Day": [
+                    3,
+                    "per day"
+                ],
+                "TraMADol Dose": [
+                    60,
+                    "mg"
+                ],
+                "TraMADol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Codeine Dose": [
+                    70,
+                    "mg"
+                ],
+                "Codeine Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of TraMADol is 70 mg. The patient takes 2 doses/day of TraMADol. This means that the patient takes 70 mg/dose TraMADol * 2 dose/day = 140 mg/day. To convert to mme/day of TraMADol, multiply the 140 mg/day by the mme conversion factor, 0.2 mme/mg, giving us 28.0 mme/day. Adding the mme/day of TraMADol to the total mme/day gives us 0 + 28.0 = 28.0 mme/day.\nThe patient's dose of OxyCODONE is 30 mg. The patient takes 2 doses/day of OxyCODONE. This means that the patient takes 30 mg/dose OxyCODONE * 2 dose/day = 60 mg/day. To convert to mme/day of OxyCODONE, multiply the 60 mg/day by the mme conversion factor, 1.5 mme/mg, giving us 90.0 mme/day. Adding the mme/day of OxyCODONE to the total mme/day gives us 28.0 + 90.0 = 118.0 mme/day.\nThe patient's mme/day is 118.0 mme/day.",
+            "Ground Truth Answer": 118.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 70 mg of TraMADol 2 times a day and 30 mg of OxyCODONE 2 times a day.",
+            "input_parameters": {
+                "TraMADol Dose": [
+                    70,
+                    "mg"
+                ],
+                "TraMADol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "OxyCODONE Dose": [
+                    30,
+                    "mg"
+                ],
+                "OxyCODONE Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of Methadone is 30 mg. The patient takes 1 doses/day of Methadone. This means that the patient takes 30 mg/dose Methadone * 1 dose/day = 30 mg/day. To convert to mme/day of Methadone, multiply the 30 mg/day by the mme conversion factor, 4.7 mme/mg, giving us 141.0 mme/day. Adding the mme/day of Methadone to the total mme/day gives us 0 + 141.0 = 141.0 mme/day.\nThe patient's mme/day is 141.0 mme/day.",
+            "Ground Truth Answer": 141.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of Methadone 1 time a day. ",
+            "input_parameters": {
+                "Methadone Dose": [
+                    30,
+                    "mg"
+                ],
+                "Methadone Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROmorphone is 30 mg. The patient takes 2 doses/day of HYDROmorphone. This means that the patient takes 30 mg/dose HYDROmorphone * 2 dose/day = 60 mg/day. To convert to mme/day of HYDROmorphone, multiply the 60 mg/day by the mme conversion factor, 5 mme/mg, giving us 300 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 0 + 300 = 300 mme/day.\nThe patient's mme/day is 300 mme/day.",
+            "Ground Truth Answer": 300,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of HYDROmorphone 2 times a day. ",
+            "input_parameters": {
+                "HYDROmorphone Dose": [
+                    30,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of Tapentadol is 60 mg. The patient takes 2 doses/day of Tapentadol. This means that the patient takes 60 mg/dose Tapentadol * 2 dose/day = 120 mg/day. To convert to mme/day of Tapentadol, multiply the 120 mg/day by the mme conversion factor, 0.4 mme/mg, giving us 48.0 mme/day. Adding the mme/day of Tapentadol to the total mme/day gives us 0 + 48.0 = 48.0 mme/day.\nThe patient's dose of Methadone is 60 mg. The patient takes 2 doses/day of Methadone. This means that the patient takes 60 mg/dose Methadone * 2 dose/day = 120 mg/day. To convert to mme/day of Methadone, multiply the 120 mg/day by the mme conversion factor, 4.7 mme/mg, giving us 564.0 mme/day. Adding the mme/day of Methadone to the total mme/day gives us 48.0 + 564.0 = 612.0 mme/day.\nThe patient's dose of OxyMORphone is 50 mg. The patient takes 2 doses/day of OxyMORphone. This means that the patient takes 50 mg/dose OxyMORphone * 2 dose/day = 100 mg/day. To convert to mme/day of OxyMORphone, multiply the 100 mg/day by the mme conversion factor, 3 mme/mg, giving us 300 mme/day. Adding the mme/day of OxyMORphone to the total mme/day gives us 612.0 + 300 = 912.0 mme/day.\nThe patient's mme/day is 912.0 mme/day.",
+            "Ground Truth Answer": 912.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 60 mg of Tapentadol 2 times a day, 60 mg of Methadone 2 times a day, and 50 mg of OxyMORphone 2 times a day.",
+            "input_parameters": {
+                "Tapentadol Dose": [
+                    60,
+                    "mg"
+                ],
+                "Tapentadol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Methadone Dose": [
+                    60,
+                    "mg"
+                ],
+                "Methadone Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "OxyMORphone Dose": [
+                    50,
+                    "mg"
+                ],
+                "OxyMORphone Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROcodone is 70 mg. The patient takes 3 doses/day of HYDROcodone. This means that the patient takes 70 mg/dose HYDROcodone * 3 dose/day = 210 mg/day. To convert to mme/day of HYDROcodone, multiply the 210 mg/day by the mme conversion factor, 1 mme/mg, giving us 210 mme/day. Adding the mme/day of HYDROcodone to the total mme/day gives us 0 + 210 = 210 mme/day.\nThe patient's dose of FentaNYL buccal is 70 \u00b5g.\nThe patient takes 2 doses/day of FentaNYL buccal. This means that the patient takes 70 \u00b5g/dose FentaNYL buccal * 2 dose/day = 140 \u00b5g/day. To convert to mme/day of FentaNYL buccal, multiply the 140 \u00b5g/day by the mme conversion factor, 0.13 mme/\u00b5g, giving us 18.2 mme/day. Adding the mme/day of FentaNYL buccal to the total mme/day gives us 210 + 18.2 = 228.2 mme/day.\nThe patient's dose of Morphine is 60 mg. The patient takes 3 doses/day of Morphine. This means that the patient takes 60 mg/dose Morphine * 3 dose/day = 180 mg/day. To convert to mme/day of Morphine, multiply the 180 mg/day by the mme conversion factor, 1 mme/mg, giving us 180 mme/day. Adding the mme/day of Morphine to the total mme/day gives us 228.2 + 180 = 408.2 mme/day.\nThe patient's mme/day is 408.2 mme/day.",
+            "Ground Truth Answer": 408.2,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 70 mg of HYDROcodone 3 times a day, 70 mg of FentaNYL buccal 2 times a day, and 60 mg of Morphine 3 times a day.",
+            "input_parameters": {
+                "HYDROcodone Dose": [
+                    70,
+                    "mg"
+                ],
+                "HYDROcodone Dose Per Day": [
+                    3,
+                    "per day"
+                ],
+                "FentaNYL buccal Dose": [
+                    70,
+                    "\u00b5g"
+                ],
+                "FentaNYL buccal Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Morphine Dose": [
+                    60,
+                    "mg"
+                ],
+                "Morphine Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of OxyCODONE is 20 mg. The patient takes 1 doses/day of OxyCODONE. This means that the patient takes 20 mg/dose OxyCODONE * 1 dose/day = 20 mg/day. To convert to mme/day of OxyCODONE, multiply the 20 mg/day by the mme conversion factor, 1.5 mme/mg, giving us 30.0 mme/day. Adding the mme/day of OxyCODONE to the total mme/day gives us 0 + 30.0 = 30.0 mme/day.\nThe patient's dose of Morphine is 60 mg. The patient takes 3 doses/day of Morphine. This means that the patient takes 60 mg/dose Morphine * 3 dose/day = 180 mg/day. To convert to mme/day of Morphine, multiply the 180 mg/day by the mme conversion factor, 1 mme/mg, giving us 180 mme/day. Adding the mme/day of Morphine to the total mme/day gives us 30.0 + 180 = 210.0 mme/day.\nThe patient's mme/day is 210.0 mme/day.",
+            "Ground Truth Answer": 210.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 20 mg of OxyCODONE 1 time a day and 60 mg of Morphine 3 times a day.",
+            "input_parameters": {
+                "OxyCODONE Dose": [
+                    20,
+                    "mg"
+                ],
+                "OxyCODONE Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Morphine Dose": [
+                    60,
+                    "mg"
+                ],
+                "Morphine Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROcodone is 50 mg. The patient takes 1 doses/day of HYDROcodone. This means that the patient takes 50 mg/dose HYDROcodone * 1 dose/day = 50 mg/day. To convert to mme/day of HYDROcodone, multiply the 50 mg/day by the mme conversion factor, 1 mme/mg, giving us 50 mme/day. Adding the mme/day of HYDROcodone to the total mme/day gives us 0 + 50 = 50 mme/day.\nThe patient's dose of Tapentadol is 40 mg. The patient takes 1 doses/day of Tapentadol. This means that the patient takes 40 mg/dose Tapentadol * 1 dose/day = 40 mg/day. To convert to mme/day of Tapentadol, multiply the 40 mg/day by the mme conversion factor, 0.4 mme/mg, giving us 16.0 mme/day. Adding the mme/day of Tapentadol to the total mme/day gives us 50 + 16.0 = 66.0 mme/day.\nThe patient's mme/day is 66.0 mme/day.",
+            "Ground Truth Answer": 66.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 50 mg of HYDROcodone 1 time a day and 40 mg of Tapentadol 1 time a day.",
+            "input_parameters": {
+                "HYDROcodone Dose": [
+                    50,
+                    "mg"
+                ],
+                "HYDROcodone Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Tapentadol Dose": [
+                    40,
+                    "mg"
+                ],
+                "Tapentadol Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of TraMADol is 50 mg. The patient takes 2 doses/day of TraMADol. This means that the patient takes 50 mg/dose TraMADol * 2 dose/day = 100 mg/day. To convert to mme/day of TraMADol, multiply the 100 mg/day by the mme conversion factor, 0.2 mme/mg, giving us 20.0 mme/day. Adding the mme/day of TraMADol to the total mme/day gives us 0 + 20.0 = 20.0 mme/day.\nThe patient's dose of Codeine is 30 mg. The patient takes 2 doses/day of Codeine. This means that the patient takes 30 mg/dose Codeine * 2 dose/day = 60 mg/day. To convert to mme/day of Codeine, multiply the 60 mg/day by the mme conversion factor, 0.15 mme/mg, giving us 9.0 mme/day. Adding the mme/day of Codeine to the total mme/day gives us 20.0 + 9.0 = 29.0 mme/day.\nThe patient's mme/day is 29.0 mme/day.",
+            "Ground Truth Answer": 29.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 50 mg of TraMADol 2 times a day and 30 mg of Codeine 2 times a day.",
+            "input_parameters": {
+                "TraMADol Dose": [
+                    50,
+                    "mg"
+                ],
+                "TraMADol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Codeine Dose": [
+                    30,
+                    "mg"
+                ],
+                "Codeine Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of FentaNYL buccal is 30 \u00b5g.\nThe patient takes 1 doses/day of FentaNYL buccal. This means that the patient takes 30 \u00b5g/dose FentaNYL buccal * 1 dose/day = 30 \u00b5g/day. To convert to mme/day of FentaNYL buccal, multiply the 30 \u00b5g/day by the mme conversion factor, 0.13 mme/\u00b5g, giving us 3.9 mme/day. Adding the mme/day of FentaNYL buccal to the total mme/day gives us 0 + 3.9 = 3.9 mme/day.\nThe patient's dose of Morphine is 70 mg. The patient takes 3 doses/day of Morphine. This means that the patient takes 70 mg/dose Morphine * 3 dose/day = 210 mg/day. To convert to mme/day of Morphine, multiply the 210 mg/day by the mme conversion factor, 1 mme/mg, giving us 210 mme/day. Adding the mme/day of Morphine to the total mme/day gives us 3.9 + 210 = 213.9 mme/day.\nThe patient's dose of OxyMORphone is 60 mg. The patient takes 3 doses/day of OxyMORphone. This means that the patient takes 60 mg/dose OxyMORphone * 3 dose/day = 180 mg/day. To convert to mme/day of OxyMORphone, multiply the 180 mg/day by the mme conversion factor, 3 mme/mg, giving us 540 mme/day. Adding the mme/day of OxyMORphone to the total mme/day gives us 213.9 + 540 = 753.9 mme/day.\nThe patient's mme/day is 753.9 mme/day.",
+            "Ground Truth Answer": 753.9,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of FentaNYL buccal 1 time a day, 70 mg of Morphine 3 times a day, and 60 mg of OxyMORphone 3 times a day.",
+            "input_parameters": {
+                "FentaNYL buccal Dose": [
+                    30,
+                    "\u00b5g"
+                ],
+                "FentaNYL buccal Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Morphine Dose": [
+                    70,
+                    "mg"
+                ],
+                "Morphine Dose Per Day": [
+                    3,
+                    "per day"
+                ],
+                "OxyMORphone Dose": [
+                    60,
+                    "mg"
+                ],
+                "OxyMORphone Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROmorphone is 30 mg. The patient takes 2 doses/day of HYDROmorphone. This means that the patient takes 30 mg/dose HYDROmorphone * 2 dose/day = 60 mg/day. To convert to mme/day of HYDROmorphone, multiply the 60 mg/day by the mme conversion factor, 5 mme/mg, giving us 300 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 0 + 300 = 300 mme/day.\nThe patient's dose of OxyMORphone is 20 mg. The patient takes 2 doses/day of OxyMORphone. This means that the patient takes 20 mg/dose OxyMORphone * 2 dose/day = 40 mg/day. To convert to mme/day of OxyMORphone, multiply the 40 mg/day by the mme conversion factor, 3 mme/mg, giving us 120 mme/day. Adding the mme/day of OxyMORphone to the total mme/day gives us 300 + 120 = 420 mme/day.\nThe patient's dose of Tapentadol is 70 mg. The patient takes 2 doses/day of Tapentadol. This means that the patient takes 70 mg/dose Tapentadol * 2 dose/day = 140 mg/day. To convert to mme/day of Tapentadol, multiply the 140 mg/day by the mme conversion factor, 0.4 mme/mg, giving us 56.0 mme/day. Adding the mme/day of Tapentadol to the total mme/day gives us 420 + 56.0 = 476.0 mme/day.\nThe patient's mme/day is 476.0 mme/day.",
+            "Ground Truth Answer": 476.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of HYDROmorphone 2 times a day, 20 mg of OxyMORphone 2 times a day, and 70 mg of Tapentadol 2 times a day.",
+            "input_parameters": {
+                "HYDROmorphone Dose": [
+                    30,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "OxyMORphone Dose": [
+                    20,
+                    "mg"
+                ],
+                "OxyMORphone Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Tapentadol Dose": [
+                    70,
+                    "mg"
+                ],
+                "Tapentadol Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of OxyCODONE is 60 mg. The patient takes 1 doses/day of OxyCODONE. This means that the patient takes 60 mg/dose OxyCODONE * 1 dose/day = 60 mg/day. To convert to mme/day of OxyCODONE, multiply the 60 mg/day by the mme conversion factor, 1.5 mme/mg, giving us 90.0 mme/day. Adding the mme/day of OxyCODONE to the total mme/day gives us 0 + 90.0 = 90.0 mme/day.\nThe patient's mme/day is 90.0 mme/day.",
+            "Ground Truth Answer": 90.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 60 mg of OxyCODONE 1 time a day. ",
+            "input_parameters": {
+                "OxyCODONE Dose": [
+                    60,
+                    "mg"
+                ],
+                "OxyCODONE Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of Tapentadol is 50 mg. The patient takes 2 doses/day of Tapentadol. This means that the patient takes 50 mg/dose Tapentadol * 2 dose/day = 100 mg/day. To convert to mme/day of Tapentadol, multiply the 100 mg/day by the mme conversion factor, 0.4 mme/mg, giving us 40.0 mme/day. Adding the mme/day of Tapentadol to the total mme/day gives us 0 + 40.0 = 40.0 mme/day.\nThe patient's dose of HYDROcodone is 30 mg. The patient takes 1 doses/day of HYDROcodone. This means that the patient takes 30 mg/dose HYDROcodone * 1 dose/day = 30 mg/day. To convert to mme/day of HYDROcodone, multiply the 30 mg/day by the mme conversion factor, 1 mme/mg, giving us 30 mme/day. Adding the mme/day of HYDROcodone to the total mme/day gives us 40.0 + 30 = 70.0 mme/day.\nThe patient's mme/day is 70.0 mme/day.",
+            "Ground Truth Answer": 70.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 50 mg of Tapentadol 2 times a day and 30 mg of HYDROcodone 1 time a day.",
+            "input_parameters": {
+                "Tapentadol Dose": [
+                    50,
+                    "mg"
+                ],
+                "Tapentadol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "HYDROcodone Dose": [
+                    30,
+                    "mg"
+                ],
+                "HYDROcodone Dose Per Day": [
+                    1,
+                    "per day"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of OxyMORphone is 70 mg. The patient takes 1 doses/day of OxyMORphone. This means that the patient takes 70 mg/dose OxyMORphone * 1 dose/day = 70 mg/day. To convert to mme/day of OxyMORphone, multiply the 70 mg/day by the mme conversion factor, 3 mme/mg, giving us 210 mme/day. Adding the mme/day of OxyMORphone to the total mme/day gives us 0 + 210 = 210 mme/day.\nThe patient's dose of Codeine is 70 mg. The patient takes 3 doses/day of Codeine. This means that the patient takes 70 mg/dose Codeine * 3 dose/day = 210 mg/day. To convert to mme/day of Codeine, multiply the 210 mg/day by the mme conversion factor, 0.15 mme/mg, giving us 31.5 mme/day. Adding the mme/day of Codeine to the total mme/day gives us 210 + 31.5 = 241.5 mme/day.\nThe patient's mme/day is 241.5 mme/day.",
+            "Ground Truth Answer": 241.5,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 70 mg of OxyMORphone 1 time a day and 70 mg of Codeine 3 times a day.",
+            "input_parameters": {
+                "OxyMORphone Dose": [
+                    70,
+                    "mg"
+                ],
+                "OxyMORphone Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "Codeine Dose": [
+                    70,
+                    "mg"
+                ],
+                "Codeine Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of HYDROcodone is 50 mg. The patient takes 2 doses/day of HYDROcodone. This means that the patient takes 50 mg/dose HYDROcodone * 2 dose/day = 100 mg/day. To convert to mme/day of HYDROcodone, multiply the 100 mg/day by the mme conversion factor, 1 mme/mg, giving us 100 mme/day. Adding the mme/day of HYDROcodone to the total mme/day gives us 0 + 100 = 100 mme/day.\nThe patient's dose of OxyCODONE is 60 mg. The patient takes 1 doses/day of OxyCODONE. This means that the patient takes 60 mg/dose OxyCODONE * 1 dose/day = 60 mg/day. To convert to mme/day of OxyCODONE, multiply the 60 mg/day by the mme conversion factor, 1.5 mme/mg, giving us 90.0 mme/day. Adding the mme/day of OxyCODONE to the total mme/day gives us 100 + 90.0 = 190.0 mme/day.\nThe patient's dose of HYDROmorphone is 30 mg. The patient takes 3 doses/day of HYDROmorphone. This means that the patient takes 30 mg/dose HYDROmorphone * 3 dose/day = 90 mg/day. To convert to mme/day of HYDROmorphone, multiply the 90 mg/day by the mme conversion factor, 5 mme/mg, giving us 450 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 190.0 + 450 = 640.0 mme/day.\nThe patient's mme/day is 640.0 mme/day.",
+            "Ground Truth Answer": 640.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 50 mg of HYDROcodone 2 times a day, 60 mg of OxyCODONE 1 time a day, and 30 mg of HYDROmorphone 3 times a day.",
+            "input_parameters": {
+                "HYDROcodone Dose": [
+                    50,
+                    "mg"
+                ],
+                "HYDROcodone Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "OxyCODONE Dose": [
+                    60,
+                    "mg"
+                ],
+                "OxyCODONE Dose Per Day": [
+                    1,
+                    "per day"
+                ],
+                "HYDROmorphone Dose": [
+                    30,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    3,
+                    "per day"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of OxyMORphone is 30 mg. The patient takes 2 doses/day of OxyMORphone. This means that the patient takes 30 mg/dose OxyMORphone * 2 dose/day = 60 mg/day. To convert to mme/day of OxyMORphone, multiply the 60 mg/day by the mme conversion factor, 3 mme/mg, giving us 180 mme/day. Adding the mme/day of OxyMORphone to the total mme/day gives us 0 + 180 = 180 mme/day.\nThe patient's mme/day is 180 mme/day.",
+            "Ground Truth Answer": 180,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 30 mg of OxyMORphone 2 times a day. ",
+            "input_parameters": {
+                "OxyMORphone Dose": [
+                    30,
+                    "mg"
+                ],
+                "OxyMORphone Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The curent Morphine Milligram Equivalents (MME) is 0 MME per day.\nThe patient's dose of Tapentadol is 20 mg. The patient takes 2 doses/day of Tapentadol. This means that the patient takes 20 mg/dose Tapentadol * 2 dose/day = 40 mg/day. To convert to mme/day of Tapentadol, multiply the 40 mg/day by the mme conversion factor, 0.4 mme/mg, giving us 16.0 mme/day. Adding the mme/day of Tapentadol to the total mme/day gives us 0 + 16.0 = 16.0 mme/day.\nThe patient's dose of Codeine is 40 mg. The patient takes 3 doses/day of Codeine. This means that the patient takes 40 mg/dose Codeine * 3 dose/day = 120 mg/day. To convert to mme/day of Codeine, multiply the 120 mg/day by the mme conversion factor, 0.15 mme/mg, giving us 18.0 mme/day. Adding the mme/day of Codeine to the total mme/day gives us 16.0 + 18.0 = 34.0 mme/day.\nThe patient's dose of HYDROmorphone is 70 mg. The patient takes 2 doses/day of HYDROmorphone. This means that the patient takes 70 mg/dose HYDROmorphone * 2 dose/day = 140 mg/day. To convert to mme/day of HYDROmorphone, multiply the 140 mg/day by the mme conversion factor, 5 mme/mg, giving us 700 mme/day. Adding the mme/day of HYDROmorphone to the total mme/day gives us 34.0 + 700 = 734.0 mme/day.\nThe patient's mme/day is 734.0 mme/day.",
+            "Ground Truth Answer": 734.0,
+            "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+            "Patient Note": "A patient takes 20 mg of Tapentadol 2 times a day, 40 mg of Codeine 3 times a day, and 70 mg of HYDROmorphone 2 times a day.",
+            "input_parameters": {
+                "Tapentadol Dose": [
+                    20,
+                    "mg"
+                ],
+                "Tapentadol Dose Per Day": [
+                    2,
+                    "per day"
+                ],
+                "Codeine Dose": [
+                    40,
+                    "mg"
+                ],
+                "Codeine Dose Per Day": [
+                    3,
+                    "per day"
+                ],
+                "HYDROmorphone Dose": [
+                    70,
+                    "mg"
+                ],
+                "HYDROmorphone Dose Per Day": [
+                    2,
+                    "per day"
+                ]
+            }
+        }
+    },
+    "56": {
+        "1": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 131 beats per minute.\nThe QT interval is 301 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/131 = 0.458.\nHence, plugging in these values, we will get 301/\u221a(0.458) = 390.491.The patient's corrected QT interval (QTc) is 390.491 msec. ",
+            "Ground Truth Answer": 390.491,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 131 bpm and a QT interval of 301 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    131,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    301,
+                    "msec"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 129 beats per minute.\nThe QT interval is 468 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/129 = 0.465.\nHence, plugging in these values, we will get 468/\u221a(0.465) = 604.081.The patient's corrected QT interval (QTc) is 604.081 msec. ",
+            "Ground Truth Answer": 604.081,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 129 bpm and a QT interval of 468 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    129,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    468,
+                    "msec"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 138 beats per minute.\nThe QT interval is 437 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/138 = 0.435.\nHence, plugging in these values, we will get 437/\u221a(0.435) = 576.747.The patient's corrected QT interval (QTc) is 576.747 msec. ",
+            "Ground Truth Answer": 576.747,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 138 bpm and a QT interval of 437 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    138,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    437,
+                    "msec"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 103 beats per minute.\nThe QT interval is 246 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/103 = 0.583.\nHence, plugging in these values, we will get 246/\u221a(0.583) = 294.473.The patient's corrected QT interval (QTc) is 294.473 msec. ",
+            "Ground Truth Answer": 294.473,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 103 bpm and a QT interval of 246 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    103,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    246,
+                    "msec"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 170 beats per minute.\nThe QT interval is 392 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/170 = 0.353.\nHence, plugging in these values, we will get 392/\u221a(0.353) = 554.661.The patient's corrected QT interval (QTc) is 554.661 msec. ",
+            "Ground Truth Answer": 554.661,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 170 bpm and a QT interval of 392 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    170,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    392,
+                    "msec"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 144 beats per minute.\nThe QT interval is 438 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/144 = 0.417.\nHence, plugging in these values, we will get 438/\u221a(0.417) = 586.267.The patient's corrected QT interval (QTc) is 586.267 msec. ",
+            "Ground Truth Answer": 586.267,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 144 bpm and a QT interval of 438 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    144,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    438,
+                    "msec"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 169 beats per minute.\nThe QT interval is 499 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/169 = 0.355.\nHence, plugging in these values, we will get 499/\u221a(0.355) = 704.733.The patient's corrected QT interval (QTc) is 704.733 msec. ",
+            "Ground Truth Answer": 704.733,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 169 bpm and a QT interval of 499 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    169,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    499,
+                    "msec"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 170 beats per minute.\nThe QT interval is 247 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/170 = 0.353.\nHence, plugging in these values, we will get 247/\u221a(0.353) = 349.493.The patient's corrected QT interval (QTc) is 349.493 msec. ",
+            "Ground Truth Answer": 349.493,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 170 bpm and a QT interval of 247 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    170,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    247,
+                    "msec"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 141 beats per minute.\nThe QT interval is 282 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/141 = 0.426.\nHence, plugging in these values, we will get 282/\u221a(0.426) = 374.782.The patient's corrected QT interval (QTc) is 374.782 msec. ",
+            "Ground Truth Answer": 374.782,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 141 bpm and a QT interval of 282 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    141,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    282,
+                    "msec"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 153 beats per minute.\nThe QT interval is 391 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/153 = 0.392.\nHence, plugging in these values, we will get 391/\u221a(0.392) = 534.254.The patient's corrected QT interval (QTc) is 534.254 msec. ",
+            "Ground Truth Answer": 534.254,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 153 bpm and a QT interval of 391 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    153,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    391,
+                    "msec"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 166 beats per minute.\nThe QT interval is 296 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/166 = 0.361.\nHence, plugging in these values, we will get 296/\u221a(0.361) = 415.709.The patient's corrected QT interval (QTc) is 415.709 msec. ",
+            "Ground Truth Answer": 415.709,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 166 bpm and a QT interval of 296 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    166,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    296,
+                    "msec"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 72 beats per minute.\nThe QT interval is 280 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/72 = 0.833.\nHence, plugging in these values, we will get 280/\u221a(0.833) = 297.584.The patient's corrected QT interval (QTc) is 297.584 msec. ",
+            "Ground Truth Answer": 297.584,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 72 bpm and a QT interval of 280 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    72,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    280,
+                    "msec"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 82 beats per minute.\nThe QT interval is 213 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/82 = 0.732.\nHence, plugging in these values, we will get 213/\u221a(0.732) = 236.343.The patient's corrected QT interval (QTc) is 236.343 msec. ",
+            "Ground Truth Answer": 236.343,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 82 bpm and a QT interval of 213 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    82,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    213,
+                    "msec"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 96 beats per minute.\nThe QT interval is 370 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/96 = 0.625.\nHence, plugging in these values, we will get 370/\u221a(0.625) = 432.755.The patient's corrected QT interval (QTc) is 432.755 msec. ",
+            "Ground Truth Answer": 432.755,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 96 bpm and a QT interval of 370 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    96,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    370,
+                    "msec"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 54 beats per minute.\nThe QT interval is 375 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/54 = 1.111.\nHence, plugging in these values, we will get 375/\u221a(1.111) = 362.071.The patient's corrected QT interval (QTc) is 362.071 msec. ",
+            "Ground Truth Answer": 362.071,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 54 bpm and a QT interval of 375 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    54,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    375,
+                    "msec"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 78 beats per minute.\nThe QT interval is 458 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/78 = 0.769.\nHence, plugging in these values, we will get 458/\u221a(0.769) = 499.908.The patient's corrected QT interval (QTc) is 499.908 msec. ",
+            "Ground Truth Answer": 499.908,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 78 bpm and a QT interval of 458 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    78,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    458,
+                    "msec"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 124 beats per minute.\nThe QT interval is 393 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/124 = 0.484.\nHence, plugging in these values, we will get 393/\u221a(0.484) = 500.546.The patient's corrected QT interval (QTc) is 500.546 msec. ",
+            "Ground Truth Answer": 500.546,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 124 bpm and a QT interval of 393 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    124,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    393,
+                    "msec"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 126 beats per minute.\nThe QT interval is 343 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/126 = 0.476.\nHence, plugging in these values, we will get 343/\u221a(0.476) = 439.297.The patient's corrected QT interval (QTc) is 439.297 msec. ",
+            "Ground Truth Answer": 439.297,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 126 bpm and a QT interval of 343 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    126,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    343,
+                    "msec"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 128 beats per minute.\nThe QT interval is 404 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/128 = 0.469.\nHence, plugging in these values, we will get 404/\u221a(0.469) = 519.985.The patient's corrected QT interval (QTc) is 519.985 msec. ",
+            "Ground Truth Answer": 519.985,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 128 bpm and a QT interval of 404 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    128,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    404,
+                    "msec"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 69 beats per minute.\nThe QT interval is 401 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/69 = 0.87.\nHence, plugging in these values, we will get 401/\u221a(0.87) = 420.054.The patient's corrected QT interval (QTc) is 420.054 msec. ",
+            "Ground Truth Answer": 420.054,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 69 bpm and a QT interval of 401 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    69,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    401,
+                    "msec"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The corrected QT interval using the Fredericia formula is computed as  QTc = QT interval / (RR interval)**(1/3), where ** denotes an exponent, QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 161 beats per minute.\nThe QT interval is 256 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/161 = 0.373.\nHence, plugging in these values, we will get 256/\u221a(0.373) = 355.634.The patient's corrected QT interval (QTc) is 355.634 msec. ",
+            "Ground Truth Answer": 355.634,
+            "calculator name": "QTc Fridericia Calculator",
+            "Patient Note": "A patient has a heart rate of 161 bpm and a QT interval of 256 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    161,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    256,
+                    "msec"
+                ]
+            }
+        }
+    },
+    "57": {
+        "1": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 85 beats per minute.\nThe QT interval is 307 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/85 = 0.706.\nHence, plugging in these values, we will get 307/(154 * ( 1- 0.706 )) = 352.276.\nThe patient's corrected QT interval (QTc) is 352.276 msec.\n",
+            "Ground Truth Answer": 352.276,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 85 bpm and a QT interval of 307 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    85,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    307,
+                    "msec"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 47 beats per minute.\nThe QT interval is 434 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/47 = 1.277.\nHence, plugging in these values, we will get 434/(154 * ( 1- 1.277 )) = 391.342.\nThe patient's corrected QT interval (QTc) is 391.342 msec.\n",
+            "Ground Truth Answer": 391.342,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 47 bpm and a QT interval of 434 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    47,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    434,
+                    "msec"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 108 beats per minute.\nThe QT interval is 479 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/108 = 0.556.\nHence, plugging in these values, we will get 479/(154 * ( 1- 0.556 )) = 547.376.\nThe patient's corrected QT interval (QTc) is 547.376 msec.\n",
+            "Ground Truth Answer": 547.376,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 108 bpm and a QT interval of 479 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    108,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    479,
+                    "msec"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 112 beats per minute.\nThe QT interval is 470 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/112 = 0.536.\nHence, plugging in these values, we will get 470/(154 * ( 1- 0.536 )) = 541.456.\nThe patient's corrected QT interval (QTc) is 541.456 msec.\n",
+            "Ground Truth Answer": 541.456,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 112 bpm and a QT interval of 470 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    112,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    470,
+                    "msec"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 95 beats per minute.\nThe QT interval is 318 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/95 = 0.632.\nHence, plugging in these values, we will get 318/(154 * ( 1- 0.632 )) = 374.672.\nThe patient's corrected QT interval (QTc) is 374.672 msec.\n",
+            "Ground Truth Answer": 374.672,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 95 bpm and a QT interval of 318 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    95,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    318,
+                    "msec"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 150 beats per minute.\nThe QT interval is 432 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/150 = 0.4.\nHence, plugging in these values, we will get 432/(154 * ( 1- 0.4 )) = 524.4.\nThe patient's corrected QT interval (QTc) is 524.4 msec.\n",
+            "Ground Truth Answer": 524.4,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 150 bpm and a QT interval of 432 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    150,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    432,
+                    "msec"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 156 beats per minute.\nThe QT interval is 443 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/156 = 0.385.\nHence, plugging in these values, we will get 443/(154 * ( 1- 0.385 )) = 537.71.\nThe patient's corrected QT interval (QTc) is 537.71 msec.\n",
+            "Ground Truth Answer": 537.71,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 156 bpm and a QT interval of 443 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    156,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    443,
+                    "msec"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 94 beats per minute.\nThe QT interval is 394 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/94 = 0.638.\nHence, plugging in these values, we will get 394/(154 * ( 1- 0.638 )) = 449.748.\nThe patient's corrected QT interval (QTc) is 449.748 msec.\n",
+            "Ground Truth Answer": 449.748,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 94 bpm and a QT interval of 394 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    94,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    394,
+                    "msec"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 85 beats per minute.\nThe QT interval is 423 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/85 = 0.706.\nHence, plugging in these values, we will get 423/(154 * ( 1- 0.706 )) = 468.276.\nThe patient's corrected QT interval (QTc) is 468.276 msec.\n",
+            "Ground Truth Answer": 468.276,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 85 bpm and a QT interval of 423 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    85,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    423,
+                    "msec"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 61 beats per minute.\nThe QT interval is 320 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/61 = 0.984.\nHence, plugging in these values, we will get 320/(154 * ( 1- 0.984 )) = 322.464.\nThe patient's corrected QT interval (QTc) is 322.464 msec.\n",
+            "Ground Truth Answer": 322.464,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 61 bpm and a QT interval of 320 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    61,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    320,
+                    "msec"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 130 beats per minute.\nThe QT interval is 200 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/130 = 0.462.\nHence, plugging in these values, we will get 200/(154 * ( 1- 0.462 )) = 282.852.\nThe patient's corrected QT interval (QTc) is 282.852 msec.\n",
+            "Ground Truth Answer": 282.852,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 130 bpm and a QT interval of 200 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    130,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    200,
+                    "msec"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 157 beats per minute.\nThe QT interval is 291 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/157 = 0.382.\nHence, plugging in these values, we will get 291/(154 * ( 1- 0.382 )) = 386.172.\nThe patient's corrected QT interval (QTc) is 386.172 msec.\n",
+            "Ground Truth Answer": 386.172,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 157 bpm and a QT interval of 291 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    157,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    291,
+                    "msec"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 69 beats per minute.\nThe QT interval is 441 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/69 = 0.87.\nHence, plugging in these values, we will get 441/(154 * ( 1- 0.87 )) = 461.02.\nThe patient's corrected QT interval (QTc) is 461.02 msec.\n",
+            "Ground Truth Answer": 461.02,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 69 bpm and a QT interval of 441 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    69,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    441,
+                    "msec"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 54 beats per minute.\nThe QT interval is 348 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/54 = 1.111.\nHence, plugging in these values, we will get 348/(154 * ( 1- 1.111 )) = 330.906.\nThe patient's corrected QT interval (QTc) is 330.906 msec.\n",
+            "Ground Truth Answer": 330.906,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 54 bpm and a QT interval of 348 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    54,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    348,
+                    "msec"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 148 beats per minute.\nThe QT interval is 489 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/148 = 0.405.\nHence, plugging in these values, we will get 489/(154 * ( 1- 0.405 )) = 580.63.\nThe patient's corrected QT interval (QTc) is 580.63 msec.\n",
+            "Ground Truth Answer": 580.63,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 148 bpm and a QT interval of 489 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    148,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    489,
+                    "msec"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 140 beats per minute.\nThe QT interval is 339 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/140 = 0.429.\nHence, plugging in these values, we will get 339/(154 * ( 1- 0.429 )) = 426.934.\nThe patient's corrected QT interval (QTc) is 426.934 msec.\n",
+            "Ground Truth Answer": 426.934,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 140 bpm and a QT interval of 339 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    140,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    339,
+                    "msec"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 74 beats per minute.\nThe QT interval is 351 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/74 = 0.811.\nHence, plugging in these values, we will get 351/(154 * ( 1- 0.811 )) = 380.106.\nThe patient's corrected QT interval (QTc) is 380.106 msec.\n",
+            "Ground Truth Answer": 380.106,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 74 bpm and a QT interval of 351 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    74,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    351,
+                    "msec"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 48 beats per minute.\nThe QT interval is 472 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/48 = 1.25.\nHence, plugging in these values, we will get 472/(154 * ( 1- 1.25 )) = 433.5.\nThe patient's corrected QT interval (QTc) is 433.5 msec.\n",
+            "Ground Truth Answer": 433.5,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 48 bpm and a QT interval of 472 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    48,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    472,
+                    "msec"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 66 beats per minute.\nThe QT interval is 379 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/66 = 0.909.\nHence, plugging in these values, we will get 379/(154 * ( 1- 0.909 )) = 393.014.\nThe patient's corrected QT interval (QTc) is 393.014 msec.\n",
+            "Ground Truth Answer": 393.014,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 66 bpm and a QT interval of 379 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    66,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    379,
+                    "msec"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 113 beats per minute.\nThe QT interval is 293 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/113 = 0.531.\nHence, plugging in these values, we will get 293/(154 * ( 1- 0.531 )) = 365.226.\nThe patient's corrected QT interval (QTc) is 365.226 msec.\n",
+            "Ground Truth Answer": 365.226,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 113 bpm and a QT interval of 293 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    113,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    293,
+                    "msec"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The corrected QT interval using the Framingham formula is computed as  QTc = QT Interval + (154 * (1 - rr_interval_sec)), where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 89 beats per minute.\nThe QT interval is 448 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/89 = 0.674.\nHence, plugging in these values, we will get 448/(154 * ( 1- 0.674 )) = 498.204.\nThe patient's corrected QT interval (QTc) is 498.204 msec.\n",
+            "Ground Truth Answer": 498.204,
+            "calculator name": "QTc Framingham Calculator",
+            "Patient Note": "A patient has a heart rate of 89 bpm and a QT interval of 448 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    89,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    448,
+                    "msec"
+                ]
+            }
+        }
+    },
+    "58": {
+        "1": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 172 beats per minute.\nThe QT interval is 280 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/172 = 0.349.\nHence, plugging in these values, we will get 280 + 1.75 * [(60/0.349) - 60] = 475.86.\nThe patient's corrected QT interval (QTc) is 475.86 msec.\n",
+            "Ground Truth Answer": 475.86,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 172 bpm and a QT interval of 280 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    172,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    280,
+                    "msec"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 96 beats per minute.\nThe QT interval is 418 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/96 = 0.625.\nHence, plugging in these values, we will get 418 + 1.75 * [(60/0.625) - 60] = 481.0.\nThe patient's corrected QT interval (QTc) is 481.0 msec.\n",
+            "Ground Truth Answer": 481.0,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 96 bpm and a QT interval of 418 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    96,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    418,
+                    "msec"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 171 beats per minute.\nThe QT interval is 202 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/171 = 0.351.\nHence, plugging in these values, we will get 202 + 1.75 * [(60/0.351) - 60] = 396.145.\nThe patient's corrected QT interval (QTc) is 396.145 msec.\n",
+            "Ground Truth Answer": 396.145,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 171 bpm and a QT interval of 202 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    171,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    202,
+                    "msec"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 126 beats per minute.\nThe QT interval is 458 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/126 = 0.476.\nHence, plugging in these values, we will get 458 + 1.75 * [(60/0.476) - 60] = 573.588.\nThe patient's corrected QT interval (QTc) is 573.588 msec.\n",
+            "Ground Truth Answer": 573.588,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 126 bpm and a QT interval of 458 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    126,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    458,
+                    "msec"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 129 beats per minute.\nThe QT interval is 282 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/129 = 0.465.\nHence, plugging in these values, we will get 282 + 1.75 * [(60/0.465) - 60] = 402.806.\nThe patient's corrected QT interval (QTc) is 402.806 msec.\n",
+            "Ground Truth Answer": 402.806,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 129 bpm and a QT interval of 282 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    129,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    282,
+                    "msec"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 131 beats per minute.\nThe QT interval is 302 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/131 = 0.458.\nHence, plugging in these values, we will get 302 + 1.75 * [(60/0.458) - 60] = 426.258.\nThe patient's corrected QT interval (QTc) is 426.258 msec.\n",
+            "Ground Truth Answer": 426.258,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 131 bpm and a QT interval of 302 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    131,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    302,
+                    "msec"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 84 beats per minute.\nThe QT interval is 308 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/84 = 0.714.\nHence, plugging in these values, we will get 308 + 1.75 * [(60/0.714) - 60] = 350.059.\nThe patient's corrected QT interval (QTc) is 350.059 msec.\n",
+            "Ground Truth Answer": 350.059,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 84 bpm and a QT interval of 308 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    84,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    308,
+                    "msec"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 95 beats per minute.\nThe QT interval is 492 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/95 = 0.632.\nHence, plugging in these values, we will get 492 + 1.75 * [(60/0.632) - 60] = 553.139.\nThe patient's corrected QT interval (QTc) is 553.139 msec.\n",
+            "Ground Truth Answer": 553.139,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 95 bpm and a QT interval of 492 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    95,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    492,
+                    "msec"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 69 beats per minute.\nThe QT interval is 495 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/69 = 0.87.\nHence, plugging in these values, we will get 495 + 1.75 * [(60/0.87) - 60] = 510.69.\nThe patient's corrected QT interval (QTc) is 510.69 msec.\n",
+            "Ground Truth Answer": 510.69,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 69 bpm and a QT interval of 495 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    69,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    495,
+                    "msec"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 134 beats per minute.\nThe QT interval is 312 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/134 = 0.448.\nHence, plugging in these values, we will get 312 + 1.75 * [(60/0.448) - 60] = 441.375.\nThe patient's corrected QT interval (QTc) is 441.375 msec.\n",
+            "Ground Truth Answer": 441.375,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 134 bpm and a QT interval of 312 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    134,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    312,
+                    "msec"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 77 beats per minute.\nThe QT interval is 299 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/77 = 0.779.\nHence, plugging in these values, we will get 299 + 1.75 * [(60/0.779) - 60] = 328.788.\nThe patient's corrected QT interval (QTc) is 328.788 msec.\n",
+            "Ground Truth Answer": 328.788,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 77 bpm and a QT interval of 299 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    77,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    299,
+                    "msec"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 87 beats per minute.\nThe QT interval is 208 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/87 = 0.69.\nHence, plugging in these values, we will get 208 + 1.75 * [(60/0.69) - 60] = 255.174.\nThe patient's corrected QT interval (QTc) is 255.174 msec.\n",
+            "Ground Truth Answer": 255.174,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 87 bpm and a QT interval of 208 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    87,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    208,
+                    "msec"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 107 beats per minute.\nThe QT interval is 457 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/107 = 0.561.\nHence, plugging in these values, we will get 457 + 1.75 * [(60/0.561) - 60] = 539.166.\nThe patient's corrected QT interval (QTc) is 539.166 msec.\n",
+            "Ground Truth Answer": 539.166,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 107 bpm and a QT interval of 457 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    107,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    457,
+                    "msec"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 61 beats per minute.\nThe QT interval is 212 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/61 = 0.984.\nHence, plugging in these values, we will get 212 + 1.75 * [(60/0.984) - 60] = 213.707.\nThe patient's corrected QT interval (QTc) is 213.707 msec.\n",
+            "Ground Truth Answer": 213.707,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 61 bpm and a QT interval of 212 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    61,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    212,
+                    "msec"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 76 beats per minute.\nThe QT interval is 360 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/76 = 0.789.\nHence, plugging in these values, we will get 360 + 1.75 * [(60/0.789) - 60] = 388.08.\nThe patient's corrected QT interval (QTc) is 388.08 msec.\n",
+            "Ground Truth Answer": 388.08,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 76 bpm and a QT interval of 360 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    76,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    360,
+                    "msec"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 100 beats per minute.\nThe QT interval is 240 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/100 = 0.6.\nHence, plugging in these values, we will get 240 + 1.75 * [(60/0.6) - 60] = 310.0.\nThe patient's corrected QT interval (QTc) is 310.0 msec.\n",
+            "Ground Truth Answer": 310.0,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 100 bpm and a QT interval of 240 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    100,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    240,
+                    "msec"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 175 beats per minute.\nThe QT interval is 379 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/175 = 0.343.\nHence, plugging in these values, we will get 379 + 1.75 * [(60/0.343) - 60] = 580.122.\nThe patient's corrected QT interval (QTc) is 580.122 msec.\n",
+            "Ground Truth Answer": 580.122,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 175 bpm and a QT interval of 379 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    175,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    379,
+                    "msec"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 165 beats per minute.\nThe QT interval is 457 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/165 = 0.364.\nHence, plugging in these values, we will get 457 + 1.75 * [(60/0.364) - 60] = 640.462.\nThe patient's corrected QT interval (QTc) is 640.462 msec.\n",
+            "Ground Truth Answer": 640.462,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 165 bpm and a QT interval of 457 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    165,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    457,
+                    "msec"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 177 beats per minute.\nThe QT interval is 329 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/177 = 0.339.\nHence, plugging in these values, we will get 329 + 1.75 * [(60/0.339) - 60] = 533.735.\nThe patient's corrected QT interval (QTc) is 533.735 msec.\n",
+            "Ground Truth Answer": 533.735,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 177 bpm and a QT interval of 329 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    177,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    329,
+                    "msec"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 167 beats per minute.\nThe QT interval is 489 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/167 = 0.359.\nHence, plugging in these values, we will get 489 + 1.75 * [(60/0.359) - 60] = 676.479.\nThe patient's corrected QT interval (QTc) is 676.479 msec.\n",
+            "Ground Truth Answer": 676.479,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 167 bpm and a QT interval of 489 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    167,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    489,
+                    "msec"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The corrected QT interval using the Hodges formula is computed as  QTc = QT interval + 1.75 * [(60 /rr_interval_sec) - 60], where QT interval is in msec, and RR interval is given as 60/(heart rate).\nThe patient's heart rate is 176 beats per minute.\nThe QT interval is 320 msec.\nThe RR interval is computed as 60/(heart rate), and so the RR interval is 60/176 = 0.341.\nHence, plugging in these values, we will get 320 + 1.75 * [(60/0.341) - 60] = 522.918.\nThe patient's corrected QT interval (QTc) is 522.918 msec.\n",
+            "Ground Truth Answer": 522.918,
+            "calculator name": "QTc Hodges Calculator",
+            "Patient Note": "A patient has a heart rate of 176 bpm and a QT interval of 320 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    176,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    320,
+                    "msec"
+                ]
+            }
+        }
+    },
+    "59": {
+        "1": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 444 msec.\nThe patient's heart rate is 146 beats per minute.\nHence, plugging in these values, we will get 444 x (120 + 146) / 180 = 656.133.\nThe patient's corrected QT interval (QTc) is 656.133 msec.\n",
+            "Ground Truth Answer": 656.133,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 146 bpm and a QT interval of 444 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    146,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    444,
+                    "msec"
+                ]
+            }
+        },
+        "2": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 293 msec.\nThe patient's heart rate is 106 beats per minute.\nHence, plugging in these values, we will get 293 x (120 + 106) / 180 = 367.878.\nThe patient's corrected QT interval (QTc) is 367.878 msec.\n",
+            "Ground Truth Answer": 367.878,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 106 bpm and a QT interval of 293 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    106,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    293,
+                    "msec"
+                ]
+            }
+        },
+        "3": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 378 msec.\nThe patient's heart rate is 76 beats per minute.\nHence, plugging in these values, we will get 378 x (120 + 76) / 180 = 411.6.\nThe patient's corrected QT interval (QTc) is 411.6 msec.\n",
+            "Ground Truth Answer": 411.6,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 76 bpm and a QT interval of 378 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    76,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    378,
+                    "msec"
+                ]
+            }
+        },
+        "4": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 233 msec.\nThe patient's heart rate is 161 beats per minute.\nHence, plugging in these values, we will get 233 x (120 + 161) / 180 = 363.739.\nThe patient's corrected QT interval (QTc) is 363.739 msec.\n",
+            "Ground Truth Answer": 363.739,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 161 bpm and a QT interval of 233 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    161,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    233,
+                    "msec"
+                ]
+            }
+        },
+        "5": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 240 msec.\nThe patient's heart rate is 125 beats per minute.\nHence, plugging in these values, we will get 240 x (120 + 125) / 180 = 326.667.\nThe patient's corrected QT interval (QTc) is 326.667 msec.\n",
+            "Ground Truth Answer": 326.667,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 125 bpm and a QT interval of 240 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    125,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    240,
+                    "msec"
+                ]
+            }
+        },
+        "6": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 453 msec.\nThe patient's heart rate is 159 beats per minute.\nHence, plugging in these values, we will get 453 x (120 + 159) / 180 = 702.15.\nThe patient's corrected QT interval (QTc) is 702.15 msec.\n",
+            "Ground Truth Answer": 702.15,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 159 bpm and a QT interval of 453 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    159,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    453,
+                    "msec"
+                ]
+            }
+        },
+        "7": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 261 msec.\nThe patient's heart rate is 128 beats per minute.\nHence, plugging in these values, we will get 261 x (120 + 128) / 180 = 359.6.\nThe patient's corrected QT interval (QTc) is 359.6 msec.\n",
+            "Ground Truth Answer": 359.6,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 128 bpm and a QT interval of 261 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    128,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    261,
+                    "msec"
+                ]
+            }
+        },
+        "8": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 371 msec.\nThe patient's heart rate is 77 beats per minute.\nHence, plugging in these values, we will get 371 x (120 + 77) / 180 = 406.039.\nThe patient's corrected QT interval (QTc) is 406.039 msec.\n",
+            "Ground Truth Answer": 406.039,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 77 bpm and a QT interval of 371 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    77,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    371,
+                    "msec"
+                ]
+            }
+        },
+        "9": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 438 msec.\nThe patient's heart rate is 139 beats per minute.\nHence, plugging in these values, we will get 438 x (120 + 139) / 180 = 630.233.\nThe patient's corrected QT interval (QTc) is 630.233 msec.\n",
+            "Ground Truth Answer": 630.233,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 139 bpm and a QT interval of 438 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    139,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    438,
+                    "msec"
+                ]
+            }
+        },
+        "10": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 324 msec.\nThe patient's heart rate is 92 beats per minute.\nHence, plugging in these values, we will get 324 x (120 + 92) / 180 = 381.6.\nThe patient's corrected QT interval (QTc) is 381.6 msec.\n",
+            "Ground Truth Answer": 381.6,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 92 bpm and a QT interval of 324 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    92,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    324,
+                    "msec"
+                ]
+            }
+        },
+        "11": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 214 msec.\nThe patient's heart rate is 159 beats per minute.\nHence, plugging in these values, we will get 214 x (120 + 159) / 180 = 331.7.\nThe patient's corrected QT interval (QTc) is 331.7 msec.\n",
+            "Ground Truth Answer": 331.7,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 159 bpm and a QT interval of 214 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    159,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    214,
+                    "msec"
+                ]
+            }
+        },
+        "12": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 460 msec.\nThe patient's heart rate is 93 beats per minute.\nHence, plugging in these values, we will get 460 x (120 + 93) / 180 = 544.333.\nThe patient's corrected QT interval (QTc) is 544.333 msec.\n",
+            "Ground Truth Answer": 544.333,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 93 bpm and a QT interval of 460 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    93,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    460,
+                    "msec"
+                ]
+            }
+        },
+        "13": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 360 msec.\nThe patient's heart rate is 68 beats per minute.\nHence, plugging in these values, we will get 360 x (120 + 68) / 180 = 376.0.\nThe patient's corrected QT interval (QTc) is 376.0 msec.\n",
+            "Ground Truth Answer": 376.0,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 68 bpm and a QT interval of 360 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    68,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    360,
+                    "msec"
+                ]
+            }
+        },
+        "14": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 215 msec.\nThe patient's heart rate is 118 beats per minute.\nHence, plugging in these values, we will get 215 x (120 + 118) / 180 = 284.278.\nThe patient's corrected QT interval (QTc) is 284.278 msec.\n",
+            "Ground Truth Answer": 284.278,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 118 bpm and a QT interval of 215 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    118,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    215,
+                    "msec"
+                ]
+            }
+        },
+        "15": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 449 msec.\nThe patient's heart rate is 58 beats per minute.\nHence, plugging in these values, we will get 449 x (120 + 58) / 180 = 444.011.\nThe patient's corrected QT interval (QTc) is 444.011 msec.\n",
+            "Ground Truth Answer": 444.011,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 58 bpm and a QT interval of 449 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    58,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    449,
+                    "msec"
+                ]
+            }
+        },
+        "16": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 296 msec.\nThe patient's heart rate is 165 beats per minute.\nHence, plugging in these values, we will get 296 x (120 + 165) / 180 = 468.667.\nThe patient's corrected QT interval (QTc) is 468.667 msec.\n",
+            "Ground Truth Answer": 468.667,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 165 bpm and a QT interval of 296 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    165,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    296,
+                    "msec"
+                ]
+            }
+        },
+        "17": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 212 msec.\nThe patient's heart rate is 95 beats per minute.\nHence, plugging in these values, we will get 212 x (120 + 95) / 180 = 253.222.\nThe patient's corrected QT interval (QTc) is 253.222 msec.\n",
+            "Ground Truth Answer": 253.222,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 95 bpm and a QT interval of 212 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    95,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    212,
+                    "msec"
+                ]
+            }
+        },
+        "18": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 294 msec.\nThe patient's heart rate is 120 beats per minute.\nHence, plugging in these values, we will get 294 x (120 + 120) / 180 = 392.0.\nThe patient's corrected QT interval (QTc) is 392.0 msec.\n",
+            "Ground Truth Answer": 392.0,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 120 bpm and a QT interval of 294 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    120,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    294,
+                    "msec"
+                ]
+            }
+        },
+        "19": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 399 msec.\nThe patient's heart rate is 140 beats per minute.\nHence, plugging in these values, we will get 399 x (120 + 140) / 180 = 576.333.\nThe patient's corrected QT interval (QTc) is 576.333 msec.\n",
+            "Ground Truth Answer": 576.333,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 140 bpm and a QT interval of 399 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    140,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    399,
+                    "msec"
+                ]
+            }
+        },
+        "20": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 209 msec.\nThe patient's heart rate is 171 beats per minute.\nHence, plugging in these values, we will get 209 x (120 + 171) / 180 = 337.883.\nThe patient's corrected QT interval (QTc) is 337.883 msec.\n",
+            "Ground Truth Answer": 337.883,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 171 bpm and a QT interval of 209 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    171,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    209,
+                    "msec"
+                ]
+            }
+        },
+        "21": {
+            "explanation": "The corrected QT interval using the Rautajarju formula is computed as  QTc = QT interval x (120 + HR) / 180, where QT interval is in msec, and HR is the heart rate in beats per minute.\nThe QT interval is 490 msec.\nThe patient's heart rate is 48 beats per minute.\nHence, plugging in these values, we will get 490 x (120 + 48) / 180 = 457.333.\nThe patient's corrected QT interval (QTc) is 457.333 msec.\n",
+            "Ground Truth Answer": 457.333,
+            "calculator name": "QTc Rautaharju Calculator",
+            "Patient Note": "A patient has a heart rate of 48 bpm and a QT interval of 490 msec.",
+            "input_parameters": {
+                "heart_rate": [
+                    48,
+                    "beats per minute"
+                ],
+                "qt_interval": [
+                    490,
+                    "msec"
+                ]
+            }
+        }
+    }
+}
