@@ -16,14 +16,10 @@ In all, we hope that our dataset and benchmark serves as a call to improve the c
 Our preprint is available at: https://arxiv.org/abs/2406.12036.
 
 
-## Updates 
-
-- We have updated MedCalc-Bench to version 1.1. Please see the changes describedin the latest tag to see what has changed from the original version. 
-
 ## MedCalc-Bench Dataset
 
 
-In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,614 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix). The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
+In addition to the 1,047 evaluation instances, we also provide a training dataset of 10,053 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix). The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
 
 Each Instance in the dataset contains the following information: 
 
