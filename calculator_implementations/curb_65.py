@@ -5,20 +5,18 @@ def curb_65_explanation(input_parameters):
 
     curb_65_score = 0
 
-    explanation  = """
-    The CURB-65 Score criteria are listed below:
+    explanation  = """The CURB-65 Score criteria are listed below:
 
-       1. Confusion: No = 0 points, Yes = +1 point
-       2. BUN >19 mg/dL (>7 mmol/L urea): No = 0 points, Yes = +1 point
-       3. Respiratory Rate ≥30: No = 0 points, Yes = +1 point
-       4. Systolic BP <90 mmHg or Diastolic BP ≤60 mmHg: No = 0 points, Yes = +1 point
-       5. Age ≥65: No = 0 points, Yes = +1 point
-    
-    The total CURB-65 score is calculated by summing the points for each criterion.\n\n
-    """
+1. Confusion: No = 0 points, Yes = +1 point
+2. BUN >19 mg/dL (>7 mmol/L urea): No = 0 points, Yes = +1 point
+3. Respiratory Rate ≥30: No = 0 points, Yes = +1 point
+4. Systolic BP <90 mmHg or Diastolic BP ≤60 mmHg: No = 0 points, Yes = +1 point
+5. Age ≥65: No = 0 points, Yes = +1 point
 
-    
-    explanation += "The CURB-65 score is current at 0 points.\n"
+The total CURB-65 score is calculated by summing the points for each criterion.
+"""
+
+    explanation += "\nThe CURB-65 score is current at 0 points.\n"
 
     bun_exp, bun = unit_converter_new.conversion_explanation(input_parameters["bun"][0], "BUN", 28.02, None, input_parameters["bun"][1], "mg/dL")
     
@@ -58,7 +56,7 @@ def curb_65_explanation(input_parameters):
         explanation += f"Because the respiratory rate is greater than 30 breaths per minute, 1 point is added to the score, making the current total {curb_65_score} + 1 = {curb_65_score + 1}.\n"
         curb_65_score += 1
     else:
-        explanation += f"Because the respiratory rate is greater than 30 breaths per minute, 0 points are added to the score, keeping the current total at {curb_65_score}.\n"
+        explanation += f"Because the respiratory rate is less than 30 breaths per minute, 0 points are added to the score, keeping the current total at {curb_65_score}.\n"
 
     explanation += f"The patient's systiolic blood pressure is {sys_bp} mm Hg. The patient's diastolic blood pressure is {dia_bp} mm Hg. "
 
@@ -68,7 +66,7 @@ def curb_65_explanation(input_parameters):
     else:
         explanation += f"For a point a point to be added, the systiolic blood pressure must be less than 90 mm Hg or the diastolic blood pressure must be less than or equal to 60 mm Hg. Because neither of these statements are true, 0 points are added to score, keeping the current total to {curb_65_score}.\n"
 
-    explanation += f"The patient's CURB-65 score is {curb_65_score}.\n"
+    explanation += f"The patient's CURB-65 score is {curb_65_score}."
 
     return {"Explanation": explanation, "Answer": curb_65_score}
 

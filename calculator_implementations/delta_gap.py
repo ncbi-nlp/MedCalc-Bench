@@ -14,6 +14,6 @@ def compute_delta_gap_explanation(input_parameters):
     answer = round_number(anion_gap_val - 12.0)
 
     explanation += f"Plugging in {anion_gap_val} mEq/L for the delta gap formula, we get {anion_gap_val} - 12 = {answer} mEq/L. "
-    explanation += f"Hence, the patient's delta gap is {answer} mEq/L.\n"
+    explanation += f"Hence, the patient's delta gap is {answer} mEq/L."
 
     return {"Explanation": explanation, "Answer": answer }

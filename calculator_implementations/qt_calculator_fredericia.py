@@ -15,7 +15,7 @@ def fredericia_calculator_explanation(input_variables):
     qt_c = round_number(qt_interval/(rr_interval_sec) ** (1/3))
     explanation += f"Hence, plugging in these values, we will get {qt_interval}/√({rr_interval_sec}) = {qt_c}."
 
-    explanation += f"The patient's corrected QT interval (QTc) is {qt_c} msec. "
+    explanation += f"The patient's corrected QT interval (QTc) is {qt_c} msec."
 
     return {"Explanation": explanation, "Answer": qt_c}
 

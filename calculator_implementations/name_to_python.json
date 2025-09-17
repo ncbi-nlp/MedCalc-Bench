@@ -5,17 +5,21 @@
         "weight": "weight",
         "height": "height",
         "creatinine": "creatinine",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/creatinine_clearance.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/creatinine_clearance.py",
         "explanation function": "generate_cockcroft_gault_explanation",
-        "calculator name": "Creatinine Clearance (Cockcroft-Gault Equation)"
+        "calculator name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "type": "lab test",
+        "question": "What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight."
     },
     "3": {
         "age": "age",
         "sex": "sex",
         "creatinine": "creatinine",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/ckd-epi_2021_creatinine.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/ckd-epi_2021_creatinine.py",
         "explanation function": "ckd_epi_2021_explanation",
-        "calculator name": "CKD-EPI Equations for Glomerular Filtration Rate"
+        "calculator name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "type": "lab test",
+        "question": "Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m\u00b2?"
     },
     "4": {
         "sex": "sex",
@@ -26,85 +30,106 @@
         "Diabetes history": "diabetes",
         "Hypertension history": "hypertension",
         "Transient Ischemic Attacks History": "tia",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/cha2ds2_vasc_score.py",
+        "Stroke": "stroke",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/cha2ds2_vasc_score.py",
         "explanation function": "generate_cha2ds2_vasc_explanation",
-        "calculator name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk"
+        "calculator name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "type": "risk",
+        "question": "What is the patient's CHA2DS2-VASc Score?"
     },
     "5": {
         "Systolic Blood Pressure": "sys_bp",
         "Diastolic Blood Pressure": "dia_bp",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/mean_arterial_pressure.py",
-        "explanation function": "generate_cha2ds2_vasc_explanation",
-        "calculator name": "Mean Arterial Pressure (MAP)"
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/mean_arterial_pressure.py",
+        "explanation function": "mean_arterial_pressure_explanation",
+        "calculator name": "Mean Arterial Pressure (MAP)",
+        "type": "physical",
+        "question": "What is patient's mean arterial pressure in mm Hg?"
     },
     "6": {
         "weight": "weight",
         "height": "height",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/bmi_calculator.py",
-        "explanation function": "mean_arterial_pressure_explanation",
-        "calculator name": "Body Mass Index (BMI)"
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/bmi_calculator.py",
+        "explanation function": "bmi_calculator_explanation",
+        "calculator name": "Body Mass Index (BMI)",
+        "type": "physical",
+        "question": "What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m\u00b2."
     },
     "7": {
         "Calcium": "calcium",
         "Albumin": "albumin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/calcium_correction.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/calcium_correction.py",
         "explanation function": "calculate_corrected_calcium_explanation",
-        "calculator name": "Calcium Correction for Hypoalbuminemia"
+        "calculator name": "Calcium Correction for Hypoalbuminemia",
+        "type": "lab test",
+        "question": "Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL."
     },
     "8": {
         "Heart Rate or Pulse": "heart_rate",
         "Previously Documented Pulmonary Embolism": "previous_pe",
         "Immobilization for at least 3 days": "immobilization_for_3days",
         "Malignancy with treatment within 6 months or palliative": "malignancy_with_treatment",
-        "Pulmonary Embolism is #1 diagnosis OR equally likely": "previous_pe",
+        "Pulmonary Embolism is #1 diagnosis OR equally likely": "pe_number_one",
         "Surgery in the previous 4 weeks": "surgery_in_past4weeks",
         "Previously documented Deep Vein Thrombosis": "previous_dvt",
         "Hemoptysis": "hemoptysis",
         "Clinical signs and symptoms of Deep Vein Thrombosis": "clinical_dvt",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/wells_criteria_pe.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/wells_criteria_pe.py",
         "explanation function": "calculate_pe_wells_explanation",
-        "calculator name": "Wells' Criteria for Pulmonary Embolism"
+        "calculator name": "Wells' Criteria for Pulmonary Embolism",
+        "type": "risk",
+        "question": "What is the patient's score of Wells' criteria for Pulmonary Embolism?"
     },
     "9": {
         "age": "age",
         "sex": "sex",
         "creatinine": "creatinine",
         "Race": "race",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/mdrd_gfr.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/mdrd_gfr.py",
         "explanation function": "mrdr_gfr_explanation",
-        "calculator name": "MDRD GFR Equation"
+        "calculator name": "MDRD GFR Equation",
+        "type": "lab test",
+        "question": "Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m\u00b2? If the patient is black, please use the MDRD GFR Equation for Blacks."
     },
     "10": {
         "sex": "sex",
         "height": "height",
         "weight": "weight",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/ideal_body_weight.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/ideal_body_weight.py",
         "explanation function": "ibw_explanation",
-        "calculator name": "Ideal Body Weight"
+        "calculator name": "Ideal Body Weight",
+        "type": "physical",
+        "question": "Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg?"
     },
     "11": {
         "Heart Rate or Pulse": "heart_rate",
         "QT Interval": "qt_interval",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/qt_calculator_bazett.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/qt_calculator_bazett.py",
         "explanation function": "bazett_calculator_explanation",
-        "calculator name": "QTc Bazett Calculator"
+        "calculator name": "QTc Bazett Calculator",
+        "type": "physical",
+        "question": "Using the Bazett Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?"
     },
     "13": {
         "cycle length": "cycle_length",
         "Last menstrual date": "menstrual_date",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/estimated_due_date.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/estimated_due_date.py",
         "explanation function": "add_40_weeks_explanation",
-        "calculator name": "Estimated Due Date"
+        "calculator name": "Estimated Due Date",
+        "type": "date",
+        "question": "Using Naegele's Rule for estimated due date based on the last menstrual period and cycle length, what is the the patient's estimated due date? Your response should be in the format of M/D/Y (ie 08/31/2023, 07/03/2000) with just the date and no other text."
     },
     "15": {
         "international normalized ratio": "inr",
         "Ascites": "ascites",
-        "albumin": "albumin",
-        "bilirubin": "bilirubin",
+        "Albumin": "albumin",
+        "Bilirubin": "bilirubin",
         "Encephalopathy": "encephalopathy",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/child_pugh_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/child_pugh_score.py",
         "explanation function": "compute_child_pugh_score_explanation",
-        "calculator name": "Child-Pugh Score for Cirrhosis Mortality"
+        "calculator name": "Child-Pugh Score for Cirrhosis Mortality",
+        "type": "severity",
+        "question": "What is the patient's Child-Pugh Score?"
     },
     "16": {
         "Alternative diagnosis to Deep Vein Thrombosis as likely or more likely": "alternative_to_dvt_diagnosis",
@@ -112,15 +137,17 @@
         "Previously documented Deep Vein Thrombosis": "previous_dvt_documented",
         "Paralysis, paresis, or recent plaster immobilization of the lower extremity": "paralysis_paresis_immobilization_in_lower_extreme",
         "Entire Leg Swollen": "leg_swollen",
-        "Bedridden recently >3 days or major surgery within 12 weeks": "bedridden_for_atleast_3_days",
+        "Bedridden recently >3 days": "bedridden_for_atleast_3_days",
         "Active cancer": "active_cancer",
         "Major surgery within 12 weeks": "major_surgery_in_last_12_weeks",
         "Calf swelling >3 centimeters compared to the other leg": "calf_swelling_3cm",
         "Collateral (nonvaricose) superficial veins present": "collateral_superficial_veins",
         "Pitting edema, confined to symptomatic leg": "pitting_edema_on_symptomatic_leg",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/wells_criteria_dvt.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/wells_criteria_dvt.py",
         "explanation function": "compute_wells_criteria_dvt_explanation",
-        "calculator name": "Wells' Criteria for DVT"
+        "calculator name": "Wells' Criteria for DVT",
+        "type": "risk",
+        "question": "What is the patient's score of Wells' criteria for Deep Vein Thrombosis?"
     },
     "17": {
         "Congestive Heart Failure criteria for the Cardiac Risk Index rule": "congestive_heart_failure",
@@ -130,34 +157,41 @@
         "Pre-operative creatinine": "pre_operative_creatinine",
         "History of cerebrovascular disease": "cerebrovascular_disease",
         "age": "age",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/cardiac_risk_index.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/cardiac_risk_index.py",
         "explanation function": "compute_cardiac_index_explanation",
-        "calculator name": "Revised Cardiac Risk Index for Pre-Operative Risk"
+        "calculator name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "type": "risk",
+        "question": "What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk?"
     },
     "18": {
         "age": "age",
         "Hypertension history": "hypertension",
         "Electrocardiogram Test": "electrocardiogram",
-        "Diabetes mellitus criteria for CCI rule": "diabetes_mellitus",
+        "Diabetes mellitus": "diabetes_mellitus",
         "smoking": "smoking",
         "parent or sibling with Cardiovascular disease before age 65": "family_with_cvd",
         "atherosclerotic disease": "atherosclerotic_disease",
         "Suspicion History": "history",
-        "hypercholesterolemia": "hypercholesterolaemia",
+        "hypercholesterolemia": "hypercholesterolemia",
         "obesity": "obesity",
+        "Transient Ischemic Attacks History": "tia",
         "Initial troponin": "initial_troponin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/heart_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/heart_score.py",
         "explanation function": "compute_heart_score_explanation",
-        "calculator name": "HEART Score for Major Cardiac Events"
+        "calculator name": "HEART Score for Major Cardiac Events",
+        "type": "risk",
+        "question": "What is the patient's score of the HEART Score?"
     },
     "19": {
         "age": "age",
         "Alanine aminotransferase": "alt",
         "Aspartate aminotransferase": "ast",
         "Platelet count": "platelet_count",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/fibrosis_4.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/fibrosis_4.py",
         "explanation function": "compute_fib4_explanation",
-        "calculator name": "HOMA-IR (Homeostatic Model Assessment for Insulin Resistance)"
+        "calculator name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "type": "lab test",
+        "question": "What is the patient's score of the Fibrosis 4 Index?"
     },
     "20": {
         "age": "age",
@@ -165,169 +199,202 @@
         "Temperature": "temperature",
         "Tender/swollen anterior cervical lymph nodes": "tender_lymph_nodes",
         "Exudate or swelling on tonsils": "exudate_swelling_tonsils",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/centor_score.py",
-        "explanation function": "compute_centor_score_explanationn",
-        "calculator name": "Centor Score (Modified/McIsaac) for Strep Pharyngitis"
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/centor_score.py",
+        "explanation function": "compute_centor_score_explanation",
+        "calculator name": "Centor Score (Modified/McIsaac) for Strep Pharyngitis",
+        "type": "severity",
+        "question": "What is the patient's Centor Score?"
     },
     "21": {
         "Best motor response": "best_motor_response",
         "Best eye response": "best_eye_response",
         "Best verbal response": "best_verbal_response",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/glasgow_coma_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/glasgow_coma_score.py",
         "explanation function": "compute_glasgow_coma_score_explanation",
-        "calculator name": "Glasgow Coma Score (GCS)"
+        "calculator name": "Glasgow Coma Score (GCS)",
+        "type": "severity",
+        "question": "What is the patient's Glasgow Coma Score?"
     },
     "22": {
         "weight": "weight",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/maintenance_fluid_calc.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/maintenance_fluid_calc.py",
         "explanation function": "maintenance_fluid_explanation",
-        "calculator name": "Maintenance Fluids Calculations"
+        "calculator name": "Maintenance Fluids Calculations",
+        "type": "physical",
+        "question": "Based on the patient's weight, what is the patient's maintenance fluid in mL/hr? "
     },
     "23": {
         "creatinine": "creatinine",
-        "Continuous veno-venous hemodialysis for \u226524 hours in the past week": "cvvd",
+        "Continuous veno-venous hemodialysis for \u226524 hours in the past week": "cvvhd",
         "Dialysis at least twice in the past week": "dialysis_twice",
         "international normalized ratio": "inr",
         "Sodium": "sodium",
         "Bilirubin": "bilirubin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/meldna.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/meldna.py",
         "explanation function": "compute_meldna_explanation",
-        "calculator name": "MELD Na (UNOS/OPTN)"
+        "calculator name": "MELD Na (UNOS/OPTN)",
+        "type": "lab test",
+        "question": "What is the patient's MELD Na score?"
     },
     "24": {
-        "input_steroid": "input steroid",
+        "input steroid": "input steroid",
         "target steroid": "target steroid",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/steroid_conversion_calculator.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/steroid_conversion_calculator.py",
         "explanation function": "compute_steroid_conversion_explanation",
-        "calculator name": "Steroid Conversion Calculator"
+        "calculator name": "Steroid Conversion Calculator",
+        "type": "dosage"
     },
     "25": {
         "Liver disease criteria for the HAS-BLED rule": "liver_disease_has_bled",
         "age": "age",
         "Renal disease criteria for the HAS-BLED rule": "renal_disease_has_bled",
-        "Hypertension history": "hypertension",
+        "Hypertension": "hypertension",
         "Number of Alcoholic Drinks Per Week": "alcoholic_drinks",
         "Stroke": "stroke",
-        "Medication usage predisposing to bleeding": "medications for bleeding",
+        "Medication usage predisposing to bleeding": "medications_for_bleeding",
         "Prior major bleeding or predisposition to bleeding": "prior_bleeding",
         "Labile international normalized ratio": "labile_inr",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/has_bled_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/has_bled_score.py",
         "explanation function": "compute_has_bled_score_explanation",
-        "calculator name": "HAS-BLED Score for Major Bleeding Risk"
+        "calculator name": "HAS-BLED Score for Major Bleeding Risk",
+        "type": "risk",
+        "question": "What is the patient's HAS-BLED score?"
     },
     "26": {
         "Sodium": "sodium",
         "Glucose": "glucose",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/sodium_correction_hyperglycemia.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/sodium_correction_hyperglycemia.py",
         "explanation function": "compute_sodium_correction_hyperglycemia_explanation",
-        "calculator name": "Serum Osmolality"
+        "calculator name": "Sodium Correction for Hyperglycemia",
+        "type": "lab test",
+        "question": "What is the patient's corrected sodium concentration for hyperglycemia in terms of mEq/L? Use the sodium correction equation based on the one derived in Hillier, 1999."
     },
     "27": {
         "Heart Rate or Pulse": "heart_rate",
         "Blood Urea Nitrogen (BUN)": "bun",
         "sex": "sex",
-        "Cardiac failure present": "cardiac_failure",
+        "Cardiac Failure Present": "cardiac_failure",
         "Hemoglobin": "hemoglobin",
-        "Melena present": "melena_present",
+        "Melena Present": "melena_present",
         "Systolic Blood Pressure": "sys_bp",
-        "Recent syncope": "syncope",
+        "Recent Syncope": "syncope",
         "Hepatic disease history": "hepatic_disease_history",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/glasgow_bleeding_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/glasgow_bleeding_score.py",
         "explanation function": "glasgow_bleeding_score_explanation",
-        "calculator name": "Glasgow-Blatchford Bleeding Score (GBS)"
+        "calculator name": "Glasgow-Blatchford Bleeding Score (GBS)",
+        "type": "risk",
+        "question": "What is the patient's Glasgow-Blatchford Bleeding score?"
     },
     "28": {
         "History of severe organ failure or immunocompromise": "severe_organ_failure_or_immunocompromise",
-        "Age": "age",
+        "age": "age",
         "Temperature": "temperature",
         "Mean arterial pressure": "mean_arterial_pressure",
         "pH": "pH",
         "Heart Rate or Pulse": "heart_rate",
-        "Respiratory rate": "respiratory_rate",
+        "respiratory rate": "respiratory_rate",
         "Sodium": "sodium",
         "Potassium": "potassium",
-        "Creatinine": "creatinine",
+        "creatinine": "creatinine",
         "Acute renal failure": "acute_renal_failure",
+        "Chronic renal failure": "chronic_renal_failure",
         "Hematocrit": "hematocrit",
         "White blood cell count": "wbc",
         "Glasgow Coma Score": "gcs",
-        "FiO\u2082": "fio2",
-        "Partial pressure of oxygen ": "partial_pressure_oxygen",
+        "FiO2": "fio2",
+        "PaO2": "pao2",
         "A-a gradient": "a_a_gradient",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/apache_ii.py",
+        "Diastolic Blood Pressure": "dia_bp",
+        "Systolic Blood Pressure": "sys_bp",
+        "Surgery Type": "surgery_type",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/apache_ii.py",
         "explanation function": "apache_ii_explanation",
-        "calculator name": "APACHE II Score"
+        "calculator name": "APACHE II Score",
+        "type": "risk",
+        "question": "What is the patient's APACHE II score?"
     },
     "29": {
         "Heart Rate or Pulse": "heart_rate",
         "pH": "pH",
         "Systolic Blood Pressure": "sys_bp",
         "Blood Urea Nitrogen (BUN)": "bun",
-        "Renal disease": "renal_disease",
+        "Renal disease history": "renal_disease",
         "Cerebrovascular disease history": "cerebrovascular_disease",
         "Neoplastic disease": "neoplastic_disease",
         "Sodium": "sodium",
-        "Liver disease severity": "liver_disease",
-        "Congestive Heart Faliure": "chf",
+        "Liver disease history": "liver_disease",
+        "Congestive Heart Failure": "chf",
         "Nursing home resident": "nursing_home_resident",
         "Partial pressure of oxygen": "partial_pressure_oxygen",
         "age": "age",
         "respiratory rate": "respiratory_rate",
         "sex": "sex",
-        "Hematocrit": "hemocratit",
+        "Hematocrit": "hematocrit",
         "Glucose": "glucose",
         "Temperature": "temperature",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/psi_score.py",
+        "Pleural effusion on x-ray": "pleural_effusion",
+        "Altered mental status": "altered_mental_status",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/psi_score.py",
         "explanation function": "psi_score_explanation",
-        "calculator name": "PSI Score: Pneumonia Severity Index for CAP"
+        "calculator name": "PSI Score: Pneumonia Severity Index for CAP",
+        "type": "severity",
+        "question": "What is the patient's Pneumonia Severity Index (PSI)?"
     },
     "30": {
         "Sodium": "sodium",
         "Glucose": "glucose",
         "Blood Urea Nitrogen (BUN)": "bun",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/sOsm.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/sOsm.py",
         "explanation function": "compute_serum_osmolality_explanation",
-        "calculator name": "Serum Osmolality"
+        "calculator name": "Serum Osmolality",
+        "type": "lab test",
+        "question": "What is the patient's serum osmolality in terms of mOsm/kg? You may take the alcohol content as 0 mg/dL."
     },
     "31": {
         "Glucose": "glucose",
         "Insulin": "insulin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/homa_ir.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/homa_ir.py",
         "explanation function": "compute_homa_ir_explanation",
-        "calculator name": "HOMA-IR (Homeostatic Model Assessment for Insulin Resistance)"
+        "calculator name": "HOMA-IR (Homeostatic Model Assessment for Insulin Resistance)",
+        "type": "lab test",
+        "question": "What is the patient's HOMA-IR score?"
     },
     "32": {
         "age": "age",
         "Myocardial infarction": "mi",
-        "Congestive Heart Faliure": "chf",
+        "Congestive Heart Failure": "chf",
         "Peripheral vascular disease": "peripheral_vascular_disease",
         "Cerebrovascular Accident": "cva",
         "Transient Ischemic Attacks History": "tia",
         "Dementia": "dementia",
-        "Chronic Obstructive Pulmonary Disease": "copd",
+        "Chronic Pulmonary Disease": "copd",
         "Connective tissue disease": "connective_tissue_disease",
         "Peptic ulcer disease": "peptic_ucler_disease",
         "Liver disease severity": "liver_disease",
-        "Diabetes mellitus criteria for CCI rule": "diabetes_mellitus",
+        "Diabetes mellitus": "diabetes_mellitus",
         "Hemiplegia": "hemiplegia",
         "Moderate to severe Chronic Kidney Disease": "moderate_to_severe_ckd",
         "Solid tumor": "solid_tumor",
         "Leukemia": "leukemia",
         "Lymphoma": "lymphoma",
         "AIDS": "aids",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/cci.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/cci.py",
         "explanation function": "compute_cci_explanation",
-        "calculator name": "Charlson Comorbidity Index (CCI)"
+        "calculator name": "Charlson Comorbidity Index (CCI)",
+        "type": "risk",
+        "question": "What is the patient's Charlson Comorbidity Index (CCI)?"
     },
     "33": {
-        "Symptom onset \u22643 days": "symptom_onset",
+        "Symptom onset <=3 days": "symptom_onset",
         "Purulent tonsils": "purulent_tonsils",
         "Fever in past 24 hours": "fever_24_hours",
         "Severe tonsil inflammation": "severe_tonsil_inflammation",
         "Absence of cough or coryza": "cough_coryza_absent",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/feverpain.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/feverpain.py",
         "explanation function": "compute_fever_pain_explanation",
-        "calculator name": "FeverPAIN Score for Strep Pharyngitis"
+        "calculator name": "FeverPAIN Score for Strep Pharyngitis",
+        "type": "diagnosis",
+        "question": "What is the patient's FeverPAIN score?"
     },
     "36": {
         "age": "age",
@@ -361,41 +428,49 @@
         "Acute Myocardial infarction": "acute_myocardial_infarction",
         "Chronic Obstructive Pulmonary Disease": "copd",
         "Present or previous malignancy": "malignancy",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/caprini_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/caprini_score.py",
         "explanation function": "caprini_score_explanation",
-        "calculator name": "Caprini Score for Venous Thromboembolism (2005)"
+        "calculator name": "Caprini Score for Venous Thromboembolism (2005)",
+        "type": "risk",
+        "question": "What is the patient's Caprini Score for Venous Thromboembolism?"
     },
     "38": {
         "age": "age",
         "weight": "weight",
         "sex": "sex",
         "Sodium": "sodium",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/free_water_deficit.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/free_water_deficit.py",
         "explanation function": "free_water_deficit_explanation",
-        "calculator name": "Free Water Deficit"
+        "calculator name": "Free Water Deficit",
+        "type": "lab test",
+        "question": "What is the patient's free water deficit in terms of kg? The desired serum sodium concentration is 140 mEq/L."
     },
     "39": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/anion_gap.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/anion_gap.py",
         "explanation function": "compute_anion_gap_explanation",
-        "calculator name": "Anion Gap"
+        "calculator name": "Anion Gap",
+        "type": "lab test",
+        "question": "What is the patient's anion gap in terms of mEq/L? "
     },
     "40": {
         "Urine creatinine": "urine_creatinine",
-        "Creatinine": "creatinine",
+        "creatinine": "creatinine",
         "Urine sodium": "urine_sodium",
         "Sodium": "sodium",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/compute_fena.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/compute_fena.py",
         "explanation function": "compute_fena_explanation",
-        "calculator name": "Fractional Excretion of Sodium (FENa)"
+        "calculator name": "Fractional Excretion of Sodium (FENa)",
+        "type": "lab test",
+        "question": "What is the patient's Fractional Excretion of Sodium (FENa)? Please return your answer as a percentage value."
     },
     "43": {
-        "Partial pressure of oxygen": "partial_pressure_oxygen",
-        "FiO\u2082": "fio2",
+        "PaO2": "pao2",
+        "FiO2": "fio2",
         "On mechanical ventilation": "mechanical_ventilation",
-        "Continous positive airway pressure": "cpap",
+        "Continuous positive airway pressure": "cpap",
         "Platelet count": "platelet_count",
         "Glasgow Coma Score": "gcs",
         "Bilirubin": "bilirubin",
@@ -403,22 +478,26 @@
         "Systolic Blood Pressure": "sys_bp",
         "Diastolic Blood Pressure": "dia_bp",
         "DOPamine": "dopamine",
-        "DOBUTaimine": "doboutamine",
+        "DOBUTamine": "doboutamine",
         "norEPINEPHrine": "norepinephrine",
         "EPINEPHrine": "epinephrine",
         "creatinine": "creatinine",
         "Urine Output": "urine_output",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/sofa.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/sofa.py",
         "explanation function": "compute_sofa_explanation",
-        "calculator name": "Sequential Organ Failure Assessment (SOFA) Score"
+        "calculator name": "Sequential Organ Failure Assessment (SOFA) Score",
+        "type": "risk",
+        "question": "What is the patient's Sequential Organ Failure Assessment (SOFA) Score?"
     },
     "44": {
-        "Total cholestrol": "total_cholestrol",
-        "high-density lipoprotein cholestrol": "hdl_cholestrol",
+        "Total cholesterol": "total_cholesterol",
+        "high-density lipoprotein cholesterol": "hdl_cholesterol",
         "Triglycerides": "triglycerides",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/ldl_calculated.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/ldl_calculated.py",
         "explanation function": "compute_ldl_explanation",
-        "calculator name": "LDL Calculated"
+        "calculator name": "LDL Calculated",
+        "type": "lab test",
+        "question": "What is the patient's LDL cholestrol concentration? Please outuput your answer in terms of mg/dL."
     },
     "45": {
         "age": "age",
@@ -426,22 +505,26 @@
         "Diastolic Blood Pressure": "dia_bp",
         "Blood Urea Nitrogen (BUN)": "bun",
         "respiratory rate": "respiratory_rate",
-        "confusion": "confusion",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/curb_65.py",
+        "Confusion": "confusion",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/curb_65.py",
         "explanation function": "curb_65_explanation",
-        "calculator name": "CURB-65 Score for Pneumonia Severity"
+        "calculator name": "CURB-65 Score for Pneumonia Severity",
+        "type": "risk",
+        "question": "What is the patient's CURB-65 score?"
     },
     "46": {
         "sex": "sex",
         "age": "age",
         "Systolic Blood Pressure": "sys_bp",
         "Smoker": "smoker",
-        "Total cholestrol": "total_cholestrol",
-        "high-density lipoprotein cholestrol": "hdl_cholestrol",
+        "Total cholesterol": "total_cholesterol",
+        "high-density lipoprotein cholesterol": "hdl_cholesterol",
         "Blood pressure being treated with medicines": "bp_medicine",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/framingham_risk_score.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/framingham_risk_score.py",
         "explanation function": "framingham_risk_score_explanation",
-        "calculator name": "Framingham Risk Score for Hard Coronary Heart Disease"
+        "calculator name": "Framingham Risk Score for Hard Coronary Heart Disease",
+        "type": "lab test",
+        "question": "Based on the Framingham Risk Score for Hard Coronary Heart Disease, what is the likelihood of 10-year risk of MI or death for this patient? Please return your answer as a percentage value."
     },
     "48": {
         "age": "age",
@@ -453,131 +536,164 @@
         "Previously Documented Pulmonary Embolism": "previous_pe",
         "Unilateral Leg Swelling": "unilateral_leg_swelling",
         "Hormone use": "hormonal_use",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/perc_rule.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/perc_rule.py",
         "explanation function": "compute_perc_rule_explanation",
-        "calculator name": "PERC Rule for Pulmonary Embolism"
+        "calculator name": "PERC Rule for Pulmonary Embolism",
+        "type": "diagnosis",
+        "question": "What are the number of criteria met for the PERC Rule for Pulmonary Embolism (PE)?"
     },
     "49": {
         "Question": "Based on the number of doses per day and the quantity of different doses, what is the patient's daily Morphine Miligram Equivalents (MME)?",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/mme.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/mme.py",
         "explanation function": "mme_explanation",
-        "calculator name": "Morphine Milligram Equivalents (MME) Calculator"
+        "calculator name": "Morphine Milligram Equivalents (MME) Calculator",
+        "type": "dosage",
+        "question": "Based on the number of doses per day and the quantity of different doses, what is the patient's daily Morphine Miligram Equivalents (MME)?"
     },
     "51": {
         "Temperature": "temperature",
         "Heart Rate or Pulse": "heart_rate",
         "respiratory rate": "respiratory_rate",
         "White blood cell count": "wbc",
-        "paco2": "paco2",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/sirs_criteria.py",
+        "PaCO2": "paco2",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/sirs_criteria.py",
         "explanation function": "sirs_criteria_explanation",
-        "calculator name": "SIRS Criteria"
+        "calculator name": "SIRS Criteria",
+        "type": "diagnosis",
+        "question": "What are the number of SIRS critiera met by the patient?"
     },
     "56": {
         "Heart Rate or Pulse": "heart_rate",
         "QT Interval": "qt_interval",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/qt_calculator_fredericia.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/qt_calculator_fredericia.py",
         "explanation function": "fredericia_calculator_explanation",
-        "calculator name": "QTc Fridericia Calculator"
+        "calculator name": "QTc Fridericia Calculator",
+        "type": "physical",
+        "question": "Using the Fridericia Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?"
     },
     "57": {
         "Heart Rate or Pulse": "heart_rate",
         "QT Interval": "qt_interval",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/qt_calculator_framingham.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/qt_calculator_framingham.py",
         "explanation function": "framingham_calculator_explanation",
-        "calculator name": "QTc Framingham Calculator"
+        "calculator name": "QTc Framingham Calculator",
+        "type": "physical",
+        "question": "Using the Framingham Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?"
     },
     "58": {
         "Heart Rate or Pulse": "heart_rate",
         "QT Interval": "qt_interval",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/qt_calculator_hodges.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/qt_calculator_hodges.py",
         "explanation function": "hodges_calculator_explanation",
-        "calculator name": "QTc Hodges Calculator"
+        "calculator name": "QTc Hodges Calculator",
+        "type": "physical",
+        "question": "Using the Hodges Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?"
     },
     "59": {
         "Heart Rate or Pulse": "heart_rate",
         "QT Interval": "qt_interval",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/qt_calculator_rautaharju.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/qt_calculator_rautaharju.py",
         "explanation function": "rautaharju_calculator_explanation",
-        "calculator name": "QTc Rautaharju Calculator"
+        "calculator name": "QTc Rautaharju Calculator",
+        "type": "physical",
+        "question": "Using the Rautaharju Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?"
     },
     "60": {
         "weight": "weight",
         "height": "height",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/bsa_calculator.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/bsa_calculator.py",
         "explanation function": "bsa_calculator_explaination",
-        "calculator name": "Body Surface Area Calculator"
+        "calculator name": "Body Surface Area Calculator",
+        "type": "physical",
+        "question": "What is the patient's body surface area? Please output your answer in terms of m\u00b2."
     },
     "61": {
-        "Body Mass Index (BMI)": "bmi",
+        "Body Mass Index (BMI)": "body_mass_index",
         "height": "height",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/target_weight.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/target_weight.py",
         "explanation function": "targetweight_explanation",
-        "calculator name": "Target weight"
+        "calculator name": "Target weight",
+        "type": "physical",
+        "question": "Based on the patient's height and target BMI, what is the patient's target weight in kg?"
     },
     "62": {
         "sex": "sex",
         "weight": "weight",
         "height": "height",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/adjusted_body_weight.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/adjusted_body_weight.py",
         "explanation function": "abw_explanation",
-        "calculator name": "Adjusted Body Weight"
+        "calculator name": "Adjusted Body Weight",
+        "type": "physical",
+        "question": "Using the adjusted body weight formula, what is the patient's adjusted body weight in terms of kg?"
     },
     "63": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/delta_gap.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/delta_gap.py",
         "explanation function": "compute_delta_gap_explanation",
-        "calculator name": "Delta Gap"
+        "calculator name": "Delta Gap",
+        "type": "lab test",
+        "question": "What is the patient's delta gap in mEq/L?"
     },
     "64": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/delta_ratio.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/delta_ratio.py",
         "explanation function": "compute_delta_ratio_explanation",
-        "calculator name": "Delta Ratio"
+        "calculator name": "Delta Ratio",
+        "type": "lab test",
+        "question": "What is the patient's delta ratio?"
     },
     "65": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "Albmumin": "albumin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/albumin_corrected_anion.py",
+        "Albumin": "albumin",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/albumin_corrected_anion.py",
         "explanation function": "compute_albumin_corrected_anion_explanation",
-        "calculator name": "Albumin Corrected Anion Gap"
+        "calculator name": "Albumin Corrected Anion Gap",
+        "type": "lab test",
+        "question": "What is the patient's albumin corrected anion gap in mEq/L?"
     },
     "66": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "Albmumin": "albumin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/albumin_corrected_delta_gap.py",
+        "Albumin": "albumin",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/albumin_corrected_delta_gap.py",
         "explanation function": "compute_albumin_corrected_delta_gap_explanation",
-        "calculator name": "Albumin Corrected Delta Gap"
+        "calculator name": "Albumin Corrected Delta Gap",
+        "type": "lab test",
+        "question": "What is the patient's albumin corrected delta gap in mEq/L?"
     },
     "67": {
         "Chloride": "chloride",
         "Bicarbonate": "bicarbonate",
         "Sodium": "sodium",
-        "Albmumin": "albumin",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/albumin_delta_ratio.py",
+        "Albumin": "albumin",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/albumin_delta_ratio.py",
         "explanation function": "compute_albumin_delta_ratio_explanation",
-        "calculator name": "Albumin Corrected Delta Ratio"
+        "calculator name": "Albumin Corrected Delta Ratio",
+        "type": "lab test",
+        "question": "What is the patient's albumin corrected delta ratio?"
     },
     "68": {
-        "cycle length": "cycle_length",
         "Last menstrual date": "menstrual_date",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/estimated_conception_date.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/estimated_conception_date.py",
         "explanation function": "add_2_weeks_explanation",
-        "calculator name": "Estimated of Conception"
+        "calculator name": "Estimated of Conception",
+        "type": "date",
+        "question": "Based on the patient's last menstrual period, what is the the patient's estimated date of conception? Your answer should be in the format of M/D/Y (ie 08/31/2023, 07/03/2000) with just the date and not other text."
     },
     "69": {
-        "Current Date": "current date",
+        "Current Date": "current_date",
         "Last menstrual date": "menstrual_date",
-        "file path": "/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementations/estimated_gestational_age.py",
+        "file path": "/Users/nikhilkhandekar/Downloads/MedCalc-Bench/calculator_implementations/estimated_gestational_age.py",
         "explanation function": "compute_gestational_age_explanation",
-        "calculator name": "Estimated Gestational Age"
+        "calculator name": "Estimated Gestational Age",
+        "type": "date",
+        "question": "Based on the patient's last menstrual period, what is the patient's estimated gestational age? Your answer should be a tuple, specifying the number of weeks and days (i.e. (4 weeks, 3 days), (0 weeks, 5 days), (1 week, 5 days), (8 weeks, 0 days))."
     }
 }

@@ -2,21 +2,19 @@ import unit_converter_new
 
 def glasgow_bleeding_score_explanation(input_parameters):
 
-    explanation = """
-    The criteria for the Glasgow-Blatchford Score are listed below:
+    explanation = """The criteria for the Glasgow-Blatchford Score are listed below:
 
-    1. BUN (mg/dL): <18.2 = 0 points, 18.2-22.3 = +2 points, 22.4-28 = +3 points, 28-70 = +4 points, >70 = +6 points
-    2. Hemoglobin (g/dL) for men: >=13 = 0 points, <=12-13 = +1 point, <=10-12 = +3 points, <10 = +6 points
-    3. Hemoglobin (g/dL) for women: >=12 = 0 points, <=10-12 = +1 point, <10 = +6 points
-    4. Systolic blood pressure (mm Hg): ≥110 = 0 points, 100-109 = +1 point, 90-99 = +2 points, <90 = +3 points
-    5. Pulse ≥100 (per minute): No = 0 points, Yes = +1 point
-    6. Melena present: No = 0 points, Yes = +1 point
-    7. Presentation with syncope: No = 0 points, Yes = +1 point
-    8. Liver disease history: No = 0 points, Yes = +1 point
-    9. Cardiac failure present: No = 0 points, Yes = +1 point
+1. BUN (mg/dL): <18.2 = 0 points, 18.2-22.3 = +2 points, 22.4-28 = +3 points, 28-70 = +4 points, >70 = +6 points
+2. Hemoglobin (g/dL) for men: >=13 = 0 points, <=12-13 = +1 point, <=10-12 = +3 points, <10 = +6 points
+3. Hemoglobin (g/dL) for women: >=12 = 0 points, <=10-12 = +1 point, <10 = +6 points
+4. Systolic blood pressure (mm Hg): ≥110 = 0 points, 100-109 = +1 point, 90-99 = +2 points, <90 = +3 points
+5. Pulse ≥100 (per minute): No = 0 points, Yes = +1 point
+6. Melena present: No = 0 points, Yes = +1 point
+7. Presentation with syncope: No = 0 points, Yes = +1 point
+8. Liver disease history: No = 0 points, Yes = +1 point
+9. Cardiac failure present: No = 0 points, Yes = +1 point
 
-    The total Glasgow-Blatchford Score is calculated by summing the points for each criterion.
-    """
+The total Glasgow-Blatchford Score is calculated by summing the points for each criterion.\n"""
 
     score = 0
 
@@ -112,6 +110,6 @@ def glasgow_bleeding_score_explanation(input_parameters):
         else:
             explanation +=  f"The patient's status for {default_parameters[parameter]} is reported to be absent for the patient, and so we do not add any points, keeping the current total at {score}.\n"
         
-    explanation += f"The patient's Glasgow Bleeding Score is {score}.\n"
+    explanation += f"The patient's Glasgow Bleeding Score is {score}."
 
     return {"Explanation": explanation, "Answer": score}

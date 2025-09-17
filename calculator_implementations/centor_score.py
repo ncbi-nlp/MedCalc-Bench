@@ -3,21 +3,20 @@ import age_conversion
 
 def compute_centor_score_explanation(input_variables):
 
-    explanation = """
-    The criteria listed in the Centor Score formula are listed below:
-    
-       1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
-       2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
-       3. Tender/swollen anterior cervical lymph nodes: No = 0 points, Yes = +1 point
-       4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
-       5. Cough: Cough present = 0 points, Cough absent = +1 point
-    
-    The Centor score is calculated by summing the points for each criterion.\n\n
+    explanation = """The criteria listed in the Centor Score formula are listed below:
+
+1. Age: 3-14 years = +1 point, 15-44 years = 0 points, ≥45 years = -1 point
+2. Exudate or swelling on tonsils: No = 0 points, Yes = +1 point
+3. Tender/swollen anterior cervical lymph nodes: No = 0 points, Yes = +1 point
+4. Temperature >38°C (100.4°F): No = 0 points, Yes = +1 point
+5. Cough: Cough present = 0 points, Cough absent = +1 point
+
+The Centor score is calculated by summing the points for each criterion.
     """
    
     centor_score = 0
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
-    explanation += f"The current Centor score is 0.\n"
+    explanation += f"\nThe current Centor score is 0.\n"
     explanation += age_explanation
 
     if 3 <= age <= 14:
@@ -42,6 +41,17 @@ def compute_centor_score_explanation(input_variables):
 
     for parameter in default_parameters_dict:
 
+        if parameter == "cough_absent":
+            if "cough_absent" not in input_variables:
+                explanation += f"The patient note does not mention details about the patient coughing and so we assume it to be absent. Hence, we add 1 point to the score, making the current score {centor_score} + 1 = {centor_score + 1}.\n"
+                centor_score += 1
+            elif input_variables["cough_absent"]:
+                explanation += f"The patient note reports an absence of cough and so we add 1 point to the score, making the current score {centor_score} + 1 = {centor_score + 1}.\n"
+                centor_score += 1
+            elif not input_variables["cough_absent"]:
+                explanation += f"The patient note report reports that the patient is coughing and so we do not change the score, keeping the current score at {centor_score}.\n"
+            continue 
+                
         if parameter not in input_variables:
             explanation += f"The patient note does not mention details about '{default_parameters_dict[parameter]}' and so we assume it to be absent. "
             input_variables[parameter] = False
@@ -53,6 +63,6 @@ def compute_centor_score_explanation(input_variables):
             centor_score += 1
             
 
-    explanation += f"Hence, the Centor score for the patient is {centor_score}.\n"
+    explanation += f"Hence, the Centor score for the patient is {centor_score}."
 
     return {"Explanation": explanation, "Answer": centor_score}

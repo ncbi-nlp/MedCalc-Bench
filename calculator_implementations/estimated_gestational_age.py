@@ -21,7 +21,7 @@ def compute_gestational_age_explanation(input_parameters):
     elif days == 0:
         explanation += f"The gap between these two dates is {weeks} weeks. Hence, the estimated gestational age is {weeks} weeks. "
     else:
-        explanation += f"The gap between these two dates is {weeks} weeks and {days} days. Hence, the estimated gestational age is {weeks} weeks and {days} days. "
+        explanation += f"The gap between these two dates is {weeks} weeks and {days} days. Hence, the estimated gestational age is {weeks} weeks and {days} days."
 
 
     return {"Explanation": explanation, "Answer": (f"{weeks} weeks", f"{days} days")}

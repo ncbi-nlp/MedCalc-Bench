@@ -18,7 +18,7 @@ def compute_fena_explanation(input_variables):
     result = round_number((creatinine * urine_sodium)/(sodium * urine_creatinine) * 100)
 
     explanation += f"Plugging in these values, we get 100 * ({creatinine} * {urine_sodium})/({sodium} * {urine_creatinine}) = {result} % FENa.\n"
-    explanation += f"Hence, the patient's FEna percentage is {result} %.\n"
+    explanation += f"Hence, the patient's FEna percentage is {result} %."
 
     return {"Explanation": explanation, "Answer": result}
 

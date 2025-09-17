@@ -19,8 +19,8 @@ def calculate_corrected_calcium_explanation(params):
 
     # Generate explanation
     output += "The patient's normal albumin level is 4.0 g/dL.\n"
-    albumin_explanation, albumin  = unit_converter_new.conversion_explanation(albumin_val, "Albmumin", 66500, None, albumin_units, "g/dL" )
-    calcium_explanation, calcium  = unit_converter_new.conversion_explanation(calcium_val, "Calcium", 40.08, 2, calcium_units, "mg/dL")
+    albumin_explanation, albumin  = unit_converter_new.conversion_explanation(albumin_val, "albmumin", 66500, None, albumin_units, "g/dL" )
+    calcium_explanation, calcium  = unit_converter_new.conversion_explanation(calcium_val, "calcium", 40.08, 2, calcium_units, "mg/dL")
 
     output += f"{albumin_explanation}\n"
     output += f"{calcium_explanation}\n"
@@ -31,7 +31,7 @@ def calculate_corrected_calcium_explanation(params):
     output += f"(0.8 * ({normal_albumin} g/dL - {albumin} g/dL)) + {calcium} mg/dL = {corrected_calcium} mg/dL.\n"
 
 
-    output += f"The patient's corrected calcium concentration {corrected_calcium} mg/dL.\n"
+    output += f"The patient's corrected calcium concentration {corrected_calcium} mg/dL."
 
     return {"Explanation": output, "Answer": corrected_calcium}
 

@@ -15,6 +15,6 @@ def compute_albumin_corrected_delta_gap_explanation(input_parameters):
     answer = round_number(albumin_corrected_val - 12.0)
 
     explanation += f"Plugging in {albumin_corrected_val} mEq/L for the anion gap into the albumin corrected delta gap formula, we get {albumin_corrected_val} - 12 = {answer} mEq/L. "
-    explanation += f"Hence, the patient's albumin corrected delta gap is {answer} mEq/L.\n"
+    explanation += f"Hence, the patient's albumin corrected delta gap is {answer} mEq/L."
 
     return {"Explanation": explanation, "Answer": answer}

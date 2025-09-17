@@ -14,40 +14,39 @@ def psi_score_explanation(input_variables):
     respiratory_rate = input_variables["respiratory_rate"][0]
     sys_bp = input_variables["sys_bp"][0]
     bun_exp, bun = unit_converter_new.conversion_explanation(input_variables["bun"][0], 'BUN', 28.02, None, input_variables["bun"][1], "mg/dL")
-    sodium_exp, sodium = unit_converter_new.conversion_explanation(input_variables["sodium"][0], "sodium", 22.99, None, input_variables["sodium"][1], "mmol/L")
+    sodium_exp, sodium = unit_converter_new.conversion_explanation(input_variables["sodium"][0], "sodium", 22.99, 1, input_variables["sodium"][1], "mmol/L")
     glucose_exp, glucose = unit_converter_new.conversion_explanation(input_variables["glucose"][0], "glucose", 180.16, None, input_variables["glucose"][1], "mg/dL")
-    hemocratit = input_variables["hemocratit"][0]
+    hematocrit = input_variables["hematocrit"][0]
     partial_pressure_oxygen = input_variables.get("partial_pressure_oxygen")
 
-    explanation = """
-    The rules for computing the Pneumonia Severity Index (PSI) are shown below:
-    
-       1. Age: Enter age in years (age score will be equal to age in years)
-       2. Sex: Female = -10 points, Male = 0 points
-       3. Nursing home resident: No = 0 points, Yes = +10 points
-       4. Neoplastic disease: No = 0 points, Yes = +30 points
-       5. Liver disease history: No = 0 points, Yes = +20 points
-       6. Congestive heart failure (CHF) history: No = 0 points, Yes = +10 points
-       7. Cerebrovascular disease history: No = 0 points, Yes = +10 points
-       8. Renal disease history: No = 0 points, Yes = +10 points
-       9. Altered mental status: No = 0 points, Yes = +20 points
-       10. Respiratory rate ≥30 breaths/min: No = 0 points, Yes = +20 points
-       11. Systolic blood pressure <90 mmHg: No = 0 points, Yes = +20 points
-       12. Temperature <35°C (95°F) or >39.9°C (103.8°F): No = 0 points, Yes = +15 points
-       13. Pulse ≥125 beats/min: No = 0 points, Yes = +10 points
-       14. pH <7.35: No = 0 points, Yes = +30 points
-       15. BUN ≥30 mg/dL or ≥11 mmol/L: No = 0 points, Yes = +20 points
-       16. Sodium <130 mmol/L: No = 0 points, Yes = +20 points
-       17. Glucose ≥250 mg/dL or ≥14 mmol/L: No = 0 points, Yes = +10 points
-       18. Hematocrit <30%: No = 0 points, Yes = +10 points
-       19. Partial pressure of oxygen <60 mmHg or <8 kPa: No = 0 points, Yes = +10 points
-       20. Pleural effusion on x-ray: No = 0 points, Yes = +10 points
-    
-    The total score is calculated by summing the points for each criterion.\n\n
-    """
+    explanation = """The rules for computing the Pneumonia Severity Index (PSI) are shown below:
+
+1. Age: Enter age in years (age score will be equal to age in years)
+2. Sex: Female = -10 points, Male = 0 points
+3. Nursing home resident: No = 0 points, Yes = +10 points
+4. Neoplastic disease: No = 0 points, Yes = +30 points
+5. Liver disease history: No = 0 points, Yes = +20 points
+6. Congestive heart failure (CHF) history: No = 0 points, Yes = +10 points
+7. Cerebrovascular disease history: No = 0 points, Yes = +10 points
+8. Renal disease history: No = 0 points, Yes = +10 points
+9. Altered mental status: No = 0 points, Yes = +20 points
+10. Respiratory rate ≥30 breaths/min: No = 0 points, Yes = +20 points
+11. Systolic blood pressure <90 mmHg: No = 0 points, Yes = +20 points
+12. Temperature <35°C (95°F) or >39.9°C (103.8°F): No = 0 points, Yes = +15 points
+13. Pulse ≥125 beats/min: No = 0 points, Yes = +10 points
+14. pH <7.35: No = 0 points, Yes = +30 points
+15. BUN ≥30 mg/dL or ≥11 mmol/L: No = 0 points, Yes = +20 points
+16. Sodium <130 mmol/L: No = 0 points, Yes = +20 points
+17. Glucose ≥250 mg/dL or ≥14 mmol/L: No = 0 points, Yes = +10 points
+18. Hematocrit <30%: No = 0 points, Yes = +10 points
+19. Partial pressure of oxygen <60 mmHg or <8 kPa: No = 0 points, Yes = +10 points
+20. Pleural effusion on x-ray: No = 0 points, Yes = +10 points
+
+The total score is calculated by summing the points for each criterion.
+"""
 
 
-    explanation += f"The current PSI score is 0.\n"
+    explanation += f"\nThe current PSI score is 0.\n"
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
     explanation += age_explanation
     explanation += f"We add the the number of years of age of the patient to the psi score, making the current total 0 + {age} = {age}.\n"
@@ -159,9 +158,9 @@ def psi_score_explanation(input_variables):
     else:
         explanation += f"The patient's glucose concentration is less than or equal to than 250 mg/dL, and so we not add any points to the current total, keeping it at {psi_score}.\n"
 
-    explanation += f"The patient's hematocrit is {hemocratit} %. "
+    explanation += f"The patient's hematocrit is {hematocrit} %. "
 
-    if hemocratit < 30:
+    if hematocrit < 30:
         explanation += f"The patient's hematocrit is less than 30%, and so we add 10 points to the score, making the current total {psi_score} + 10 = {psi_score + 10}.\n"
         psi_score += 10
     else:
@@ -188,6 +187,7 @@ def psi_score_explanation(input_variables):
         else:
             explanation += f"The patient's partial pressure of oxygen is greater than or equal to 8 kPa, and so we not add any points to the current total, keeping it at {psi_score}.\n"
 
-    explanation += f"The patient's PSI score is {psi_score}.\n"
+    explanation += f"The patient's PSI score is {psi_score}."
 
     return {"Explanation": explanation, "Answer": psi_score}
+

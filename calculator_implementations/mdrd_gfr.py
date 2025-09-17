@@ -10,7 +10,9 @@ def mrdr_gfr_explanation(input_variables):
     age_explanation, age = age_conversion.age_conversion_explanation(input_variables["age"])
     creatinine_exp, creatinine_conc = unit_converter_new.conversion_explanation(input_variables["creatinine"][0], "Creatinine", 113.12, None, input_variables["creatinine"][1], "mg/dL")
 
-    explanation = ""
+    explanation = "The patient's estimated GFR is calculated using the MDRD equation as:\n"
+    explanation += f"GFR = 175 * creatinine^(-1.154) * age^(-0.203) * race_coefficient * gender_coefficient. The creatinine concentration is mg/dL. The race coefficient is 1.212 if the patient is Black and 1.0 otherwise. The gender coefficient is 0.742 if the patient is female and 1.0 otherwise.\n"
+
     explanation += f"{age_explanation}"
     explanation += f"{creatinine_exp}\n"
 
@@ -36,10 +38,8 @@ def mrdr_gfr_explanation(input_variables):
     gfr = round_number(175 * math.exp(math.log(creatinine_conc) * -1.154) * math.exp(math.log(age) * -0.203) * race_coefficient * gender_coefficient)
 
 
-    explanation += (f"The patient's estimated GFR is calculated using the MDRD equation as:\n"
-                    f"GFR = 175 * creatinine^(-1.154) * age^(-0.203) * race_coefficient * gender_coefficient. The creatinine concentration is mg/dL.\n"
-                    f"Plugging in these values will give us: 175 * {creatinine_conc}^(-1.154) * {age}^(-0.203) * {race_coefficient} * {gender_coefficient}={gfr}.\n"
-                    f"Hence, the patient's GFR is {gfr} mL/min/1.73m².\n")
+    explanation += (f"Plugging in these values will give us: 175 * {creatinine_conc}^(-1.154) * {age}^(-0.203) * {race_coefficient} * {gender_coefficient}={gfr}.\n"
+                    f"Hence, the patient's GFR is {gfr} mL/min/1.73m².")
 
     return {"Explanation": explanation, "Answer": gfr}
 

@@ -25,7 +25,7 @@ def compute_homa_ir_explanation(input_variables):
 
     answer = round_number((insulin * glucose)/405)
 
-    explanation += f"Plugging into the formula will give us {insulin} * {glucose}/405 = {answer}. Hence, the patient's HOMA-IR score is {answer}. \n"
+    explanation += f"Plugging into the formula will give us {insulin} * {glucose}/405 = {answer}. Hence, the patient's HOMA-IR score is {answer}."
 
     return {"Explanation": explanation, "Answer": answer}
 

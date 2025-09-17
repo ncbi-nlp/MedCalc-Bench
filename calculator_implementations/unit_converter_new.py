@@ -297,8 +297,6 @@ def convert_to_units_per_liter_explanation(value, unit, compound, target_unit):
 
     conversions_factor = round_number(unit_to_liter[target_unit]/unit_to_liter[unit])
 
-    print(conversions_factor)
-
     result = round_number(conversions_factor * value)
 
     explanation += f"To convert {value} count/{unit} of {compound} to {target_unit}, multiply by the conversion factor {conversions_factor} {unit}/{target_unit} which will give {value} {compound} count/{unit} * {conversions_factor} {unit}/{target_unit} = {result} {compound} count/{target_unit}. "

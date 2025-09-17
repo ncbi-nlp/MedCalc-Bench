@@ -74,7 +74,7 @@ def generate_cockcroft_gault_explanation(params):
     output += f"\nUsing the Cockcroft-Gault equation:\n"
     output += f"CrCl = ((140 - age) * adjusted weight * gender_coefficient) / (serum creatinine * 72).\n"
     output += f"Plugging the patient's values gives us ((140 - {age}) * {adjusted_weight} * {gender_coefficient}) / ({serum_creatinine} * 72) = {creatinine_clearance} mL/min. "
-    output += f"Hence, the patient's creatinine clearance is {creatinine_clearance} mL/min.\n"
+    output += f"Hence, the patient's creatinine clearance is {creatinine_clearance} mL/min."
 
     return {"Explanation": output, "Answer": creatinine_clearance}
 

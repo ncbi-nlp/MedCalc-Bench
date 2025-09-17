@@ -4,20 +4,20 @@ import json
 def calculate_pe_wells_explanation(variables):
 
    explanation = """
-   The criteria for the Wells' Criteria for Pulmonary Embolism score are listed below:
+The criteria for the Wells' Criteria for Pulmonary Embolism score are listed below:
 
-      1. Clinical signs and symptoms of DVT: No = 0 points, Yes = +3 points
-      2. PE is #1 diagnosis OR equally likely: No = 0 points, Yes = +3 points
-      3. Heart rate > 100: No = 0 points, Yes = +1.5 points
-      4. Immobilization at least 3 days OR surgery in the previous 4 weeks: No = 0 points, Yes = +1.5 points
-      5. Previous, objectively diagnosed PE or DVT: No = 0 points, Yes = +1.5 points
-      6. Hemoptysis: No = 0 points, Yes = +1 point
-      7. Malignancy with treatment within 6 months or palliative: No = 0 points, Yes = +1 point
-   
-   The total score is calculated by summing the points for each criterion.\n\n
+1. Clinical signs and symptoms of DVT: No = 0 points, Yes = +3 points
+2. PE is #1 diagnosis OR equally likely: No = 0 points, Yes = +3 points
+3. Heart rate > 100: No = 0 points, Yes = +1.5 points
+4. Immobilization at least 3 days OR surgery in the previous 4 weeks: No = 0 points, Yes = +1.5 points
+5. Previous, objectively diagnosed PE or DVT: No = 0 points, Yes = +1.5 points
+6. Hemoptysis: No = 0 points, Yes = +1 point
+7. Malignancy with treatment within 6 months or palliative: No = 0 points, Yes = +1 point
+
+The total score is calculated by summing the points for each criterion.
    """
 
-   explanation += "The Well's score for pulmonary embolism is currently 0.\n"
+   explanation += "\nThe Well's score for pulmonary embolism is currently 0.\n"
 
    score = 0
 
@@ -106,6 +106,6 @@ def calculate_pe_wells_explanation(variables):
    else:
          explanation += f'Malignany with treatment within 6 months or palliative is not reported in the patient note and so we assume that this is absent for the patient, keeping the score at {score}.\n'
 
-   explanation += f"The patient's Well's score for pulmonary embolism is {score}.\n"
+   explanation += f"The patient's Well's score for pulmonary embolism is {score}."
 
    return {"Explanation": explanation, "Answer": score}

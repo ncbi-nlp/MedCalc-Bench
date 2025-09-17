@@ -15,6 +15,6 @@ def hodges_calculator_explanation(input_variables):
     qt_c = round_number(qt_interval + 1.75 * ((60 /rr_interval_sec) - 60))
     explanation += f"Hence, plugging in these values, we will get {qt_interval} + 1.75 * [(60/{rr_interval_sec}) - 60] = {qt_c}.\n"
 
-    explanation += f"The patient's corrected QT interval (QTc) is {qt_c} msec.\n"
+    explanation += f"The patient's corrected QT interval (QTc) is {qt_c} msec."
 
     return {"Explanation": explanation, "Answer": qt_c}

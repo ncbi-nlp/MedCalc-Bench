@@ -92,10 +92,10 @@ def compute_meldna_explanation(input_variables):
             explanation += "The maximum the MELD Na score can be is 40, and so the patient's MELD score is 40."
         else:
             meldna = meld
-            explanation += f"The MELD Na score is less than 40, and so we keep the score as it is. The patient's MELDNa score, rounded to the nearest integer, is {round(meldna)} points.\n"
+            explanation += f"The MELD Na score is less than 40, and so we keep the score as it is. The patient's MELDNa score, rounded to the nearest integer, is {round(meldna)} points."
 
     else:
         meldna = meld_10
-        explanation += f"The patient's MELD (i) score is less than 11, and so we do not apply the second equation, making the patient's MELD Na score, {round(meldna)} points.\n"
+        explanation += f"The patient's MELD (i) score is less than 11, and so we do not apply the second equation, making the patient's MELD Na score, {round(meldna)} points."
 
     return {"Explanation": explanation, "Answer": round(meldna)}

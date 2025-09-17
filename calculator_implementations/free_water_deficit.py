@@ -9,10 +9,16 @@ def free_water_deficit_explanation(input_variables):
 
     explanation += f"The formula for computing the free water deficit is (total body water percentage) * (weight) * (sodium/140 - 1), where the total body water percentage is a percentage expressed as a decimal, weight is in kg, and the sodium concentration is in mmol/L.\n"
 
+    explanation += "The total body water percentage is based on the patient's age and gender.\n"
+    explanation += "Adult male: 60% (i.e., use 0.6 in the equation)\n"
+    explanation += "Adult female: 50% (0.5)\n"
+    explanation += "Elderly male: 50% (0.5)\n"
+    explanation += "Elderly female: 45% (0.45)\n"
+    explanation += "Child: 60% (0.6)\n"
+
     age_exp, age = age_conversion.age_conversion_explanation(input_variables["age"])
     gender = input_variables["sex"]
 
-    explanation += f"The patient's total body weight percentage is based on the patient's age and gender.\n"
     explanation += age_exp
     explanation += f"The patient's is a {gender}.\n"
 
@@ -43,7 +49,7 @@ def free_water_deficit_explanation(input_variables):
     answer = round_number(tbw * weight * (sodium/140 - 1))
 
     explanation += f"Plugging in these values into the equation, we get {tbw} * {weight} * ({sodium}/140 - 1) = {answer} L. "
-    explanation += f"The patient's free body water deficit is {answer} L.\n"
+    explanation += f"The patient's free body water deficit is {answer} L."
 
 
     return {"Explanation": explanation, "Answer": answer}

@@ -4,23 +4,27 @@ def compute_child_pugh_score_explanation(input_variables):
 
     cp_score = 0
 
-    explanation =  """
-    The criteria for the Child-Pugh Score are listed below:
+    explanation =  """The criteria for the Child-Pugh Score are listed below:
 
-    1. Bilirubin (Total): <2 mg/dL (<34.2 μmol/L) = +1 point, 2-3 mg/dL (34.2-51.3 μmol/L) = +2 points, >3 mg/dL (>51.3 μmol/L) = +3 points
-    2. Albumin: >3.5 g/dL (>35 g/L) = +1 point, 2.8-3.5 g/dL (28-35 g/L) = +2 points, <2.8 g/dL (<28 g/L) = +3 points
-    3. INR: <1.7 = +1 point, 1.7-2.3 = +2 points, >2.3 = +3 points
-    4. Ascites: Absent = +1 point, Slight = +2 points, Moderate = +3 points
-    5. Encephalopathy: No Encephalopathy = +1 point, Grade 1-2 = +2 points, Grade 3-4 = +3 points
+1. Bilirubin (Total): <2 mg/dL (<34.2 μmol/L) = +1 point, 2-3 mg/dL (34.2-51.3 μmol/L) = +2 points, >3 mg/dL (>51.3 μmol/L) = +3 points
+2. Albumin: >3.5 g/dL (>35 g/L) = +1 point, 2.8-3.5 g/dL (28-35 g/L) = +2 points, <2.8 g/dL (<28 g/L) = +3 points
+3. INR: <1.7 = +1 point, 1.7-2.3 = +2 points, >2.3 = +3 points
+4. Ascites: Absent = +1 point, Slight = +2 points, Moderate = +3 points
+5. Encephalopathy: No Encephalopathy = +1 point, Grade 1-2 = +2 points, Grade 3-4 = +3 points 
+(Grade 0: normal consciousness, personality, neurological examination, electroencephalogram
+Grade 1: restless, sleep disturbed, irritable/agitated, tremor, impaired handwriting, 5 cps waves
+Grade 2: lethargic, time-disoriented, inappropriate, asterixis, ataxia, slow triphasic waves
+Grade 3: somnolent, stuporous, place-disoriented, hyperactive reflexes, rigidity, slower waves
+Grade 4: unrousable coma, no personality/behavior, decerebrate, slow 2-3 cps delta activity)
 
-    The Child-Pugh Score is calculated by summing the points for each criterion.\n\n
-    """
+The Child-Pugh Score is calculated by summing the points for each criterion.
+"""
 
-    explanation += "The current child pugh score is 0.\n"
+    explanation += "\nThe current child pugh score is 0.\n"
 
-    inr = input_variables['inr']
+    inr = float(input_variables['inr'])
 
-    ascites_state = input_variables.get('ascites', 'Absent')
+    ascites_state = input_variables.get('ascites', 'absent')
     encephalopathy_state = input_variables.get('encephalopathy', 'No Encephalopathy')
 
     explanation += f"The patient's INR is {inr}. "
@@ -84,19 +88,19 @@ def compute_child_pugh_score_explanation(input_variables):
     if 'encephalopathy' in input_variables:
         # Encephalopathy score calculation
         if encephalopathy_state == 'No Encephalopathy':
-            explanation +=  f"Encephalopathy state is reported to be 'no encephalopathy' and so we add one point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+            explanation +=  f"The patient is determined to not have any encephalopathy and so we add one point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
             cp_score += 1
         elif encephalopathy_state == 'Grade 1-2':
-            explanation += f"Encephalopathy state is 'Grade 1-2 encephalopathy' and so we add two points to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
+            explanation += f"The encephalopathy state is determined to be 'Grade 1-2' and so we add two points to the score, making the current total {cp_score} + 2 = {cp_score + 2}.\n"
             cp_score += 2
         elif encephalopathy_state == 'Grade 3-4':
-            explanation += f"Encephalopathy state is 'Grade 3-4 encephalopathy' and so we add three points to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
+            explanation += f"The encephalopathy state is determined to be 'Grade 3-4' and so we add three points to the score, making the current total {cp_score} + 3 = {cp_score + 3}.\n"
             cp_score += 3
     else:
-        explanation += f"Encephalopathy state is not specified, and so we assume it's value to be 'no encephalopathy.' We add one point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
+        explanation += f"The encephalopathy state is not specified, and so we assume that the patient does not have encephalopathy. We add one point to the score, making the current total {cp_score} + 1 = {cp_score + 1}.\n"
         cp_score += 1
 
-    explanation += f"The patient's child pugh score is {cp_score}.\n"
+    explanation += f"The patient's child pugh score is {cp_score}."
 
     return {"Explanation": explanation, "Answer": cp_score}
 

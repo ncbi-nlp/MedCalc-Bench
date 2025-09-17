@@ -17,6 +17,6 @@ def compute_serum_osmolality_explanation(input_parameters):
     serum_os = round_number(2 * sodium + (bun / 2.8) + (glucose / 18))
 
     explanation += f"Plugging these values into the equation, we get 2 * {sodium} + ({bun} / 2.8) + ({bun} / 18) = {serum_os} mmol/L."
-    explanation += f"The patient's calculated serum osmolality concentration is {serum_os} mmol/L. This is equalivalent to {serum_os} mOsm/kg.\n"
+    explanation += f"The patient's calculated serum osmolality concentration is {serum_os} mmol/L. This is equalivalent to {serum_os} mOsm/kg."
 
     return {"Explanation": explanation, "Answer": serum_os}

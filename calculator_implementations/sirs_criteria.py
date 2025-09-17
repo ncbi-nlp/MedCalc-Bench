@@ -3,19 +3,18 @@ import convert_temperature
 
 def sirs_criteria_explanation(input_parameters):
 
-    explanation = """
-    The rules for SIRS Criteria are listed below:
+    explanation = """The rules for SIRS Criteria are listed below:
     
-       1. Temperature >38°C (100.4°F) or <36°C (96.8°F): No = 0 points, Yes = +1 point
-       2. Heart rate >90: No = 0 points, Yes = +1 point
-       3. Respiratory rate >20 or PaCO₂ <32 mm Hg: No = 0 points, Yes = +1 point
-       4. White blood cell count (WBC) >12,000/mm³, <4,000/mm³, or >10% bands: No = 0 points, Yes = +1 point
-    
-    The total number of criteria met is taken by summing the score for each criteria.\n\n
+1. Temperature >38°C (100.4°F) or <36°C (96.8°F): No = 0 points, Yes = +1 point
+2. Heart rate >90: No = 0 points, Yes = +1 point
+3. Respiratory rate >20 or PaCO₂ <32 mm Hg: No = 0 points, Yes = +1 point
+4. White blood cell count (WBC) >12,000/mm³, <4,000/mm³, or >10% bands: No = 0 points, Yes = +1 point
+
+The total number of criteria met is taken by summing the score for each criteria.
     """
 
 
-    explanation += "The current count of SIRS criteria met is 0.\n"
+    explanation += "\nThe current count of SIRS criteria met is 0.\n"
 
     temperature = input_parameters["temperature"]
 
@@ -97,7 +96,7 @@ def sirs_criteria_explanation(input_parameters):
     else:
         explanation += f"Neither criteria met and so keep the current total at {criteria_met}.\n"
 
-    explanation += f"Hence, the the number of SIRS criteria met by the patient is {criteria_met}.\n"
+    explanation += f"Hence, the the number of SIRS criteria met by the patient is {criteria_met}."
 
     return {"Explanation": explanation, "Answer": criteria_met}
      

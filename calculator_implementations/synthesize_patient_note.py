@@ -54,9 +54,9 @@ def estimated_date_of_conception():
 
     modified_date_string = date_obj.strftime("%m/%d/%Y")
 
-    edc_note = f"The patient's last menstrual period was on {modified_date_string}. Her cycle length is {cycle_length} days."
+    edc_note = f"The patient's last menstrual period was on {modified_date_string}."
     
-    input_parameters = {"cycle_length": cycle_length, "menstrual_date": modified_date_string}
+    input_parameters = {"menstrual_date": modified_date_string}
 
     return edc_note, input_parameters
 
@@ -153,7 +153,8 @@ def qt_interval_patient_notes_rautaharju():
 
 def mme_conversion():
     
-    mme_drugs = ["Codeine", "FentaNYL buccal", "HYDROcodone", "HYDROmorphone", "Methadone", "Morphine", "OxyCODONE", "OxyMORphone", "Tapentadol", "TraMADol"]
+    mme_drugs = ["Codeine", "FentaNYL buccal", "HYDROcodone", "HYDROmorphone", "Methadone", "Morphine", 
+                 "OxyCODONE", "OxyMORphone", "Tapentadol", "TraMADol"]
     
 
     num_instances = random.randint(1,3)
@@ -245,9 +246,7 @@ with open("/Users/nikhilkhandekar/Documents/MedCalc-Bench/calculator_implementat
 
 problems = {}
 
-# calc_ids = ["11", "13", "24", "56", "57", "58", "59", "61", "49", "68", "69"]
-
-calc_ids = ["11", "49", "56", "57", "58", "59"]
+calc_ids = ["11", "13", "24", "56", "57", "58", "59", "61", "49", "68", "69"]
 
 
 calculator_id_to_name = {
@@ -273,7 +272,7 @@ for calc_id in calc_ids:
 
     data[calc_id] = {}
 
-    for i in range(0, 21):
+    for i in range(0, 100):
 
         function_name = calculator_id_to_name[calc_id]
 
@@ -297,10 +296,13 @@ for calc_id in calc_ids:
             data[calc_id][key_name]["calculator name"] = calc_info[calc_id]["calculator name"]
             data[calc_id][key_name]["Patient Note"] = note
             data[calc_id][key_name]["input_parameters"] = input_parameters
+            
+
+
 
 print(data)
 
-with open("synthetic_instances.json", "w") as file:
+with open("synthetic_instances_train_2.json", "w") as file:
     json.dump(data, file, indent=4)
 
 

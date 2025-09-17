@@ -22,7 +22,7 @@ def compute_anion_gap_explanation(input_parameters):
 
 
     explanation += f"Plugging in these values into the anion gap formula gives us {sodium} mEq/L - ({chloride} mEq/L + {bicarbonate} mEq/L) = {answer} mEq/L. "
-    explanation += f"Hence, The patient's anion gap is {answer} mEq/L.\n"
+    explanation += f"Hence, The patient's anion gap is {answer} mEq/L."
 
     return {"Explanation": explanation, "Answer": answer}
 

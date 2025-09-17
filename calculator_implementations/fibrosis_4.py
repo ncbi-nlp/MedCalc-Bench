@@ -25,7 +25,7 @@ def compute_fib4_explanation(input_parameters):
     explanation +=  f"The patient's concentration of ALT is {alt_value} U/L.\n"
 
     explanation += f"{explanation_platelet}This means that there are {platelet_value}/(10^9) = {count_platelet_billions} billion platelet counts per liter.\n"
-    explanation += f"Plugging these values into the formula, we get ({age} * {ast_value})/({count_platelet_billions} * sqrt({alt_value})) = {result}.\n"
+    explanation += f"Plugging these values into the formula, we get ({age} * {ast_value})/({count_platelet_billions} * sqrt({alt_value})) = {result}."
     explanation += f"Hence, the Fibrosis-4 score is {result}."
     
     return {"Explanation": explanation, "Answer": result}

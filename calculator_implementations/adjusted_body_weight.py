@@ -19,7 +19,7 @@ def abw_explanation(input_variables):
     abw_explanation_string += f"To compute the ABW value, apply the following formula: "
     abw_explanation_string += f"ABW = IBW + 0.4 * (weight (in kg) - IBW (in kg)). "
     abw_explanation_string += f"ABW = {ibw} kg + 0.4 * ({weight} kg  - {ibw} kg) = {abw} kg. "
-    abw_explanation_string += f"The patient's adjusted body weight is {abw} kg.\n"
+    abw_explanation_string += f"The patient's adjusted body weight is {abw} kg."
 
     explanation += abw_explanation_string
 
