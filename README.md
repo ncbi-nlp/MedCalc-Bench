@@ -16,7 +16,7 @@ In all, we hope that our dataset and benchmark serves as a call to improve the c
 
 ## Updates
 
-We curated MedCalc-Bench-v2.0, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. We also add instances to the training set so that all calculators have training instances and we also augment each instance with the full formula/criteria for the step-by-step explanations. MedCalc-Bench-v2.0 is still subject to change as we are doing through a third round of revision but you can find the new HuggingFace link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v2.0. 
+10/23 - We curated MedCalc-Bench-v2.0, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. We also add instances to the training set so that all calculators have training instances and we also augment each instance with the full formula/criteria for the step-by-step explanations. MedCalc-Bench-v2.0 is still subject to change as we are doing through a third round of revision but you can find the new HuggingFace link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v2.0. 
 
 ## MedCalc-Bench Dataset
 
