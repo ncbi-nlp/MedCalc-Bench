@@ -18,7 +18,7 @@ Our preprint is available at: https://arxiv.org/abs/2406.12036.
 
 ## Updates
 
-We curated MedCalc-Bench v2.0, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. MedCalc-Bench-v2.0 is still subject to change as we are doing through a third round of revision but you can find the new HuggingFace link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v2.0. 
+We curated MedCalc-Bench-v2.0, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. MedCalc-Bench-v2.0 is still subject to change as we are doing through a third round of revision but you can find the new HuggingFace link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v2.0. 
 
 ## MedCalc-Bench Dataset
 
