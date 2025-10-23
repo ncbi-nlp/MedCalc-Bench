@@ -21,7 +21,7 @@ We curated MedCalc-Bench-v2.0, which fixes errors in 12 calculators, replaced no
 ## MedCalc-Bench Dataset
 
 
-In addition to the 1,047 evaluation instances, we also provide a training dataset of 10,053 instances which can be used for fine-tuning open-source LLMs (see Section C of the Appendix). The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
+In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,615 instances which can be used for fine-tuning open-source LLMs. The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
 
 Each Instance in the dataset contains the following information: 
 
@@ -87,7 +87,7 @@ Each instance in the jsonl will have the following meta-data associated with the
 }
 ```
 
-Additionally, we provide the mean accuracy and standard deviation percentage for each sub-category in a json titled ```results_<model>_<prompt_style>.json```. The cumulative accuracy and standard deviation among all 1,047 instances can be found under "overall" key of the JSON. This file can be found in the ```results``` folder. 
+Additionally, we provide the mean accuracy and standard deviation percentage for each sub-category in a json titled ```results_<model>_<prompt_style>.json```. The cumulative accuracy and standard deviation among all 1,100 instances can be found under "overall" key of the JSON. This file can be found in the ```results``` folder. 
 
 ## Reproducing Code Interpreter Results
 
@@ -109,8 +109,7 @@ For curating the patient notes in MedCalc-Bench, we only use publicly available 
 
 ## Broader Impacts 
 
-As described in Sec 1, medical calculators are commonly used in the clinical setting. With the rapidly growing interest in using LLMs for domain-specific applications, healthcare practitioners might directly prompt chatbots like ChatGPT to perform medical calculation tasks. However, the capabilities of LLMs in these tasks are currently unknown. Since healthcare is a high-stakes domain and wrong medical calculations can lead to severe consequences, including misdiagnosis, inappropriate treatment plans, and potential harm to patients, it is crucial to thoroughly evaluate the performance of LLMs in
-medical calculations. Surprisingly, the evaluation results on our MedCalc-Bench dataset show that all the studied LLMs struggle in the medical calculation tasks. The most capable model GPT-4 achieves only 50% accuracy with one-shot learning and chain-of-thought prompting. As such, our study indicates that current LLMs are not yet ready to be used for medical calculations. It should be noted that while high scores on MedCalc-Bench do not guarantee excellence in medical calculation tasks, failing in this dataset indicates that the models must not be considered for such purposes at all. In other words, we believe that passing MedCalc-Bench should be a necessary (but not sufficient) condition for a model to be used for medical calculation
+As described in Sec 1, medical calculators are commonly used in the clinical setting. With the rapidly growing interest in using LLMs for domain-specific applications, healthcare practitioners might directly prompt chatbots like ChatGPT to perform medical calculation tasks. However, the capabilities of LLMs in these tasks are currently unknown. Since healthcare is a high-stakes domain and wrong medical calculations can lead to severe consequences, including misdiagnosis, inappropriate treatment plans, and potential harm to patients, it is crucial to thoroughly evaluate the performance of LLMs in medical calculations. It should be noted that while high scores on MedCalc-Bench do not guarantee excellence in medical calculation tasks, failing in this dataset indicates that the models must not be considered for such purposes at all. In other words, we believe that passing MedCalc-Bench should be a necessary (but not sufficient) condition for a model to be used for medical calculation
 
 ## Maintenance and Responsibility 
 
