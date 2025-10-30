@@ -8,18 +8,18 @@
 
 <br>
 
-MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. This dataset contains a training dataset of 10,615 instances and a testing dataset of 1,100 instances.
- <br>
-
-In all, we hope that our dataset and benchmark serves as a call to improve the computational reasoning skills of LLMs in medical settings. 
-
-
 ## Updates
 
 10/23 - We curated MedCalc-Bench-v2.0, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. We also add instances to the training set so that all calculators have training instances and we also augment each instance with the full formula/criteria for the step-by-step explanations. 
 
 
 In spite of these changes, the format of a patient note, question, and ground truth answer remain the same. MedCalc-Bench-v2.0 is still subject to change as we are doing through a third round of revision but you can find the new HuggingFace link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v2.0. 
+
+
+MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. This dataset contains a training dataset of 10,615 instances and a testing dataset of 1,100 instances.
+ <br>
+
+In all, we hope that our dataset and benchmark serves as a call to improve the computational reasoning skills of LLMs in medical settings. 
 
 ## MedCalc-Bench Dataset
 
