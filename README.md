@@ -1,9 +1,7 @@
 
 # Updates
 
-We curated MedCalc-Bench-v1.1, which fixes errors in 12 calculators, replaced notes so that they are better matches for the different calculators, and revised the Relevant Entities extractions with cross-verification from other annotators to better make sure that there is higher agreement in their values. We also add instances to the training set so that all calculators have training instances and we also augment each instance with the full formula/criteria for the step-by-step explanations. You can find the link here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v1.1. Version 1.0 can still be found at the verion-1.0 release: https://github.com/ncbi-nlp/MedCalc-Bench/releases/tag/version-1.0 inside the datasets folder.
-
-11/11/25 - We are in progress of updating v1.1 which cross validates the extractions and replaces notes which are more relevant for particular calculators. This shouldn't affact the LLMs performance, but it enhances the dataset further by providing notes that clinicans may be more likely to use. 
+The most up-to-date MedCalc-Bench version can be found here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v1.2. We recommend using this one, and only using 1.0 and 1.1 for reproducibility purposes. You should specify which version you are using when benchmarking with our dataset. 
 
 # MedCalc-Bench
 
