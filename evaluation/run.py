@@ -23,10 +23,10 @@ def direct_answer(note, question):
     user_temp = f'Here is the patient note:\n{note}\n\nHere is the task:\n{question}\n\nPlease directly output the JSON dict formatted as {{"answer": str(value which is the answer to the question)}}:'
     return system_msg, user_temp
 
-def one_shot(note, question, example_note, example_output):
+def one_shot(note, question, one_shot_question, example_note, example_output):
     system_msg = 'You are a helpful assistant for calculating a score for a given patient note. Please think step-by-step to solve the question and then generate the required score. Your output should only contain a JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(short_and_direct_answer_of_the_question)}}.'
     system_msg += f'Here is an example patient note:\n\n{example_note}'
-    system_msg += f'\n\nHere is an example task:\n\n{question}'
+    system_msg += f'\n\nHere is an example task:\n\n{one_shot_question}'
     system_msg += f'\n\nPlease directly output the JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(value which is the answer to the question)}}:\n\n{json.dumps(example_output)}'
     user_temp = f'Here is the patient note:\n\n{note}\n\nHere is the task:\n\n{question}\n\nPlease directly output the JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(short_and_direct_answer_of_the_question)}}:'
     return system_msg, user_temp
@@ -41,10 +41,10 @@ def direct_answer_meditron(note, question):
     user_temp = f'###User:\nHere is the patient note:\n\n{note}\n\nHere is the task:\n\n{question}\n\nPlease directly output the JSON dict formatted as {{"answer": str(value which is the answer to the question)}}.\n\n### Assistant:\n'
     return system_msg, user_temp
 
-def one_shot_meditron(note, question, example_note, example_output):
+def one_shot_meditron(note, question, one_shot_question, example_note, example_output):
     system_msg = 'You are a helpful assistant for calculating a score for a given patient note. Please think step-by-step to solve the question and then generate the required score. Your output should only contain a JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(short_and_direct_answer_of_the_question)}}.'
     system_msg += f'\n\n###User:\nHere is an example patient note:\n\n{example_note}'
-    system_msg += f'\n\nHere is an example task:\n\n{question}'
+    system_msg += f'\n\nHere is an example task:\n\n{one_shot_question}'
     system_msg += f'\n\nPlease directly output the JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(value which is the answer to the question)}}:\n\n### Assistant:\n{json.dumps(example_output)}'
     user_temp = f'###User:\nHere is the patient note:\n{note}\n\nHere is the task:\n{question}\n\nPlease directly output the JSON dict formatted as {{"step_by_step_thinking": str(your_step_by_step_thinking_procress_to_solve_the_question), "answer": str(short_and_direct_answer_of_the_question)}}:\n\n### Assistant:\n'
     return system_msg, user_temp
@@ -199,6 +199,11 @@ if __name__ == "__main__":
         if prompt_style == "zero_shot":
             system, user = zero_shot(patient_note, question)
         elif prompt_style == "one_shot":
+            if calculator_id == "24":
+                one_shot_question = "Based on the patient's dose of Hydrocortisone IV, what is the equivalent dosage in mg of Dexamethasone PO?"
+            else:
+                one_shot_question = question
+        
             example = one_shot_json[calculator_id]
             if "meditron" in model_name.lower():
                 example["Patient Note"] = llm.tokenizer.decode(llm.tokenizer.encode(example["Patient Note"], add_special_tokens=False)[:512])
@@ -206,7 +211,7 @@ if __name__ == "__main__":
             elif "pmc_llama" in model_name.lower():
                 example["Patient Note"] = llm.tokenizer.decode(llm.tokenizer.encode(example["Patient Note"], add_special_tokens=False)[:256])
                 example["Response"]["step_by_step_thinking"] = llm.tokenizer.decode(llm.tokenizer.encode(example["Response"]["step_by_step_thinking"], add_special_tokens=False)[:256])
-            system, user = one_shot(patient_note, question, example["Patient Note"], {"step_by_step_thinking": example["Response"]["step_by_step_thinking"], "answer": example["Response"]["answer"]})
+            system, user = one_shot(patient_note, question, one_shot_question, example["Patient Note"], {"step_by_step_thinking": example["Response"]["step_by_step_thinking"], "answer": example["Response"]["answer"]})
         elif prompt_style == "direct_answer":
             system, user = direct_answer(patient_note, question)
 
