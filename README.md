@@ -32,7 +32,7 @@ Each Instance in the dataset contains the following information:
 - **Category**: Specifies the sub-category of the calculator. For equation-based calculators, the options are lab test, dosage, date, or physical and for rule-based calculators, the options are risk, severity, and diagnosis.
 - **Output Type**: Specifies the format type that the calculator will return. The options are decimal, integer, date (MM/DD/YY), or time in terms of weeks and days (i.e. (17 weeks, 4 days)).
 - **Note ID**: Specifies the ID of the patient note. The ID of the note will either be the ID given by Open-Patients or it will be an integer value if the patient note was handwritten by clinicians or synthesized by a template.
-- **Note Type**: Specifies whether the patient note was synthesized by a clinician (Handwritten), produced from a template (Template), or was extracted from PMC-Patients (extracted).
+- **Note Type**: Specifies whether the patient note was synthesized by a clinician (LLM generated and then edited/approvied by a clinician), produced from a template (Template), or was extracted from PMC-Patients (extracted).
 - **Patient Note**: Specifies the patient note which provides the information needed to compute the final answer.
 - **Question**: Specifies the question that is asked to the model to compute a specific medical value based on a particular calculator.
 - **Relevant Entities**: Provides a dictionary of the parameters and their extracted values based on the patient note.
