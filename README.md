@@ -14,7 +14,7 @@ The most up-to-date MedCalc-Bench version can be found here: https://huggingface
 <br>
 
 
-MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. This dataset contains a training dataset of 10,544 instances and a testing dataset of 1,100 instances.
+MedCalc-Bench is the first medical calculation dataset used to benchmark LLMs ability to serve as clinical calculators. Each instance in the dataset consists of a patient note, a question asking to compute a specific clinical value, a final answer value, and a step-by-step solution explaining how the final answer was obtained. Our dataset covers 55 different calculation tasks which are either rule-based calculations or are equation-based calculations. This dataset contains a training dataset of 10,543 instances and a testing dataset of 1,100 instances.
  <br>
 
 In all, we hope that our dataset and benchmark serves as a call to improve the computational reasoning skills of LLMs in medical settings. 
@@ -22,7 +22,7 @@ In all, we hope that our dataset and benchmark serves as a call to improve the c
 ## MedCalc-Bench Dataset
 
 
-In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,544 instances which can be used for fine-tuning open-source LLMs. The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
+In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,543 instances which can be used for fine-tuning open-source LLMs. The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
 
 Each Instance in the dataset contains the following information: 
 
