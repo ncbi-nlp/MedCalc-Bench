@@ -22,7 +22,7 @@ In all, we hope that our dataset and benchmark serves as a call to improve the c
 ## MedCalc-Bench Dataset
 
 
-In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,615 instances which can be used for fine-tuning open-source LLMs. The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
+In addition to the 1,100 evaluation instances, we also provide a training dataset of 10,544 instances which can be used for fine-tuning open-source LLMs. The training data can be found in the ```dataset/train_data.csv.zip``` file and can be unzipped to obtain ```train_data.csv```. This training dataset can also be found in the train split of the HuggingFace link. 
 
 Each Instance in the dataset contains the following information: 
 
