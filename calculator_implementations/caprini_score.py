@@ -2,7 +2,7 @@ import age_conversion
 
 
 param_full_name = { 
-                    "surgery type": "surgery type",
+                    "surgery_type": "surgery type",
                     "major_surgery_last_month": ("major surgery in the last month", 1),
                     "chf_last_month": ("congestive heart failure in the last month", 1),
                     "sepsis": ("sepsis in the last month", 1),
@@ -77,6 +77,7 @@ The total Caprini Score is calculated by summing the points for each criterion.
         explanation += f"Because the patient's age at least 75, we add three points to the current total, making the current total, {score} + 3 = {score + 3}.\n"
         score += 3
 
+
     for param, value in param_full_name.items():
         
         if param not in input_parameters:
@@ -113,6 +114,8 @@ The total Caprini Score is calculated by summing the points for each criterion.
 
     explanation += f"The final caprini score is {score}."
     return {"Explanation": explanation, "Answer": score}
+
+
 
 
 
