@@ -50,7 +50,7 @@ The total APACHE II score is calculated by summing the points for each criterion
 
     if age < 45:
         explanation += f"Because the patient's age is less than 45, no points are added to the score, keeping it at {score}."
-    elif 45 < age <= 54:
+    elif 45 <= age <= 54:
         explanation += f"Because the patient's age is between 45 and 54, 2 points are added to the total, making the current total, {score} + 2 = {score + 2}.\n"
         score += 2
     elif 55 <= age <= 64:
@@ -63,22 +63,21 @@ The total APACHE II score is calculated by summing the points for each criterion
         explanation += f"Because the patient's age is at least 75 years, 6 points are added to the total, making the current total, {score} + 6 = {score + 6}.\n"
         score += 6
 
-    if 'severe_organ_failure_or_immunocompromise' in input_parameters:
-        if input_parameters['severe_organ_failure_or_immunocompromise']:
+    if 'organ_failure_immunocompromise' in input_parameters:
+        if input_parameters['organ_failure_immunocompromise']:
 
             surgery_type = input_parameters.get('surgery_type', None)
 
             explanation += f"The patient is reported to have an organ failure of immunocompromise with a surgery type being classified as {surgery_type}. "
-
-            if surgery_type == "Nonelective":
-                explanation += f"The patient's surgery type is classified as 'Nonelective' and so 0 points are added to the total, keeping the total at {score} points.\n"
+            if surgery_type in ("Nonoperative", "Emergency"):
+                explanation += f"The patient's surgery type is classified as '{surgery_type}' and so 5 points are added to the total, making the current total {score} + 5 = {score + 5}.\n"
+                score += 5
             elif surgery_type == "Elective":
                 explanation += f"The patient's surgery type is classified as 'Elective' and so 2 points are added to the total, making the current total {score} + 2 = {score + 2}.\n"
                 score += 2
-            elif surgery_type == "Emergency":
-                explanation += f"The patient's surgery type is classified as 'Emergency' and so 5 points are added to the total, making the current total {score} + 5 = {score + 5}.\n"
-                score += 5
-        elif not input_parameters['severe_organ_failure_or_immunocompromise']:
+
+
+        elif not input_parameters['organ_failure_immunocompromise']:
             explanation += f"The patient is reported to not have any organ failure immunocompromise and so 0 points are added to the total, keeping the total at {score} points.\n"
     else:
         explanation += f"The patient note does not report any history on immunocompromise and so we assume this to be false. Hence, 0 points are added to the total, keeping the total at {score} points.\n"
@@ -335,12 +334,29 @@ The total APACHE II score is calculated by summing the points for each criterion
         additional_points = 2
         explanation += f"Because the patient has chronic renal failure and a creatinine level between 1.5 and 2.0, {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
         score += additional_points
-    elif 0.6 <= creatinine < 1.5:
-        explanation += f"Because the patient's creatinine level is between 0.6 and 1.4, no points are added to the score, keeping the current total at {score}.\n"
-    elif creatinine < 0.6:
-        additional_points = 2
-        explanation += f"Because the patient's creatinine level is below 0.6, {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
-        score += additional_points
+
+
+    if not acute_renal_failure and not chronic_renal_failure:
+
+        if creatinine >= 3.5:
+            additional_points = 4
+            explanation += f"Because the patient's creatinine level is at least 3.5 mg/dL (without acute renal failure), {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
+            score += additional_points
+        elif 2.0 <= creatinine < 3.5 :
+            additional_points = 3
+            explanation += f"Because the patient's creatinine level is between 2.0 and 3.4 mg/dL (without acute renal failure), {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
+            score += additional_points
+        elif 1.5 <= creatinine < 2.0:
+            additional_points = 2
+            explanation += f"Because the patient's creatinine level is between 1.5 and 1.9 mg/dL (without acute renal failure), {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
+            score += additional_points
+
+        elif 0.6 <= creatinine < 1.5:
+            explanation += f"Because the patient's creatinine level is between 0.6 and 1.4, no points are added to the score, keeping the current total at {score}.\n"
+        elif creatinine < 0.6:
+            additional_points = 2
+            explanation += f"Because the patient's creatinine level is below 0.6, {additional_points} points are added to the score, making the current total {score} + {additional_points} = {score + additional_points}.\n"
+            score += additional_points
 
 
     explanation += f"The patient has a hematocrit of {hematocrit}%.\n"
@@ -378,7 +394,7 @@ The total APACHE II score is calculated by summing the points for each criterion
         score += 1
     elif 3e9 <= wbc < 15e9:
         explanation += f"Because the patient's white blood cell count is at least 3x10^9/L, but less than 15 x10^9/L, 0 points are added to the patient's score, keeping the total at {score}.\n"
-    elif 10e9 <= wbc < 3e9:
+    elif 1e9 <= wbc < 3e9:
         explanation += f"Because the patient's white blood cell count is at least 1x10^9/L, but less than 3 x10^9/L, 2 points are added to the score, making the current total {score} + 2 = {score + 2}.\n"
         score += 2
     elif wbc < 1e9:
