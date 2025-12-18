@@ -1,7 +1,11 @@
 
 # Updates
 
-The most up-to-date MedCalc-Bench version can be found here: https://huggingface.co/datasets/ncbi/MedCalc-Bench-v1.2. We recommend using this one, and only using 1.0 and 1.1 for reproducibility purposes. You should specify which version you are using when benchmarking with our dataset. 
+Please visit MedCalc-Bench Verified at this url: https://github.com/nikhilk7153/MedCalc-Bench-Verified for the latest changes.
+
+Here is the HuggingFace link: https://huggingface.co/datasets/nsk7153/MedCalc-Bench-Verified
+
+The first version of MedCalc-Bench Verified is an update from v1.2 on this repository.
 
 # MedCalc-Bench
 
